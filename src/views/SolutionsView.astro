@@ -1,0 +1,92 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/sections/PageHero.astro';
+import CtaBand from '../components/sections/CtaBand.astro';
+import Process from '../components/sections/Process.astro';
+import SolutionCard from '../components/ui/SolutionCard.astro';
+import Icon from '../components/ui/Icon.astro';
+import { getSolutions } from '../lib/content';
+import { media } from '../lib/media';
+import { useDict, routes, pageAlternates, solutionUrl, type Locale } from '../i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = useDict(locale);
+const p = t.solutionsPage;
+const solutions = await getSolutions(locale);
+const pillarIcons = ['integrated-lines', 'software', 'palletizing'] as const;
+
+const crumbs = [
+  { label: t.nav.home, href: routes.home[locale] },
+  { label: p.title, href: routes.solutions[locale] },
+];
+
+const itemListLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: p.title,
+  itemListElement: solutions.map((s, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: s.data.title,
+    url: new URL(solutionUrl(locale, s.data.slug), Astro.site).href,
+  })),
+};
+---
+
+<BaseLayout
+  locale={locale}
+  title={p.seoTitle}
+  description={p.seoDescription}
+  alternates={pageAlternates('solutions')}
+  breadcrumbs={crumbs}
+  jsonLd={[itemListLd]}
+  image={media('2026/05/sistec-soluzioni.jpg')}
+>
+  <PageHero
+    eyebrow={p.eyebrow}
+    title={p.title}
+    lead={p.lead}
+    image={media('2026/05/sistec-soluzioni.jpg')}
+    imageAlt=""
+    breadcrumbs={crumbs}
+    breadcrumbLabel={t.a11y.breadcrumb}
+  />
+
+  <section class="bg-paper py-20 lg:py-28" aria-label={p.title}>
+    <div class="container-x">
+      <ul class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        {
+          solutions.map((s, i) => (
+            <li data-reveal style={`--d:${(i % 3) * 100}`}>
+              <SolutionCard solution={s} locale={locale} index={i} cta={t.common.details} headingLevel="h2" />
+            </li>
+          ))
+        }
+        <li data-reveal style="--d:200" class="md:col-span-2 xl:col-span-2">
+          <div class="flex h-full flex-col justify-between gap-10 rounded-3xl bg-ink-950 p-8 text-white lg:p-12">
+            <h2 class="max-w-xl text-h3 font-bold">{p.pillarsTitle}</h2>
+            <ul class="grid gap-8 sm:grid-cols-3">
+              {
+                p.pillars.map((pl, i) => (
+                  <li>
+                    <Icon name={pillarIcons[i]} class="size-8 text-signal" />
+                    <h3 class="mt-4 font-semibold">{pl.title}</h3>
+                    <p class="mt-2 text-sm leading-relaxed text-ink-300">{pl.text}</p>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <Process eyebrow={t.home.process.eyebrow} title={t.home.process.title} steps={t.home.process.steps} />
+
+  <CtaBand locale={locale} />
+</BaseLayout>

@@ -1,0 +1,101 @@
+---
+import { Picture } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import SplitHeading from '../ui/SplitHeading.astro';
+import Breadcrumbs from '../ui/Breadcrumbs.astro';
+import Asterisk from '../brand/Asterisk.astro';
+import type { Crumb } from '../../layouts/BaseLayout.astro';
+
+interface Props {
+  eyebrow?: string;
+  title: string;
+  lead?: string;
+  image?: ImageMetadata;
+  imageAlt?: string;
+  breadcrumbs?: Crumb[];
+  breadcrumbLabel?: string;
+  /** "split" = immagine a destra; "full" = immagine a tutto schermo sotto il testo; "none" = solo testo */
+  variant?: 'split' | 'full' | 'none';
+  titleClass?: string;
+}
+
+const {
+  eyebrow,
+  title,
+  lead,
+  image,
+  imageAlt = '',
+  breadcrumbs,
+  breadcrumbLabel = 'Breadcrumb',
+  variant = image ? 'split' : 'none',
+  titleClass = 'text-h1',
+} = Astro.props;
+---
+
+<section class="noise relative overflow-hidden bg-ink-950 text-white">
+  <div class="bg-blueprint pointer-events-none absolute inset-0 text-white [mask-image:radial-gradient(ellipse_at_30%_20%,black,transparent_75%)]"></div>
+  <Asterisk class="pointer-events-none absolute -top-24 -right-24 w-[28rem] opacity-[0.07] md:w-[38rem]" spin />
+
+  <div
+    class:list={[
+      'container-x relative grid gap-12 pt-[calc(var(--header-h)+3rem)] lg:pt-[calc(var(--header-h)+5rem)]',
+      variant === 'split' ? 'pb-16 lg:grid-cols-12 lg:items-end lg:pb-24' : 'pb-14 lg:pb-20',
+    ]}
+  >
+    <div class:list={[variant === 'split' && 'lg:col-span-7']}>
+      {breadcrumbs && <Breadcrumbs items={breadcrumbs} label={breadcrumbLabel} />}
+      {eyebrow && (
+        <p class="eyebrow mt-8 text-signal" data-reveal="fade">
+          {eyebrow}
+        </p>
+      )}
+      <SplitHeading as="h1" text={title} class:list={['mt-5 font-bold', titleClass]} />
+      {lead && (
+        <p class="mt-7 max-w-2xl text-lead text-ink-300" data-reveal style="--d:250">
+          {lead}
+        </p>
+      )}
+      <slot />
+    </div>
+
+    {
+      image && variant === 'split' && (
+        <div class="lg:col-span-5" data-reveal="clip" style="--d:200">
+          <div class="relative aspect-[4/5] overflow-hidden rounded-3xl bg-ink-800 sm:aspect-[4/3] lg:aspect-[4/5]">
+            <Picture
+              src={image}
+              alt={imageAlt}
+              formats={['avif', 'webp']}
+              widths={[480, 720, 960, 1200]}
+              sizes="(min-width: 1024px) 40vw, 100vw"
+              class="parallax-y size-full object-cover"
+              loading="eager"
+              fetchpriority="high"
+            />
+            <div class="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-white/10 ring-inset" />
+          </div>
+        </div>
+      )
+    }
+  </div>
+
+  {
+    image && variant === 'full' && (
+      <div class="container-x relative pb-4" data-reveal="clip" style="--d:250">
+        <div class="relative aspect-[16/9] overflow-hidden rounded-t-3xl bg-ink-800 md:aspect-[21/9]">
+          <Picture
+            src={image}
+            alt={imageAlt}
+            formats={['avif', 'webp']}
+            widths={[640, 960, 1280, 1600, 2000]}
+            sizes="(min-width: 1440px) 1360px, 100vw"
+            class="parallax-y size-full object-cover"
+            loading="eager"
+            fetchpriority="high"
+          />
+        </div>
+      </div>
+    )
+  }
+  <slot name="after" />
+</section>

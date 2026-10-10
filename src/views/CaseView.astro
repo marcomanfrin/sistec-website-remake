@@ -1,0 +1,214 @@
+---
+import { render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/sections/PageHero.astro';
+import CtaBand from '../components/sections/CtaBand.astro';
+import Gallery from '../components/media/Gallery.astro';
+import VideoGrid from '../components/media/VideoGrid.astro';
+import SectionHeader from '../components/ui/SectionHeader.astro';
+import CaseCard from '../components/ui/CaseCard.astro';
+import Icon, { type IconName } from '../components/ui/Icon.astro';
+import Asterisk from '../components/brand/Asterisk.astro';
+import { media } from '../lib/media';
+import { getSolutions, getCases, findTranslation, readingMinutes, type Case } from '../lib/content';
+import { useDict, fmt, routes, caseUrl, solutionUrl, type Locale, type Alternates } from '../i18n';
+
+interface Props {
+  locale: Locale;
+  item: Case;
+}
+
+const { locale, item } = Astro.props;
+const t = useDict(locale);
+const cp = t.casesPage;
+const d = item.data;
+const url = caseUrl(locale, d.slug);
+const { Content } = await render(item);
+
+const solutions = (await getSolutions(locale)).filter((s) => d.solutions.includes(s.data.key));
+const more = (await getCases(locale)).filter((c) => c.data.key !== d.key).slice(0, 3);
+const minutes = readingMinutes(`${d.lede} ${item.body ?? ''}`);
+
+const other: Locale = locale === 'it' ? 'en' : 'it';
+const translation = await findTranslation('cases', d.key, other);
+const alternates: Alternates = { [locale]: url };
+if (translation) alternates[other] = caseUrl(other, translation.data.slug);
+
+const crumbs = [
+  { label: t.nav.home, href: routes.home[locale] },
+  { label: t.nav.cases, href: routes.cases[locale] },
+  { label: d.cardTitle, href: url },
+];
+
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: d.title,
+  description: d.seoDescription,
+  datePublished: d.date.toISOString(),
+  inLanguage: locale,
+  mainEntityOfPage: new URL(url, Astro.site).href,
+  author: { '@id': `${Astro.site!.origin}/#organization` },
+  publisher: { '@id': `${Astro.site!.origin}/#organization` },
+  about: d.sector,
+};
+---
+
+<BaseLayout
+  locale={locale}
+  title={d.cardTitle}
+  description={d.seoDescription}
+  alternates={alternates}
+  breadcrumbs={crumbs}
+  jsonLd={[articleLd]}
+  image={media(d.hero)}
+  imageAlt={d.heroAlt}
+  type="article"
+  published={d.date}
+>
+  <div class="scroll-progress fixed inset-x-0 top-0 z-[55] h-1 origin-left bg-signal" aria-hidden="true"></div>
+
+  <PageHero
+    eyebrow={`${t.nav.cases} · ${d.sector}`}
+    title={d.title}
+    image={media(d.hero)}
+    imageAlt={d.heroAlt}
+    variant="full"
+    breadcrumbs={crumbs}
+    breadcrumbLabel={t.a11y.breadcrumb}
+    titleClass="text-h2 max-w-5xl"
+  >
+    <dl class="mt-10 flex flex-wrap gap-x-10 gap-y-4 font-mono text-xs tracking-wider uppercase" data-reveal style="--d:300">
+      <div>
+        <dt class="text-ink-300">{t.common.sector}</dt>
+        <dd class="mt-1 text-white">{d.sector}</dd>
+      </div>
+      <div>
+        <dt class="text-ink-300">{t.common.solutionsUsed}</dt>
+        <dd class="mt-1 text-white">{solutions.map((s) => s.data.shortTitle).join(' · ')}</dd>
+      </div>
+    </dl>
+    <p class="mt-6 flex items-center gap-2 font-mono text-xs tracking-wider text-ink-300 uppercase" data-reveal style="--d:350">
+      <Icon name="clock" class="size-4 text-signal" />
+      {fmt(cp.readingTime, { n: minutes })}
+    </p>
+  </PageHero>
+
+  <!-- Lede + highlights -->
+  <section class="bg-paper pt-20 pb-10 lg:pt-28" aria-labelledby="highlights-title">
+    <div class="container-x grid gap-14 lg:grid-cols-12">
+      <p class="text-[clamp(1.375rem,1.1rem+1.1vw,2.125rem)] leading-[1.35] font-medium tracking-tight text-ink-950 lg:col-span-8" data-reveal>
+        {d.lede}
+      </p>
+      <div class="lg:col-span-12">
+        <h2 id="highlights-title" class="eyebrow text-signal-ink">{cp.highlightsTitle}</h2>
+        <dl class="mt-6 grid gap-px overflow-hidden rounded-3xl bg-ink-950/10 md:grid-cols-3">
+          {
+            d.highlights.map((h, i) => (
+              <div class="flex flex-col gap-4 bg-white p-8 lg:p-10" data-reveal style={`--d:${i * 120}`}>
+                <dt class="order-2 text-ink-600">{h.label}</dt>
+                <dd class="order-1 text-[clamp(2.5rem,1.8rem+2.4vw,4rem)] leading-none font-bold tracking-tight text-ink-950">
+                  {h.value}
+                </dd>
+              </div>
+            ))
+          }
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- Corpo -->
+  <section class="bg-paper pt-10 pb-24 lg:pb-32">
+    <div class="container-x grid gap-14 lg:grid-cols-12">
+      <article class="prose-sistec lg:col-span-7 lg:col-start-1" data-reveal>
+        <Content />
+      </article>
+      <aside class="lg:col-span-4 lg:col-start-9">
+        <div class="space-y-6 lg:sticky lg:top-[calc(var(--header-h)+2rem)]">
+          {
+            d.quote && (
+              <figure class="relative overflow-hidden rounded-3xl bg-ink-950 p-8 text-white" data-reveal>
+                <Asterisk class="absolute -top-8 -right-8 w-32 opacity-25" />
+                <blockquote class="relative text-lg leading-snug font-medium">“{d.quote}”</blockquote>
+              </figure>
+            )
+          }
+          <div class="rounded-3xl bg-white p-8 ring-1 ring-ink-950/8" data-reveal style="--d:120">
+            <h2 class="eyebrow text-signal-ink">{t.common.solutionsUsed}</h2>
+            <ul class="mt-5 space-y-2">
+              {solutions.map((s) => (
+                <li>
+                  <a href={solutionUrl(locale, s.data.slug)} class="group flex min-h-12 items-center gap-3 rounded-xl font-semibold text-ink-950">
+                    <span class="grid size-10 shrink-0 place-items-center rounded-xl bg-ink-950 text-signal transition-colors group-hover:bg-signal group-hover:text-ink-950">
+                      <Icon name={s.data.key as IconName} class="size-5" />
+                    </span>
+                    <span class="link-underline">{s.data.shortTitle}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <a href={routes.contact[locale]} class="btn btn-primary mt-8 w-full">
+              {t.common.talkToEngineer}
+              <Icon name="arrow-right" class="btn-arrow" />
+            </a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  {
+    d.gallery.length > 0 && (
+      <section class="bg-paper-2 py-24 lg:py-32" aria-labelledby="gallery-title">
+        <div class="container-x">
+          <SectionHeader eyebrow={t.solutionPage.galleryEyebrow} title={cp.galleryTitle} id="gallery-title" />
+          <div class="mt-14">
+            <Gallery
+              items={d.gallery}
+              altPattern={fmt(t.solutionPage.galleryAlt, { title: d.sector, n: '{n}' })}
+              locale={locale}
+              id="gallery"
+            />
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  {
+    d.videos.length > 0 && (
+      <section class="bg-ink-900 py-24 text-white lg:py-32" aria-labelledby="video-title">
+        <div class="container-x">
+          <SectionHeader eyebrow={t.solutionPage.videosEyebrow} title={cp.videoTitle} tone="dark" id="video-title" />
+          <div class="mt-14">
+            <VideoGrid ids={d.videos} locale={locale} id="videos" />
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <section class="bg-paper py-24 lg:py-32" aria-labelledby="more-title">
+    <div class="container-x">
+      <div class="flex flex-wrap items-end justify-between gap-8">
+        <SectionHeader eyebrow={t.nav.cases} title={cp.moreTitle} id="more-title" />
+        <a href={routes.cases[locale]} class="btn btn-ghost-dark shrink-0" data-reveal>
+          {t.common.allCases}
+          <Icon name="arrow-right" class="btn-arrow" />
+        </a>
+      </div>
+      <ul class="mt-14 grid gap-x-6 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
+        {
+          more.map((c, i) => (
+            <li data-reveal style={`--d:${i * 120}`}>
+              <CaseCard item={c} locale={locale} cta={t.common.readCase} />
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <CtaBand locale={locale} />
+</BaseLayout>

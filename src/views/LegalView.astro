@@ -1,0 +1,35 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/sections/PageHero.astro';
+import { useDict, routes, htmlLang, type Locale } from '../i18n';
+
+interface Props {
+  locale: Locale;
+  docKey: 'privacy' | 'cookies';
+}
+
+const { locale, docKey } = Astro.props;
+const t = useDict(locale);
+const [doc] = await getCollection('legal', ({ data }) => data.lang === locale && data.key === docKey);
+if (!doc) throw new Error(`Documento legale mancante: ${docKey} (${locale})`);
+const { Content } = await render(doc);
+const route = docKey === 'privacy' ? routes.privacy : routes.cookies;
+const updated = new Intl.DateTimeFormat(htmlLang[locale], { dateStyle: 'long' }).format(doc.data.updated);
+
+const crumbs = [
+  { label: t.nav.home, href: routes.home[locale] },
+  { label: doc.data.title, href: route[locale] },
+];
+---
+
+<BaseLayout locale={locale} title={doc.data.title} description={doc.data.description} alternates={{ ...route }} breadcrumbs={crumbs}>
+  <PageHero eyebrow={`${t.common.updated}: ${updated}`} title={doc.data.title} lead={doc.data.description} breadcrumbs={crumbs} breadcrumbLabel={t.a11y.breadcrumb} />
+  <section class="bg-paper py-20 lg:py-28">
+    <div class="container-x">
+      <article class="prose-sistec mx-auto lg:mx-0 lg:ml-[calc(100%/12)]">
+        <Content />
+      </article>
+    </div>
+  </section>
+</BaseLayout>

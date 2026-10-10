@@ -1,0 +1,53 @@
+---
+import SplitHeading from './SplitHeading.astro';
+
+interface Props {
+  eyebrow?: string;
+  title: string;
+  text?: string;
+  tone?: 'light' | 'dark';
+  align?: 'left' | 'center';
+  as?: 'h1' | 'h2';
+  class?: string;
+  id?: string;
+  size?: 'lg' | 'md';
+}
+
+const { eyebrow, title, text, tone = 'light', align = 'left', as = 'h2', class: className, id, size = 'lg' } = Astro.props;
+const dark = tone === 'dark';
+---
+
+<div class:list={['max-w-4xl', align === 'center' && 'mx-auto text-center', className]}>
+  {
+    eyebrow && (
+      <p
+        class:list={['eyebrow', dark ? 'text-signal' : 'text-signal-ink', align === 'center' && 'justify-center']}
+        data-reveal="fade"
+      >
+        {eyebrow}
+      </p>
+    )
+  }
+  <SplitHeading
+    as={as}
+    id={id}
+    text={title}
+    class:list={[
+      'mt-5 font-bold',
+      size === 'lg' ? 'text-h2' : 'text-h3',
+      dark ? 'text-white' : 'text-ink-950',
+    ]}
+  />
+  {
+    text && (
+      <p
+        class:list={['mt-6 text-lead', dark ? 'text-ink-300' : 'text-ink-600', align === 'center' && 'mx-auto max-w-2xl']}
+        data-reveal
+        style="--d:150"
+      >
+        {text}
+      </p>
+    )
+  }
+  <slot />
+</div>

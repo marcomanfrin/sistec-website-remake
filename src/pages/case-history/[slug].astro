@@ -1,0 +1,14 @@
+---
+import type { GetStaticPaths } from 'astro';
+import CaseView from '../../views/CaseView.astro';
+import { getCases } from '../../lib/content';
+
+export const getStaticPaths = (async () => {
+  const cases = await getCases('it');
+  return cases.map((item) => ({ params: { slug: item.data.slug }, props: { item } }));
+}) satisfies GetStaticPaths;
+
+const { item } = Astro.props;
+---
+
+<CaseView locale="it" item={item} />

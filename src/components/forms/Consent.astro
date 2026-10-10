@@ -1,0 +1,44 @@
+---
+interface Props {
+  name: string;
+  required?: boolean;
+  tone?: 'light' | 'dark';
+  requiredLabel: string;
+}
+
+const { name, required = false, tone = 'light', requiredLabel } = Astro.props;
+const id = `f-${name}`;
+const dark = tone === 'dark';
+---
+
+<div class="field" data-field>
+  <div class="flex items-start gap-3">
+    <input
+      id={id}
+      name={name}
+      type="checkbox"
+      value="yes"
+      required={required}
+      aria-describedby={`${id}-err`}
+      class:list={[
+        'mt-0.5 size-6 shrink-0 cursor-pointer rounded-md',
+        dark ? 'accent-signal' : 'accent-ink-950',
+      ]}
+    />
+    <label for={id} class:list={['cursor-pointer text-sm leading-relaxed', dark ? 'text-ink-200' : 'text-ink-700']}>
+      <slot />
+      {
+        required && (
+          <>
+            <span aria-hidden="true" class={dark ? 'text-signal' : 'text-signal-ink'}>
+              {' '}
+              *
+            </span>
+            <span class="sr-only"> ({requiredLabel})</span>
+          </>
+        )
+      }
+    </label>
+  </div>
+  <p id={`${id}-err`} class:list={['mt-2 ml-9 text-sm font-medium empty:hidden', dark ? 'text-red-300' : 'text-red-700']} data-error></p>
+</div>

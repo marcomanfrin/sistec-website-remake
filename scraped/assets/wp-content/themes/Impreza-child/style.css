@@ -1,0 +1,251 @@
+/*
+Theme Name: Impreza Child
+Template: Impreza
+Version: 1.0
+Author:	UpSolution
+Theme URI: http://impreza.us-themes.com/
+Author URI: http://us-themes.com/
+*/
+
+/* general style */
+.no-touch a:hover {
+    text-decoration: underline;
+}
+
+/*footer*/
+
+.footer-link {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px; /* Spazio tra il link e le icone */
+}
+
+.footer-link:hover {
+    color: #FF4500; /* Sostituisci con il colore desiderato */
+}
+
+.colonna-dx-footer .wpb_wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 128px;
+}
+
+
+.social-icons {
+    display: flex;
+}
+
+.social-icons img.alignnone.size-full.wp-image-1427 {
+    width: 19px;
+    height: 19px;
+    margin-right: 10px;
+}
+
+.colonna-dx-footer a.footer-link {
+    margin-right: 80px;
+}
+
+.colonna-dx-footer p {
+    margin: 0;
+}
+
+/* homepage style */
+.section-mailup h2 {
+    text-transform: uppercase;
+}
+
+/* Stili per le icone social */
+
+.social-icons img.alignnone.size-full.wp-image-1427 {
+    width: 19px; /* Dimensione delle icone */
+    height: 19px;
+}
+
+/*stile per la checkbox del form*/
+
+input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    border-color: #E77816;
+    margin-top: 0;
+    margin-bottom: auto;
+}
+
+.w-form-row.for_checkboxes label, .w-form-row.for_radio label {
+    display: flex;
+    align-items: flex-start;
+    padding: .2em 0;
+    width: fit-content;
+}
+
+/*stile card soluzioni*/
+
+.w-vwrapper.usg_vwrapper_2.contenitore-img-icona.align_none.valign_top {
+    position: relative;
+}
+
+.w-vwrapper.usg_vwrapper_2.contenitore-img-icona.align_none.valign_top .w-image.usg_image_1 {
+    position: absolute;
+    z-index: 1;
+}
+.section-template-video .repeater {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.section-template-video .repeater .repeater-row {
+    max-width: 48%;
+}
+/*stile soluzione in evidenza*/
+
+#primo img.attachment-large.size-large.wp-post-image {
+    max-width: 360px;
+}
+
+#primo .w-vwrapper.usg_vwrapper_1.card-singola-soluzione.align_none.valign_top {
+    flex-direction: row;
+}
+
+#primo .w-vwrapper.usg_vwrapper_3.contenitore-img-icona.align_none.valign_top {
+    max-width: 654px;
+    justify-content: center;
+    margin-left: 36px;
+}
+#primo a.w-btn.us-btn-style_2.usg_btn_1 {
+    height: auto;
+    margin-bottom: 0;
+    margin-top: auto;
+}
+.section-solution-video .repeater {
+    gap: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.section-solution-video .repeater .repeater-row .video,
+.section-solution-video .repeater .repeater-row .video iframe {
+    width: 100%;
+}
+/* Mailup form */
+.section-mailup-form form>div {
+    margin: 16px 0;
+}
+.section-mailup-form form>div.form-privacy,
+.section-mailup-form form>div.form-consent {
+    margin-bottom: 32px;
+}
+.section-mailup-form .form-field,
+.section-mailup-form input:focus {
+    border: 1px solid #E77816;
+    border-radius: 0;
+    background: #FFF;
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 1;
+}
+.section-mailup-form label {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 8px;
+    display: block;
+}
+.section-mailup-form form>div.form-privacy label,
+.section-mailup-form form>div.form-consent label {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+}
+.section-mailup-form form>div.form-privacy label a {
+    text-decoration: underline;
+}
+.section-mailup-form .form-privacy input[type="checkbox"],
+.section-mailup-form .form-consent input[type="checkbox"] {
+    width: 14px;
+    height: 14px;
+    border-radius: 4px;
+    border: 1px solid #E77816;
+    background: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-mailup-form .form-privacy input[type="checkbox"]::before,
+.section-mailup-form .form-consent input[type="checkbox"]::before {
+    font-size: 10px;
+    color: black;
+}
+
+
+.section-solutions .w-grid-list .soluzione {
+    height: 100%;
+}
+.section-case-history article {
+    height: 100%;
+    overflow: visible;
+}
+.section-case-history article .w-grid-item-h {
+    height: 100% !important;
+    padding-bottom: 16px;
+}
+.section-solutions .w-grid-list .soluzione .w-grid-item-h .card-singola-soluzione .w-btn {
+    margin-top: auto;
+}
+.section-case-history article .w-grid-item-h .w-btn {
+    margin-top: auto !important;
+    margin-bottom: 0;
+}
+.section-template-gallery {
+    height: auto;
+    margin: auto;
+}
+.col-automatione-overflow {
+    overflow: hidden;
+    padding-top: 16px;
+}
+.no-touch .l-header.bg_transparent .l-subheader.at_middle .w-dropdown.opened  .w-dropdown-current a {
+    color: var(--color-header-middle-text-hover);
+}
+@media (max-width: 1025px) {
+    .section-case-history {
+        overflow: hidden;
+    }
+    #primo .w-vwrapper.usg_vwrapper_1.card-singola-soluzione.align_none.valign_top {
+        flex-wrap: wrap;
+    }
+    #primo .w-vwrapper.usg_vwrapper_3.contenitore-img-icona.align_none.valign_top,
+    #primo .w-vwrapper.usg_vwrapper_2.contenitore-img-icona.align_none.valign_top {
+        max-width: 50%;
+    }
+    #primo .w-vwrapper.usg_vwrapper_3.contenitore-img-icona.align_none.valign_top {
+        margin: auto;
+    }
+    #primo a.w-btn.us-btn-style_2.usg_btn_1 {
+        width: 100%;
+        margin-top: 16px;
+    }
+    .section-contacts-form .reversed {
+        flex-direction: column-reverse;
+    }
+    .colonna-dx-footer .wpb_wrapper {
+        margin: auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .section-template-video .repeater {
+        grid-template-columns: 1fr;
+    }
+    #primo .w-vwrapper.usg_vwrapper_3.contenitore-img-icona.align_none.valign_top,
+    #primo .w-vwrapper.usg_vwrapper_2.contenitore-img-icona.align_none.valign_top {
+        max-width: 100%;
+    }
+	.section-template-video .repeater .repeater-row {
+		max-width: 100%;
+	}
+	.section-template-video .repeater {
+		justify-content: center;
+	}
+} 

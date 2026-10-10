@@ -1,0 +1,117 @@
+---
+/**
+ * Campo di modulo accessibile: label sempre visibile, hint e messaggio d'errore collegati
+ * via aria-describedby, stato aria-invalid gestito dallo script del form.
+ */
+interface Props {
+  name: string;
+  label: string;
+  type?: 'text' | 'email' | 'tel' | 'textarea' | 'file' | 'select';
+  required?: boolean;
+  autocomplete?: string;
+  hint?: string;
+  requiredLabel: string;
+  options?: { value: string; label: string }[];
+  accept?: string;
+  rows?: number;
+  class?: string;
+  tone?: 'light' | 'dark';
+  inputmode?: 'text' | 'email' | 'tel';
+}
+
+const {
+  name,
+  label,
+  type = 'text',
+  required = false,
+  autocomplete,
+  hint,
+  requiredLabel,
+  options = [],
+  accept,
+  rows = 5,
+  class: className,
+  tone = 'light',
+} = Astro.props;
+
+const id = `f-${name}`;
+const hintId = hint ? `${id}-hint` : undefined;
+const errId = `${id}-err`;
+const describedBy = [hintId, errId].filter(Boolean).join(' ');
+const dark = tone === 'dark';
+
+const control = [
+  'peer block w-full rounded-xl px-4 py-3.5 text-base transition-[box-shadow,background-color] duration-300 outline-none',
+  'aria-invalid:ring-2 aria-invalid:ring-red-600',
+  dark
+    ? 'bg-white/6 text-white ring-1 ring-white/20 placeholder:text-ink-300 focus:bg-white/10 focus:ring-2 focus:ring-signal aria-invalid:ring-red-400'
+    : 'bg-white text-ink-950 ring-1 ring-ink-950/20 placeholder:text-ink-500 focus:ring-2 focus:ring-ink-950',
+];
+---
+
+<div class:list={['field', className]} data-field>
+  <label for={id} class:list={['mb-2 block text-sm font-semibold', dark ? 'text-white' : 'text-ink-950']}>
+    {label}
+    {
+      required && (
+        <>
+          <span aria-hidden="true" class={dark ? 'text-signal' : 'text-signal-ink'}>
+            {' '}
+            *
+          </span>
+          <span class="sr-only"> ({requiredLabel})</span>
+        </>
+      )
+    }
+  </label>
+  {
+    hint && (
+      <p id={hintId} class:list={['-mt-1 mb-2 text-sm', dark ? 'text-ink-300' : 'text-ink-600']}>
+        {hint}
+      </p>
+    )
+  }
+
+  {
+    type === 'textarea' ? (
+      <textarea id={id} name={name} rows={rows} required={required} aria-describedby={describedBy} class:list={control} />
+    ) : type === 'select' ? (
+      <div class="relative">
+        <select id={id} name={name} required={required} aria-describedby={describedBy} class:list={[control, 'appearance-none pr-12']}>
+          {options.map((o) => (
+            <option value={o.value}>{o.label}</option>
+          ))}
+        </select>
+        <svg class="pointer-events-none absolute top-1/2 right-4 size-5 -translate-y-1/2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <path d="m6 9 6 6 6-6" />
+        </svg>
+      </div>
+    ) : type === 'file' ? (
+      <input
+        id={id}
+        name={name}
+        type="file"
+        required={required}
+        accept={accept}
+        aria-describedby={describedBy}
+        class:list={[
+          control,
+          'cursor-pointer file:mr-4 file:cursor-pointer file:rounded-full file:border-0 file:px-4 file:py-2 file:text-sm file:font-semibold',
+          dark ? 'file:bg-signal file:text-ink-950' : 'file:bg-ink-950 file:text-white',
+        ]}
+      />
+    ) : (
+      <input
+        id={id}
+        name={name}
+        type={type}
+        required={required}
+        autocomplete={autocomplete}
+        aria-describedby={describedBy}
+        class:list={control}
+        spellcheck={type === 'email' ? 'false' : undefined}
+      />
+    )
+  }
+  <p id={errId} class:list={['mt-2 flex items-start gap-2 text-sm font-medium empty:hidden', dark ? 'text-red-300' : 'text-red-700']} data-error></p>
+</div>

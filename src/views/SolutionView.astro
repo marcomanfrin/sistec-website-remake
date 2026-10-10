@@ -1,0 +1,271 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/sections/PageHero.astro';
+import CtaBand from '../components/sections/CtaBand.astro';
+import Faq from '../components/sections/Faq.astro';
+import DigitalTwinViewer from '../components/media/DigitalTwinViewer.astro';
+import ShowreelDialog from '../components/media/ShowreelDialog.astro';
+import Gallery from '../components/media/Gallery.astro';
+import VideoGrid from '../components/media/VideoGrid.astro';
+import SectionHeader from '../components/ui/SectionHeader.astro';
+import SolutionCard from '../components/ui/SolutionCard.astro';
+import CaseCard from '../components/ui/CaseCard.astro';
+import Icon, { type IconName } from '../components/ui/Icon.astro';
+import { media } from '../lib/media';
+import { getSolutions, getCases, findTranslation, type Solution } from '../lib/content';
+import { useDict, fmt, routes, solutionUrl, type Locale, type Alternates } from '../i18n';
+
+interface Props {
+  locale: Locale;
+  solution: Solution;
+}
+
+const { locale, solution } = Astro.props;
+const t = useDict(locale);
+const sp = t.solutionPage;
+const d = solution.data;
+const url = solutionUrl(locale, d.slug);
+
+const others = (await getSolutions(locale)).filter((s) => s.data.key !== d.key);
+const relatedCases = (await getCases(locale)).filter((c) => c.data.solutions.includes(d.key)).slice(0, 3);
+
+const other: Locale = locale === 'it' ? 'en' : 'it';
+const translation = await findTranslation('solutions', d.key, other);
+const alternates: Alternates = { [locale]: url };
+if (translation) alternates[other] = solutionUrl(other, translation.data.slug);
+
+const crumbs = [
+  { label: t.nav.home, href: routes.home[locale] },
+  { label: t.nav.solutions, href: routes.solutions[locale] },
+  { label: d.shortTitle, href: url },
+];
+
+const jsonLd: Record<string, unknown>[] = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: d.title,
+    description: d.seoDescription,
+    serviceType: d.shortTitle,
+    url: new URL(url, Astro.site).href,
+    provider: { '@id': `${Astro.site!.origin}/#organization` },
+    areaServed: 'Worldwide',
+  },
+];
+if (d.faqs.length) {
+  jsonLd.push({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: d.faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  });
+}
+---
+
+<BaseLayout
+  locale={locale}
+  title={d.seoTitle ?? d.title}
+  description={d.seoDescription}
+  alternates={alternates}
+  breadcrumbs={crumbs}
+  jsonLd={jsonLd}
+  image={media(d.cover)}
+  imageAlt={d.coverAlt}
+>
+  <PageHero
+    eyebrow={`${String(d.order).padStart(2, '0')} · ${t.nav.solutions}`}
+    title={d.title}
+    lead={d.tagline}
+    image={media(d.cover)}
+    imageAlt={d.coverAlt}
+    breadcrumbs={crumbs}
+    breadcrumbLabel={t.a11y.breadcrumb}
+    titleClass={d.title.length > 40 ? 'text-h2' : 'text-h1'}
+  >
+    <div class="mt-10 flex flex-wrap items-center gap-4" data-reveal style="--d:350">
+      <a href={routes.contact[locale]} class="btn btn-primary" data-magnetic>
+        {t.common.talkToEngineer}
+        <Icon name="arrow-right" class="btn-arrow" />
+      </a>
+      {
+        d.videos.length > 0 && (
+          <a href="#video" class="btn btn-ghost-light">
+            <Icon name="play" class="size-4" />
+            {sp.videosTitle}
+          </a>
+        )
+      }
+    </div>
+  </PageHero>
+
+  <!-- Introduzione -->
+  <section class="bg-paper py-20 lg:py-32" aria-labelledby="intro-title">
+    <div class="container-x grid gap-12 lg:grid-cols-12 lg:gap-16">
+      <div class="lg:col-span-8 lg:col-start-5 lg:row-start-1">
+        <h2 id="intro-title" class="eyebrow text-signal-ink" data-reveal="fade">{d.shortTitle}</h2>
+        <p class="mt-6 text-[clamp(1.375rem,1.1rem+1.1vw,2.125rem)] leading-[1.35] font-medium tracking-tight text-ink-950" data-reveal>
+          {d.intro}
+        </p>
+      </div>
+      {
+        d.keywords.length > 0 && (
+          <aside class="lg:col-span-4 lg:row-start-1" aria-labelledby="keywords-title" data-reveal style="--d:150">
+            <div class="rounded-3xl bg-ink-950 p-7 text-white lg:sticky lg:top-[calc(var(--header-h)+2rem)]">
+              <div class="flex items-center gap-4">
+                <span class="grid size-12 shrink-0 place-items-center rounded-2xl bg-signal text-ink-950">
+                  <Icon name={d.key as IconName} class="size-6" />
+                </span>
+                <h3 id="keywords-title" class="font-mono text-xs tracking-[0.16em] text-ink-300 uppercase">{sp.keywordsLabel}</h3>
+              </div>
+              <ul class="mt-6 divide-y divide-white/10 border-t border-white/10">
+                {d.keywords.map((k) => (
+                  <li class="flex items-center gap-3 py-3 font-semibold">
+                    <Icon name="check" class="size-4 shrink-0 text-signal" />
+                    {k}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </aside>
+        )
+      }
+    </div>
+  </section>
+
+  {d.key === 'software' && <DigitalTwinViewer locale={locale} />}
+
+  <!-- Vantaggi -->
+  <section class="noise relative overflow-hidden bg-ink-950 py-24 text-white lg:py-32" aria-labelledby="benefits-title">
+    <div class="bg-blueprint pointer-events-none absolute inset-0 text-white opacity-50"></div>
+    <div class="container-x relative">
+      <SectionHeader eyebrow={sp.benefitsEyebrow} title={d.benefitsTitle} tone="dark" id="benefits-title" />
+      <ol class="mt-16 grid gap-px overflow-hidden rounded-3xl bg-white/10 lg:mt-20 lg:grid-cols-3">
+        {
+          d.benefits.map((b, i) => (
+            <li class="group relative flex flex-col bg-ink-950 p-8 lg:p-10" data-reveal style={`--d:${i * 120}`}>
+              <span class="font-mono text-sm font-semibold text-signal">{String(i + 1).padStart(2, '0')}</span>
+              <h3 class="mt-10 text-h3 font-bold">{b.title}</h3>
+              <p class="mt-4 leading-relaxed text-ink-300">{b.text}</p>
+              {b.points && (
+                <ul class="mt-8 space-y-5 border-t border-white/10 pt-8">
+                  {b.points.map((pt) => (
+                    <li class="flex gap-3">
+                      <Icon name="check" class="mt-0.5 size-5 shrink-0 text-signal" />
+                      <p class="text-sm leading-relaxed text-ink-300">
+                        <strong class="font-semibold text-white">{pt.title}</strong>: {pt.text}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+              )}
+              <span class="absolute inset-x-0 bottom-0 h-1 origin-left scale-x-0 bg-signal transition-transform duration-700 ease-(--ease-out-expo) group-hover:scale-x-100" />
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+
+  <!-- Consulenza -->
+  <section class="bg-signal text-ink-950" aria-labelledby="consult-title">
+    <div class="container-x flex flex-col items-start justify-between gap-8 py-12 md:flex-row md:items-center lg:py-14">
+      <div>
+        <h2 id="consult-title" class="text-h3 font-bold">{sp.consultTitle}</h2>
+        <p class="mt-2 text-lg font-medium">{sp.consultText}</p>
+      </div>
+      <a href={routes.contact[locale]} class="btn btn-dark shrink-0" data-magnetic>
+        {t.common.contactUs}
+        <Icon name="arrow-right" class="btn-arrow" />
+      </a>
+    </div>
+  </section>
+
+  {
+    d.gallery.length > 0 && (
+      <section class="bg-paper py-24 lg:py-32" aria-labelledby="gallery-title">
+        <div class="container-x">
+          <SectionHeader eyebrow={sp.galleryEyebrow} title={sp.galleryTitle} id="gallery-title" />
+          <div class="mt-14">
+            <Gallery items={d.gallery} altPattern={fmt(sp.galleryAlt, { title: d.shortTitle, n: '{n}' })} locale={locale} id="gallery" />
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  {
+    d.videos.length > 0 && (
+      <section id="video" class="bg-ink-900 py-24 text-white lg:py-32" aria-labelledby="video-title">
+        <div class="container-x">
+          <SectionHeader eyebrow={sp.videosEyebrow} title={sp.videosTitle} tone="dark" id="video-title" />
+          <div class="mt-14">
+            <VideoGrid ids={d.videos} locale={locale} id="videos" />
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  {
+    relatedCases.length > 0 && (
+      <section class="bg-paper py-24 lg:py-32" aria-labelledby="related-cases-title">
+        <div class="container-x">
+          <div class="flex flex-wrap items-end justify-between gap-8">
+            <SectionHeader eyebrow={t.nav.cases} title={sp.casesTitle} id="related-cases-title" />
+            <a href={routes.cases[locale]} class="btn btn-ghost-dark shrink-0" data-reveal>
+              {t.common.allCases}
+              <Icon name="arrow-right" class="btn-arrow" />
+            </a>
+          </div>
+          <ul class="mt-14 grid gap-x-6 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
+            {relatedCases.map((c, i) => (
+              <li data-reveal style={`--d:${i * 120}`}>
+                <CaseCard item={c} locale={locale} cta={t.common.readCase} />
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+    )
+  }
+
+  {d.faqs.length > 0 && <Faq eyebrow={sp.faqEyebrow} title={sp.faqTitle} items={d.faqs} />}
+
+  <!-- Altre soluzioni -->
+  <section class="bg-ink-950 py-24 text-white lg:py-32" aria-labelledby="others-title">
+    <div class="container-x">
+      <div class="flex flex-wrap items-end justify-between gap-8">
+        <SectionHeader eyebrow={sp.othersEyebrow} title={sp.othersTitle} text={sp.othersText} tone="dark" id="others-title" />
+        <a href={routes.solutions[locale]} class="btn btn-ghost-light shrink-0" data-reveal>
+          {t.common.allSolutions}
+          <Icon name="arrow-right" class="btn-arrow" />
+        </a>
+      </div>
+      <div class="scroller mt-14 -mx-5 overflow-x-auto px-5 pb-6 sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12">
+        <ul class="flex snap-x snap-mandatory gap-5">
+          {
+            others.map((s) => (
+              <li class="w-[min(22rem,82vw)] shrink-0 snap-start">
+                <SolutionCard solution={s} locale={locale} index={s.data.order - 1} cta={t.common.details} tone="dark" />
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <CtaBand locale={locale} />
+
+  {d.key === 'software' && <ShowreelDialog locale={locale} />}
+</BaseLayout>
+
+<style>
+  .scroller {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-signal) transparent;
+  }
+</style>

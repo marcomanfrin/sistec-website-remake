@@ -1,0 +1,42 @@
+---
+import Icon from '../ui/Icon.astro';
+import SplitHeading from '../ui/SplitHeading.astro';
+import Asterisk from '../brand/Asterisk.astro';
+import { useDict, routes, type Locale } from '../../i18n';
+import { company } from '../../data/site';
+
+interface Props {
+  locale: Locale;
+  title?: string;
+  text?: string;
+}
+
+const { locale, title, text } = Astro.props;
+const t = useDict(locale);
+---
+
+<section class="relative overflow-hidden bg-signal text-ink-950" aria-labelledby="cta-band-title">
+  <Asterisk
+    class="pointer-events-none absolute top-1/2 -right-24 w-[34rem] -translate-y-1/2 opacity-15 md:w-[46rem]"
+    fill="fill-ink-950"
+    spin
+  />
+  <div class="container-x relative grid gap-10 py-20 md:py-28 lg:grid-cols-12 lg:items-end">
+    <div class="lg:col-span-8">
+      <SplitHeading as="h2" id="cta-band-title" text={title ?? t.cta.title} class="text-h2 font-bold" />
+      <p class="mt-6 max-w-2xl text-lead font-medium" data-reveal style="--d:200">{text ?? t.cta.text}</p>
+    </div>
+    <div class="flex flex-col items-start gap-5 lg:col-span-4 lg:items-end" data-reveal style="--d:300">
+      <a href={routes.contact[locale]} class="btn btn-dark px-8 text-base" data-magnetic>
+        {t.cta.button}
+        <Icon name="arrow-right" class="btn-arrow" />
+      </a>
+      <p class="text-sm font-medium">
+        {t.cta.phoneLabel}
+        <a href={company.phoneHref} class="ml-1 font-bold underline decoration-2 underline-offset-4 hover:no-underline">
+          {company.phone}
+        </a>
+      </p>
+    </div>
+  </div>
+</section>

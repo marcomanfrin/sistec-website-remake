@@ -1,0 +1,108 @@
+---
+import { Picture } from 'astro:assets';
+import Icon from '../ui/Icon.astro';
+import SectionHeader from '../ui/SectionHeader.astro';
+import { still } from '../../lib/media';
+import { useDict, solutionUrl, type Locale } from '../../i18n';
+import { getSolutions } from '../../lib/content';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = useDict(locale);
+const tw = t.home.twin;
+const software = (await getSolutions(locale)).find((s) => s.data.key === 'software');
+const frames = [
+  { src: still('f0345'), label: 'CAM 01 · Layout' },
+  { src: still('f0420'), label: 'CAM 02 · Loading stack' },
+  { src: still('f0700'), label: 'CAM 05 · Bend 1' },
+  { src: still('f0930'), label: 'CAM 07 · Regrip station' },
+];
+---
+
+<section class="relative overflow-hidden bg-ink-900 py-24 text-white lg:py-36" aria-labelledby="twin-title">
+  <div class="container-x grid gap-16 lg:grid-cols-12 lg:items-center">
+    <div class="lg:col-span-5">
+      <SectionHeader eyebrow={tw.eyebrow} title={tw.title} text={tw.text} tone="dark" id="twin-title" />
+      <dl class="mt-10 grid grid-cols-2 gap-px overflow-hidden rounded-2xl bg-white/10 font-mono text-sm" data-reveal style="--d:200">
+        {
+          tw.specs.map((s) => (
+            <div class="bg-ink-900 p-4">
+              <dt class="text-[0.6875rem] tracking-[0.16em] text-ink-300 uppercase">{s.label}</dt>
+              <dd class="mt-1 text-white">{s.value}</dd>
+            </div>
+          ))
+        }
+      </dl>
+      <div class="mt-10 flex flex-wrap gap-4" data-reveal style="--d:300">
+        <button type="button" class="btn btn-primary" data-showreel-open>
+          <Icon name="play" class="size-4" />
+          {t.common.watchShowreel}
+        </button>
+        {
+          software && (
+            <a href={solutionUrl(locale, software.data.slug)} class="btn btn-ghost-light">
+              {tw.cta}
+              <Icon name="arrow-right" class="btn-arrow" />
+            </a>
+          )
+        }
+      </div>
+    </div>
+
+    <div class="lg:col-span-7">
+      <button
+        type="button"
+        class="group relative block w-full overflow-hidden rounded-3xl bg-black text-left ring-1 ring-white/10"
+        data-showreel-open
+        data-reveal="clip"
+      >
+        <Picture
+          src={still('f0620')}
+          alt=""
+          formats={['avif', 'webp']}
+          widths={[640, 960, 1280, 1600]}
+          sizes="(min-width: 1024px) 55vw, 100vw"
+          class="aspect-video w-full object-cover transition-transform duration-[1.6s] ease-(--ease-out-expo) group-hover:scale-[1.04]"
+        />
+        <span class="absolute inset-0 grid place-items-center bg-ink-950/20 transition-colors group-hover:bg-ink-950/40">
+          <span class="relative grid size-24 place-items-center rounded-full bg-signal text-ink-950 shadow-2xl transition-transform duration-500 ease-(--ease-out-expo) group-hover:scale-110">
+            <span class="ping absolute inset-0 rounded-full ring-2 ring-signal"></span>
+            <Icon name="play" class="size-9 translate-x-0.5" />
+          </span>
+        </span>
+        <span class="sr-only">{t.common.watchShowreel}: {t.common.showreelTitle}</span>
+      </button>
+      <ul class="mt-4 grid grid-cols-4 gap-3" aria-hidden="true">
+        {
+          frames.map((f, i) => (
+            <li class="relative overflow-hidden rounded-xl bg-black" data-reveal style={`--d:${300 + i * 90}`}>
+              <Picture src={f.src} alt="" formats={['avif', 'webp']} widths={[320, 480]} sizes="14vw" class="aspect-video w-full object-cover opacity-80" />
+              <span class="absolute bottom-1.5 left-2 hidden font-mono text-[0.625rem] tracking-wider text-white/85 uppercase md:block">{f.label}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+  @media (prefers-reduced-motion: no-preference) {
+    .ping {
+      animation: ping 1.8s var(--ease-out-expo) 3;
+    }
+    @keyframes ping {
+      from {
+        transform: scale(1);
+        opacity: 0.8;
+      }
+      to {
+        transform: scale(1.7);
+        opacity: 0;
+      }
+    }
+  }
+</style>

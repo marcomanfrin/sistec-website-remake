@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/ui/Icon.astro';
+import Asterisk from '../components/brand/Asterisk.astro';
+import { useDict, routes, pageAlternates } from '../i18n';
+
+const t = useDict('it');
+const en = useDict('en');
+---
+
+<BaseLayout locale="it" title={t.notFound.seoTitle} alternates={pageAlternates('home')} noindex>
+  <section class="noise relative flex min-h-[100svh] items-center overflow-hidden bg-ink-950 text-white">
+    <div class="bg-blueprint pointer-events-none absolute inset-0 text-white opacity-60"></div>
+    <Asterisk class="pointer-events-none absolute top-1/2 -right-32 w-[40rem] -translate-y-1/2 opacity-15" spin />
+    <div class="container-x relative py-40">
+      <p class="eyebrow text-signal">{t.notFound.eyebrow}</p>
+      <h1 class="mt-6 max-w-4xl text-h1 font-bold">{t.notFound.title}</h1>
+      <p class="mt-6 max-w-xl text-lead text-ink-300">{t.notFound.text}</p>
+      <div class="mt-10 flex flex-wrap gap-4">
+        <a href={routes.home.it} class="btn btn-primary">
+          {t.notFound.home}
+          <Icon name="arrow-right" class="btn-arrow" />
+        </a>
+        <a href={routes.solutions.it} class="btn btn-ghost-light">{t.common.allSolutions}</a>
+      </div>
+      <div lang="en" class="mt-20 max-w-xl border-t border-white/10 pt-8 text-ink-300">
+        <p class="font-semibold text-white">{en.notFound.title}</p>
+        <p class="mt-2">{en.notFound.text}</p>
+        <a href={routes.home.en} class="mt-4 inline-flex items-center gap-2 font-semibold text-signal underline-offset-4 hover:underline">
+          {en.notFound.home}
+          <Icon name="arrow-right" class="size-4" />
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

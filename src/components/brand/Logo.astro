@@ -1,0 +1,57 @@
+---
+import { ASTERISK, WORDMARK, PRIMA_POWER } from './logo-paths';
+
+interface Props {
+  /** "light" = per fondi scuri (wordmark bianco); "dark" = per fondi chiari */
+  tone?: 'light' | 'dark';
+  /** Mostra la dicitura "Part of Prima Power" */
+  partOf?: boolean;
+  class?: string;
+  /** Testo alternativo; se vuoto il logo è decorativo (es. dentro un link già etichettato) */
+  label?: string;
+  /** Asterisco nello stesso colore del wordmark (es. su fondo arancio) */
+  mono?: boolean;
+}
+
+const { tone = 'light', partOf = true, class: className, label, mono = false } = Astro.props;
+const word = tone === 'light' ? 'fill-white' : 'fill-ink-950';
+const sub = tone === 'light' ? 'fill-ink-300' : 'fill-ink-500';
+---
+
+<svg
+  class:list={['logo', className]}
+  viewBox={partOf ? '0 0 1372 368' : '0 0 1372 263'}
+  xmlns="http://www.w3.org/2000/svg"
+  role={label ? 'img' : undefined}
+  aria-label={label}
+  aria-hidden={label ? undefined : 'true'}
+  focusable="false"
+>
+  <g class="logo-asterisk" style="transform-origin: 142px 131px">
+    <svg width="284" height="263" viewBox={ASTERISK.viewBox}>
+      <path class={mono ? word : 'fill-signal'} d={ASTERISK.d}></path>
+    </svg>
+  </g>
+  <svg x="333" y="11" width="1039" height="246" viewBox={WORDMARK.viewBox}>
+    <path class={word} fill-rule="evenodd" d={WORDMARK.d}></path>
+  </svg>
+  {
+    partOf && (
+      <svg x="333" y="296" width="760" height="72" viewBox={PRIMA_POWER.viewBox}>
+        <path class={sub} fill-rule="evenodd" d={PRIMA_POWER.d} />
+      </svg>
+    )
+  }
+</svg>
+
+<style>
+  @media (prefers-reduced-motion: no-preference) {
+    .logo-asterisk {
+      transition: transform 0.9s var(--ease-out-expo);
+    }
+    :global(a:hover) > .logo .logo-asterisk,
+    :global(a:focus-visible) > .logo .logo-asterisk {
+      transform: rotate(72deg);
+    }
+  }
+</style>

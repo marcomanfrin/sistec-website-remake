@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/sections/PageHero.astro';
+import Icon from '../components/ui/Icon.astro';
+import ContactForm from '../components/forms/ContactForm.astro';
+import { useDict, routes, pageAlternates, type Locale } from '../i18n';
+import { company } from '../data/site';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = useDict(locale);
+const c = t.contact;
+
+const crumbs = [
+  { label: t.nav.home, href: routes.home[locale] },
+  { label: t.nav.contact, href: routes.contact[locale] },
+];
+
+const localBusinessLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  name: c.seoTitle,
+  url: new URL(routes.contact[locale], Astro.site).href,
+  mainEntity: { '@id': `${Astro.site!.origin}/#organization` },
+};
+---
+
+<BaseLayout
+  locale={locale}
+  title={c.seoTitle}
+  description={c.seoDescription}
+  alternates={pageAlternates('contact')}
+  breadcrumbs={crumbs}
+  jsonLd={[localBusinessLd]}
+>
+  <PageHero eyebrow={c.eyebrow} title={c.title} lead={c.lead} breadcrumbs={crumbs} breadcrumbLabel={t.a11y.breadcrumb}>
+    <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:max-w-3xl" data-reveal style="--d:350">
+      <a href={company.phoneHref} class="group flex items-center gap-4 rounded-2xl bg-white/6 p-5 ring-1 ring-white/10 transition-colors hover:bg-white/10">
+        <span class="grid size-12 place-items-center rounded-xl bg-signal text-ink-950"><Icon name="phone" class="size-5" /></span>
+        <span>
+          <span class="block font-mono text-xs tracking-wider text-ink-300 uppercase">{c.phoneTitle}</span>
+          <span class="mt-1 block text-lg font-semibold">{company.phone}</span>
+        </span>
+      </a>
+      <a href={`mailto:${company.email}`} class="group flex items-center gap-4 rounded-2xl bg-white/6 p-5 ring-1 ring-white/10 transition-colors hover:bg-white/10">
+        <span class="grid size-12 place-items-center rounded-xl bg-signal text-ink-950"><Icon name="mail" class="size-5" /></span>
+        <span>
+          <span class="block font-mono text-xs tracking-wider text-ink-300 uppercase">{c.emailTitle}</span>
+          <span class="mt-1 block text-lg font-semibold">{company.email}</span>
+        </span>
+      </a>
+    </div>
+  </PageHero>
+
+  <section class="bg-paper py-20 lg:py-28">
+    <div class="container-x grid gap-16 lg:grid-cols-12">
+      <div class="lg:col-span-7">
+        <h2 id="contact-form-title" class="text-h2 font-bold text-ink-950" data-reveal>{c.formTitle}</h2>
+        <div class="mt-10 rounded-3xl bg-white p-6 ring-1 ring-ink-950/8 sm:p-10" data-reveal style="--d:120">
+          <ContactForm locale={locale} labelledby="contact-form-title" />
+        </div>
+      </div>
+      <aside class="lg:col-span-4 lg:col-start-9" aria-labelledby="where-title">
+        <div class="space-y-6 lg:sticky lg:top-[calc(var(--header-h)+2rem)]">
+          <h2 id="where-title" class="text-h3 font-bold text-ink-950" data-reveal>{c.infoTitle}</h2>
+          <div class="rounded-3xl bg-ink-950 p-8 text-white" data-reveal style="--d:100">
+            <h3 class="eyebrow text-signal">{c.legal}</h3>
+            <address class="mt-4 not-italic">
+              <p class="text-lg font-semibold">{company.name}</p>
+              <p class="mt-1 text-ink-300">{t.footer.address}</p>
+              <p class="mt-4 text-sm text-ink-300">
+                {t.footer.phone} <a href={company.phoneHref} class="text-white underline-offset-4 hover:underline">{company.phone}</a>
+                <br />{t.footer.fax} {company.fax}
+              </p>
+            </address>
+            <a href={company.mapsUrl} class="btn btn-ghost-light mt-6 min-h-11 px-5 text-sm" target="_blank" rel="noopener">
+              <Icon name="map-pin" class="size-4" />
+              {c.directions}
+              <span class="sr-only">{t.a11y.opensNewTab}</span>
+            </a>
+          </div>
+          <div class="rounded-3xl bg-white p-8 ring-1 ring-ink-950/8" data-reveal style="--d:180">
+            <h3 class="eyebrow text-signal-ink">{c.operational}</h3>
+            <ul class="mt-4 space-y-3 text-ink-700">
+              <li class="flex gap-3"><Icon name="map-pin" class="mt-0.5 size-5 shrink-0 text-signal-ink" />{t.footer.address}</li>
+              <li class="flex gap-3"><Icon name="map-pin" class="mt-0.5 size-5 shrink-0 text-signal-ink" />{t.footer.secondAddress}</li>
+            </ul>
+            <h3 class="eyebrow mt-8 text-signal-ink">{c.hoursTitle}</h3>
+            <p class="mt-4 flex gap-3 text-ink-700"><Icon name="clock" class="mt-0.5 size-5 shrink-0 text-signal-ink" />{c.hours}</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,219 @@
+---
+import { Image, getImage } from 'astro:assets';
+import Icon from '../ui/Icon.astro';
+import { galleryEntry, type GalleryItem } from '../../lib/media';
+import { useDict, fmt, type Locale } from '../../i18n';
+
+interface Props {
+  items: GalleryItem[];
+  /** Testo alternativo di ripiego, con segnaposto {n} */
+  altPattern: string;
+  locale: Locale;
+  id: string;
+  /** Numero di immagini visibili prima di "Mostra altre" */
+  initial?: number;
+}
+
+const { items, altPattern, locale, id, initial = 8 } = Astro.props;
+const t = useDict(locale);
+const total = items.length;
+
+const entries = await Promise.all(
+  items.map(async (item, i) => {
+    const e = galleryEntry(item, fmt(altPattern, { n: i + 1 }));
+    const full = await getImage({ src: e.src, width: Math.min(1800, e.src.width), format: 'webp', quality: 82 });
+    return { ...e, full: full.src, w: full.attributes.width ?? e.src.width, h: full.attributes.height ?? e.src.height };
+  }),
+);
+---
+
+<div data-gallery id={id}>
+  <ul class="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 lg:grid-cols-4">
+    {
+      entries.map((e, i) => (
+        <li data-gallery-item hidden={i >= initial ? true : undefined} data-reveal="scale" style={`--d:${(i % 4) * 70}`}>
+          <button
+            type="button"
+            class="group relative block aspect-square w-full cursor-zoom-in overflow-hidden rounded-2xl bg-ink-800"
+            data-index={i}
+            data-full={e.full}
+            data-w={e.w}
+            data-h={e.h}
+            data-alt={e.alt}
+            aria-label={`${fmt(t.a11y.openImage, { n: i + 1, total })}: ${e.alt}`}
+          >
+            <Image
+              src={e.src}
+              alt=""
+              widths={[320, 480, 640]}
+              sizes="(min-width: 1024px) 22vw, (min-width: 768px) 30vw, 48vw"
+              class="size-full object-cover transition-transform duration-[1.2s] ease-(--ease-out-expo) group-hover:scale-[1.06]"
+            />
+            <span class="absolute inset-0 grid place-items-center bg-ink-950/0 transition-colors duration-500 group-hover:bg-ink-950/35">
+              <span class="grid size-12 scale-75 place-items-center rounded-full bg-white text-ink-950 opacity-0 transition-all duration-500 ease-(--ease-out-expo) group-hover:scale-100 group-hover:opacity-100">
+                <Icon name="plus" class="size-5" />
+              </span>
+            </span>
+          </button>
+        </li>
+      ))
+    }
+  </ul>
+  {
+    total > initial && (
+      <div class="mt-8 flex justify-center">
+        <button type="button" class="btn btn-ghost-dark" data-gallery-more aria-expanded="false" aria-controls={id}>
+          <span data-label-more>{fmt(t.common.showMore, { n: total - initial })}</span>
+          <span data-label-less hidden>
+            {t.common.showLess}
+          </span>
+          <Icon name="chevron-down" class="size-4 transition-transform in-aria-expanded:rotate-180" />
+        </button>
+      </div>
+    )
+  }
+
+  <dialog
+    class="lightbox m-0 h-dvh max-h-none w-full max-w-none bg-ink-950/95 p-0 text-white backdrop:bg-transparent"
+    aria-label={fmt(t.a11y.imageOf, { n: 1, total })}
+    data-lightbox
+  >
+    <figure class="flex h-full flex-col">
+      <div class="flex shrink-0 items-center justify-between px-4 py-3 sm:px-6">
+        <p class="font-mono text-sm tracking-wider" aria-live="polite" data-lightbox-count></p>
+        <button
+          type="button"
+          class="grid size-12 place-items-center rounded-full ring-1 ring-white/25 ring-inset hover:bg-white hover:text-ink-950"
+          data-lightbox-close
+        >
+          <Icon name="close" class="size-6" />
+          <span class="sr-only">{t.a11y.close}</span>
+        </button>
+      </div>
+      <div class="relative flex min-h-0 flex-1 items-center justify-center px-4 sm:px-20">
+        <img data-lightbox-img src={entries[0]?.full} width={entries[0]?.w} height={entries[0]?.h} alt="" class="max-h-full max-w-full rounded-xl object-contain" decoding="async" />
+        <button
+          type="button"
+          class="absolute top-1/2 left-2 grid size-12 -translate-y-1/2 place-items-center rounded-full bg-ink-950/60 ring-1 ring-white/25 ring-inset hover:bg-white hover:text-ink-950 sm:left-5"
+          data-lightbox-prev
+        >
+          <Icon name="chevron-left" class="size-6" />
+          <span class="sr-only">{t.a11y.previous}</span>
+        </button>
+        <button
+          type="button"
+          class="absolute top-1/2 right-2 grid size-12 -translate-y-1/2 place-items-center rounded-full bg-ink-950/60 ring-1 ring-white/25 ring-inset hover:bg-white hover:text-ink-950 sm:right-5"
+          data-lightbox-next
+        >
+          <Icon name="chevron-right" class="size-6" />
+          <span class="sr-only">{t.a11y.next}</span>
+        </button>
+      </div>
+      <figcaption class="shrink-0 px-6 py-4 text-center text-sm text-ink-300" data-lightbox-caption></figcaption>
+    </figure>
+  </dialog>
+</div>
+
+<script define:vars={{ pattern: t.a11y.imageOf }} is:inline>
+  window.__SISTEC_IMAGE_OF__ = pattern;
+</script>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-gallery]').forEach((root) => {
+    const buttons = [...root.querySelectorAll<HTMLButtonElement>('button[data-full]')];
+    const dialog = root.querySelector<HTMLDialogElement>('[data-lightbox]')!;
+    const img = dialog.querySelector<HTMLImageElement>('[data-lightbox-img]')!;
+    const caption = dialog.querySelector<HTMLElement>('[data-lightbox-caption]')!;
+    const count = dialog.querySelector<HTMLElement>('[data-lightbox-count]')!;
+    const pattern = (window as any).__SISTEC_IMAGE_OF__ as string;
+    let index = 0;
+    let opener: HTMLElement | null = null;
+
+    const show = (i: number) => {
+      index = (i + buttons.length) % buttons.length;
+      const b = buttons[index];
+      img.src = b.dataset.full!;
+      img.width = Number(b.dataset.w);
+      img.height = Number(b.dataset.h);
+      img.alt = b.dataset.alt ?? '';
+      caption.textContent = b.dataset.alt ?? '';
+      const label = pattern.replace('{n}', String(index + 1)).replace('{total}', String(buttons.length));
+      count.textContent = label;
+      dialog.setAttribute('aria-label', label);
+    };
+
+    buttons.forEach((b, i) =>
+      b.addEventListener('click', () => {
+        opener = b;
+        show(i);
+        dialog.showModal();
+      }),
+    );
+    dialog.querySelector('[data-lightbox-prev]')!.addEventListener('click', () => show(index - 1));
+    dialog.querySelector('[data-lightbox-next]')!.addEventListener('click', () => show(index + 1));
+    dialog.querySelector('[data-lightbox-close]')!.addEventListener('click', () => dialog.close());
+    dialog.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') show(index - 1);
+      if (e.key === 'ArrowRight') show(index + 1);
+    });
+    dialog.addEventListener('click', (e) => {
+      if (e.target === dialog) dialog.close();
+    });
+    dialog.addEventListener('close', () => opener?.focus());
+
+    // Swipe su touch
+    let x0: number | null = null;
+    dialog.addEventListener('touchstart', (e) => (x0 = e.touches[0].clientX), { passive: true });
+    dialog.addEventListener('touchend', (e) => {
+      if (x0 === null) return;
+      const dx = e.changedTouches[0].clientX - x0;
+      if (Math.abs(dx) > 50) show(index + (dx < 0 ? 1 : -1));
+      x0 = null;
+    });
+
+    // Mostra altre / meno
+    const more = root.querySelector<HTMLButtonElement>('[data-gallery-more]');
+    more?.addEventListener('click', () => {
+      const expanded = more.getAttribute('aria-expanded') === 'true';
+      const items = root.querySelectorAll<HTMLElement>('[data-gallery-item]');
+      const initial = items.length - root.querySelectorAll('[data-gallery-item][hidden]').length;
+      items.forEach((li) => {
+        if (!expanded) {
+          if (li.hidden) {
+            li.hidden = false;
+            li.dataset.extra = '';
+            li.classList.add('is-in');
+          }
+        } else if (li.dataset.extra !== undefined) {
+          li.hidden = true;
+        }
+      });
+      more.setAttribute('aria-expanded', String(!expanded));
+      more.querySelector<HTMLElement>('[data-label-more]')!.hidden = !expanded;
+      more.querySelector<HTMLElement>('[data-label-less]')!.hidden = expanded;
+      if (!expanded) items[initial]?.querySelector('button')?.focus();
+    });
+  });
+</script>
+
+<style>
+  @media (prefers-reduced-motion: no-preference) {
+    .lightbox[open] {
+      animation: lb-in 0.4s var(--ease-out-expo);
+    }
+    .lightbox[open] img {
+      animation: lb-img 0.6s var(--ease-out-expo);
+    }
+    @keyframes lb-in {
+      from {
+        opacity: 0;
+      }
+    }
+    @keyframes lb-img {
+      from {
+        opacity: 0;
+        transform: scale(0.96);
+      }
+    }
+  }
+</style>

@@ -1,0 +1,40 @@
+---
+import SectionHeader from '../ui/SectionHeader.astro';
+import { htmlLang, type Locale } from '../../i18n';
+
+interface Props {
+  eyebrow: string;
+  title: string;
+  items: { value: number; suffix: string; label: string }[];
+  locale: Locale;
+}
+
+const { eyebrow, title, items, locale } = Astro.props;
+const nf = new Intl.NumberFormat(htmlLang[locale]);
+---
+
+<section class="noise relative overflow-hidden bg-ink-950 py-24 text-white lg:py-36" aria-labelledby="stats-title">
+  <div class="bg-blueprint pointer-events-none absolute inset-0 text-white opacity-60"></div>
+  <div class="container-x relative">
+    <SectionHeader eyebrow={eyebrow} title={title} tone="dark" id="stats-title" />
+    <dl class="mt-16 grid gap-px overflow-hidden rounded-3xl bg-white/10 sm:grid-cols-2 lg:mt-24 lg:grid-cols-4">
+      {
+        items.map((s, i) => (
+          <div class="group relative flex flex-col justify-between gap-10 bg-ink-950 p-8 after:absolute after:inset-x-0 after:bottom-0 after:h-1 after:origin-left after:scale-x-0 after:bg-signal after:transition-transform after:duration-700 after:ease-(--ease-out-expo) hover:after:scale-x-100 lg:min-h-80 lg:p-10" data-reveal style={`--d:${i * 110}`}>
+            <dt class="order-2 max-w-[18ch] text-ink-300">{s.label}</dt>
+            <dd class="order-1 text-[clamp(3.5rem,2.5rem+3vw,5.75rem)] leading-none font-bold tracking-tight tabular-nums">
+              <span class="sr-only">
+                {nf.format(s.value)}
+                {s.suffix}
+              </span>
+              <span aria-hidden="true">
+                <span data-count={s.value}>{nf.format(s.value)}</span>
+                <span class="text-signal">{s.suffix}</span>
+              </span>
+            </dd>
+          </div>
+        ))
+      }
+    </dl>
+  </div>
+</section>

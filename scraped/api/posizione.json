@@ -1,0 +1,902 @@
+[
+ {
+  "id": 2591,
+  "date": "2026-09-22T13:26:08",
+  "date_gmt": "2026-09-22T11:26:08",
+  "guid": {
+   "rendered": "https://www.sistec-am.com/?post_type=posizione&#038;p=2591"
+  },
+  "modified": "2026-09-23T12:18:06",
+  "modified_gmt": "2026-09-23T10:18:06",
+  "slug": "programmatore-robot",
+  "status": "publish",
+  "type": "posizione",
+  "link": "https://www.sistec-am.com/posizione/programmatore-robot/",
+  "title": {
+   "rendered": "Programmatore Robot"
+  },
+  "content": {
+   "rendered": "<div>Siamo alla ricerca di un <strong>Programmatore Robot</strong> da inserire nel team <strong>Software &amp; Automation</strong> per lo sviluppo di soluzioni avanzate nel settore dell&#8217;automazione industriale e della robotica.</div>\n<div></div>\n<div>La risorsa sarà coinvolta nella progettazione e programmazione di sistemi robotici, trasformando le esigenze di processo in applicazioni software affidabili ed efficienti. Seguirà le attività di integrazione, collaudo e messa in servizio degli impianti, collaborando con team multidisciplinari e interfacciandosi direttamente con i clienti durante le fasi di avviamento e formazione.</div>\n",
+   "protected": false
+  },
+  "template": "",
+  "meta": {
+   "_acf_changed": false
+  },
+  "class_list": [
+   "post-2591",
+   "posizione",
+   "type-posizione",
+   "status-publish",
+   "hentry"
+  ],
+  "acf": [],
+  "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v28.6 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Programmatore Robot | Sistec</title>\n<meta name=\"robots\" content=\"noindex, follow\" />\n<meta property=\"og:locale\" content=\"it_IT\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Programmatore Robot | Sistec\" />\n<meta property=\"og:description\" content=\"Siamo alla ricerca di un Programmatore Robot da inserire nel team Software &amp; Automation per lo sviluppo di soluzioni avanzate nel settore dell&#8217;automazione industriale e della robotica. La risorsa sarà coinvolta nella progettazione e programmazione di sistemi robotici, trasformando le esigenze di processo in applicazioni software affidabili ed efficienti. Seguirà le attività di integrazione, collaudo...\" />\n<meta property=\"og:url\" content=\"https://www.sistec-am.com/posizione/programmatore-robot/\" />\n<meta property=\"og:site_name\" content=\"Sistec\" />\n<meta property=\"article:modified_time\" content=\"2026-09-23T10:18:06+00:00\" />\n<meta property=\"og:image\" content=\"https://www.sistec-am.com/wp-content/uploads/2026/04/logo_sistec.png\" />\n\t<meta property=\"og:image:width\" content=\"142\" />\n\t<meta property=\"og:image:height\" content=\"102\" />\n\t<meta property=\"og:image:type\" content=\"image/png\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"WebPage\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/posizione\\/programmatore-robot\\/\",\"url\":\"https:\\/\\/www.sistec-am.com\\/posizione\\/programmatore-robot\\/\",\"name\":\"Programmatore Robot | Sistec\",\"isPartOf\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/#website\"},\"datePublished\":\"2026-09-22T11:26:08+00:00\",\"dateModified\":\"2026-09-23T10:18:06+00:00\",\"breadcrumb\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/posizione\\/programmatore-robot\\/#breadcrumb\"},\"inLanguage\":\"it-IT\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https:\\/\\/www.sistec-am.com\\/posizione\\/programmatore-robot\\/\"]}]},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/posizione\\/programmatore-robot\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/www.sistec-am.com\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Programmatore Robot\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#website\",\"url\":\"https:\\/\\/www.sistec-am.com\\/\",\"name\":\"Sistec\",\"description\":\"\",\"publisher\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/www.sistec-am.com\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"it-IT\"},{\"@type\":\"Organization\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#organization\",\"name\":\"Sistec\",\"url\":\"https:\\/\\/www.sistec-am.com\\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"it-IT\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#\\/schema\\/logo\\/image\\/\",\"url\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2026\\/04\\/logo_sistec.png\",\"contentUrl\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2026\\/04\\/logo_sistec.png\",\"width\":142,\"height\":102,\"caption\":\"Sistec\"},\"image\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/#\\/schema\\/logo\\/image\\/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+  "yoast_head_json": {
+   "title": "Programmatore Robot | Sistec",
+   "robots": {
+    "index": "noindex",
+    "follow": "follow"
+   },
+   "og_locale": "it_IT",
+   "og_type": "article",
+   "og_title": "Programmatore Robot | Sistec",
+   "og_description": "Siamo alla ricerca di un Programmatore Robot da inserire nel team Software &amp; Automation per lo sviluppo di soluzioni avanzate nel settore dell&#8217;automazione industriale e della robotica. La risorsa sarà coinvolta nella progettazione e programmazione di sistemi robotici, trasformando le esigenze di processo in applicazioni software affidabili ed efficienti. Seguirà le attività di integrazione, collaudo...",
+   "og_url": "https://www.sistec-am.com/posizione/programmatore-robot/",
+   "og_site_name": "Sistec",
+   "article_modified_time": "2026-09-23T10:18:06+00:00",
+   "og_image": [
+    {
+     "width": 142,
+     "height": 102,
+     "url": "https://www.sistec-am.com/wp-content/uploads/2026/04/logo_sistec.png",
+     "type": "image/png"
+    }
+   ],
+   "twitter_card": "summary_large_image",
+   "schema": {
+    "@context": "https://schema.org",
+    "@graph": [
+     {
+      "@type": "WebPage",
+      "@id": "https://www.sistec-am.com/posizione/programmatore-robot/",
+      "url": "https://www.sistec-am.com/posizione/programmatore-robot/",
+      "name": "Programmatore Robot | Sistec",
+      "isPartOf": {
+       "@id": "https://www.sistec-am.com/#website"
+      },
+      "datePublished": "2026-09-22T11:26:08+00:00",
+      "dateModified": "2026-09-23T10:18:06+00:00",
+      "breadcrumb": {
+       "@id": "https://www.sistec-am.com/posizione/programmatore-robot/#breadcrumb"
+      },
+      "inLanguage": "it-IT",
+      "potentialAction": [
+       {
+        "@type": "ReadAction",
+        "target": [
+         "https://www.sistec-am.com/posizione/programmatore-robot/"
+        ]
+       }
+      ]
+     },
+     {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.sistec-am.com/posizione/programmatore-robot/#breadcrumb",
+      "itemListElement": [
+       {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.sistec-am.com/"
+       },
+       {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Programmatore Robot"
+       }
+      ]
+     },
+     {
+      "@type": "WebSite",
+      "@id": "https://www.sistec-am.com/#website",
+      "url": "https://www.sistec-am.com/",
+      "name": "Sistec",
+      "description": "",
+      "publisher": {
+       "@id": "https://www.sistec-am.com/#organization"
+      },
+      "potentialAction": [
+       {
+        "@type": "SearchAction",
+        "target": {
+         "@type": "EntryPoint",
+         "urlTemplate": "https://www.sistec-am.com/?s={search_term_string}"
+        },
+        "query-input": {
+         "@type": "PropertyValueSpecification",
+         "valueRequired": true,
+         "valueName": "search_term_string"
+        }
+       }
+      ],
+      "inLanguage": "it-IT"
+     },
+     {
+      "@type": "Organization",
+      "@id": "https://www.sistec-am.com/#organization",
+      "name": "Sistec",
+      "url": "https://www.sistec-am.com/",
+      "logo": {
+       "@type": "ImageObject",
+       "inLanguage": "it-IT",
+       "@id": "https://www.sistec-am.com/#/schema/logo/image/",
+       "url": "https://www.sistec-am.com/wp-content/uploads/2026/04/logo_sistec.png",
+       "contentUrl": "https://www.sistec-am.com/wp-content/uploads/2026/04/logo_sistec.png",
+       "width": 142,
+       "height": 102,
+       "caption": "Sistec"
+      },
+      "image": {
+       "@id": "https://www.sistec-am.com/#/schema/logo/image/"
+      }
+     }
+    ]
+   }
+  },
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/posizione/2591",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/posizione"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/types/posizione"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/media?parent=2591"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 2589,
+  "date": "2026-09-22T13:20:12",
+  "date_gmt": "2026-09-22T11:20:12",
+  "guid": {
+   "rendered": "https://www.sistec-am.com/?post_type=posizione&#038;p=2589"
+  },
+  "modified": "2026-09-23T12:18:52",
+  "modified_gmt": "2026-09-23T10:18:52",
+  "slug": "montatore-meccanico",
+  "status": "publish",
+  "type": "posizione",
+  "link": "https://www.sistec-am.com/posizione/montatore-meccanico/",
+  "title": {
+   "rendered": "Montatore Meccanico"
+  },
+  "content": {
+   "rendered": "<p>Siamo alla ricerca di un <strong>Montatore Meccanico</strong> da inserire nel nostro team per supportare la realizzazione di impianti di automazione industriale e isole robotizzate.</p>\n<p>La risorsa sarà coinvolta nelle attività di assemblaggio, installazione e avviamento meccanico degli impianti, coordinando operativamente un piccolo team di montaggio sia presso la sede aziendale sia nei cantieri dei clienti.</p>\n<p>Cerchiamo una persona con solide competenze tecniche, forte attitudine pratica e capacità organizzative, in grado di contribuire al successo dei progetti garantendo elevati standard qualitativi e il rispetto delle tempistiche.</p>\n",
+   "protected": false
+  },
+  "template": "",
+  "meta": {
+   "_acf_changed": false
+  },
+  "class_list": [
+   "post-2589",
+   "posizione",
+   "type-posizione",
+   "status-publish",
+   "hentry"
+  ],
+  "acf": [],
+  "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v28.6 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Montatore Meccanico | Sistec</title>\n<meta name=\"robots\" content=\"noindex, follow\" />\n<meta property=\"og:locale\" content=\"it_IT\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Montatore Meccanico | Sistec\" />\n<meta property=\"og:description\" content=\"Siamo alla ricerca di un Montatore Meccanico da inserire nel nostro team per supportare la realizzazione di impianti di automazione industriale e isole robotizzate. La risorsa sarà coinvolta nelle attività di assemblaggio, installazione e avviamento meccanico degli impianti, coordinando operativamente un piccolo team di montaggio sia presso la sede aziendale sia nei cantieri dei clienti. Cerchiamo...\" />\n<meta property=\"og:url\" content=\"https://www.sistec-am.com/posizione/montatore-meccanico/\" />\n<meta property=\"og:site_name\" content=\"Sistec\" />\n<meta property=\"article:modified_time\" content=\"2026-09-23T10:18:52+00:00\" />\n<meta property=\"og:image\" content=\"https://www.sistec-am.com/wp-content/uploads/2026/04/logo_sistec.png\" />\n\t<meta property=\"og:image:width\" content=\"142\" />\n\t<meta property=\"og:image:height\" content=\"102\" />\n\t<meta property=\"og:image:type\" content=\"image/png\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"WebPage\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/posizione\\/montatore-meccanico\\/\",\"url\":\"https:\\/\\/www.sistec-am.com\\/posizione\\/montatore-meccanico\\/\",\"name\":\"Montatore Meccanico | Sistec\",\"isPartOf\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/#website\"},\"datePublished\":\"2026-09-22T11:20:12+00:00\",\"dateModified\":\"2026-09-23T10:18:52+00:00\",\"breadcrumb\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/posizione\\/montatore-meccanico\\/#breadcrumb\"},\"inLanguage\":\"it-IT\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https:\\/\\/www.sistec-am.com\\/posizione\\/montatore-meccanico\\/\"]}]},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/posizione\\/montatore-meccanico\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/www.sistec-am.com\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Montatore Meccanico\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#website\",\"url\":\"https:\\/\\/www.sistec-am.com\\/\",\"name\":\"Sistec\",\"description\":\"\",\"publisher\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/www.sistec-am.com\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"it-IT\"},{\"@type\":\"Organization\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#organization\",\"name\":\"Sistec\",\"url\":\"https:\\/\\/www.sistec-am.com\\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"it-IT\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#\\/schema\\/logo\\/image\\/\",\"url\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2026\\/04\\/logo_sistec.png\",\"contentUrl\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2026\\/04\\/logo_sistec.png\",\"width\":142,\"height\":102,\"caption\":\"Sistec\"},\"image\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/#\\/schema\\/logo\\/image\\/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+  "yoast_head_json": {
+   "title": "Montatore Meccanico | Sistec",
+   "robots": {
+    "index": "noindex",
+    "follow": "follow"
+   },
+   "og_locale": "it_IT",
+   "og_type": "article",
+   "og_title": "Montatore Meccanico | Sistec",
+   "og_description": "Siamo alla ricerca di un Montatore Meccanico da inserire nel nostro team per supportare la realizzazione di impianti di automazione industriale e isole robotizzate. La risorsa sarà coinvolta nelle attività di assemblaggio, installazione e avviamento meccanico degli impianti, coordinando operativamente un piccolo team di montaggio sia presso la sede aziendale sia nei cantieri dei clienti. Cerchiamo...",
+   "og_url": "https://www.sistec-am.com/posizione/montatore-meccanico/",
+   "og_site_name": "Sistec",
+   "article_modified_time": "2026-09-23T10:18:52+00:00",
+   "og_image": [
+    {
+     "width": 142,
+     "height": 102,
+     "url": "https://www.sistec-am.com/wp-content/uploads/2026/04/logo_sistec.png",
+     "type": "image/png"
+    }
+   ],
+   "twitter_card": "summary_large_image",
+   "schema": {
+    "@context": "https://schema.org",
+    "@graph": [
+     {
+      "@type": "WebPage",
+      "@id": "https://www.sistec-am.com/posizione/montatore-meccanico/",
+      "url": "https://www.sistec-am.com/posizione/montatore-meccanico/",
+      "name": "Montatore Meccanico | Sistec",
+      "isPartOf": {
+       "@id": "https://www.sistec-am.com/#website"
+      },
+      "datePublished": "2026-09-22T11:20:12+00:00",
+      "dateModified": "2026-09-23T10:18:52+00:00",
+      "breadcrumb": {
+       "@id": "https://www.sistec-am.com/posizione/montatore-meccanico/#breadcrumb"
+      },
+      "inLanguage": "it-IT",
+      "potentialAction": [
+       {
+        "@type": "ReadAction",
+        "target": [
+         "https://www.sistec-am.com/posizione/montatore-meccanico/"
+        ]
+       }
+      ]
+     },
+     {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.sistec-am.com/posizione/montatore-meccanico/#breadcrumb",
+      "itemListElement": [
+       {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.sistec-am.com/"
+       },
+       {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Montatore Meccanico"
+       }
+      ]
+     },
+     {
+      "@type": "WebSite",
+      "@id": "https://www.sistec-am.com/#website",
+      "url": "https://www.sistec-am.com/",
+      "name": "Sistec",
+      "description": "",
+      "publisher": {
+       "@id": "https://www.sistec-am.com/#organization"
+      },
+      "potentialAction": [
+       {
+        "@type": "SearchAction",
+        "target": {
+         "@type": "EntryPoint",
+         "urlTemplate": "https://www.sistec-am.com/?s={search_term_string}"
+        },
+        "query-input": {
+         "@type": "PropertyValueSpecification",
+         "valueRequired": true,
+         "valueName": "search_term_string"
+        }
+       }
+      ],
+      "inLanguage": "it-IT"
+     },
+     {
+      "@type": "Organization",
+      "@id": "https://www.sistec-am.com/#organization",
+      "name": "Sistec",
+      "url": "https://www.sistec-am.com/",
+      "logo": {
+       "@type": "ImageObject",
+       "inLanguage": "it-IT",
+       "@id": "https://www.sistec-am.com/#/schema/logo/image/",
+       "url": "https://www.sistec-am.com/wp-content/uploads/2026/04/logo_sistec.png",
+       "contentUrl": "https://www.sistec-am.com/wp-content/uploads/2026/04/logo_sistec.png",
+       "width": 142,
+       "height": 102,
+       "caption": "Sistec"
+      },
+      "image": {
+       "@id": "https://www.sistec-am.com/#/schema/logo/image/"
+      }
+     }
+    ]
+   }
+  },
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/posizione/2589",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/posizione"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/types/posizione"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/media?parent=2589"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 2587,
+  "date": "2026-09-22T13:17:42",
+  "date_gmt": "2026-09-22T11:17:42",
+  "guid": {
+   "rendered": "https://www.sistec-am.com/?post_type=posizione&#038;p=2587"
+  },
+  "modified": "2026-09-23T12:19:40",
+  "modified_gmt": "2026-09-23T10:19:40",
+  "slug": "progettista-elettrico",
+  "status": "publish",
+  "type": "posizione",
+  "link": "https://www.sistec-am.com/posizione/progettista-elettrico/",
+  "title": {
+   "rendered": "Progettista Elettrico"
+  },
+  "content": {
+   "rendered": "<div>Siamo alla ricerca di un <strong>Progettista Elettrico</strong> da inserire nel nostro team tecnico per contribuire allo sviluppo di soluzioni innovative nel settore dell&#8217;automazione industriale e della robotica.</div>\n<div></div>\n<div>La risorsa si occuperà della progettazione degli impianti elettrici per macchine e linee automatiche, coordinando fornitori esterni e supportando le attività di sviluppo commessa fino alla fase di collaudo e avviamento.</div>\n<div></div>\n<div>La posizione offre l&#8217;opportunità di operare in un ambiente tecnologicamente avanzato, partecipando attivamente alla realizzazione e alla standardizzazione delle soluzioni elettriche aziendali.</div>\n",
+   "protected": false
+  },
+  "template": "",
+  "meta": {
+   "_acf_changed": false
+  },
+  "class_list": [
+   "post-2587",
+   "posizione",
+   "type-posizione",
+   "status-publish",
+   "hentry"
+  ],
+  "acf": [],
+  "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v28.6 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Progettista Elettrico | Sistec</title>\n<meta name=\"robots\" content=\"noindex, follow\" />\n<meta property=\"og:locale\" content=\"it_IT\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Progettista Elettrico | Sistec\" />\n<meta property=\"og:description\" content=\"Siamo alla ricerca di un Progettista Elettrico da inserire nel nostro team tecnico per contribuire allo sviluppo di soluzioni innovative nel settore dell&#8217;automazione industriale e della robotica. La risorsa si occuperà della progettazione degli impianti elettrici per macchine e linee automatiche, coordinando fornitori esterni e supportando le attività di sviluppo commessa fino alla fase di...\" />\n<meta property=\"og:url\" content=\"https://www.sistec-am.com/posizione/progettista-elettrico/\" />\n<meta property=\"og:site_name\" content=\"Sistec\" />\n<meta property=\"article:modified_time\" content=\"2026-09-23T10:19:40+00:00\" />\n<meta property=\"og:image\" content=\"https://www.sistec-am.com/wp-content/uploads/2026/04/logo_sistec.png\" />\n\t<meta property=\"og:image:width\" content=\"142\" />\n\t<meta property=\"og:image:height\" content=\"102\" />\n\t<meta property=\"og:image:type\" content=\"image/png\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"WebPage\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/posizione\\/progettista-elettrico\\/\",\"url\":\"https:\\/\\/www.sistec-am.com\\/posizione\\/progettista-elettrico\\/\",\"name\":\"Progettista Elettrico | Sistec\",\"isPartOf\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/#website\"},\"datePublished\":\"2026-09-22T11:17:42+00:00\",\"dateModified\":\"2026-09-23T10:19:40+00:00\",\"breadcrumb\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/posizione\\/progettista-elettrico\\/#breadcrumb\"},\"inLanguage\":\"it-IT\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https:\\/\\/www.sistec-am.com\\/posizione\\/progettista-elettrico\\/\"]}]},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/posizione\\/progettista-elettrico\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/www.sistec-am.com\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Progettista Elettrico\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#website\",\"url\":\"https:\\/\\/www.sistec-am.com\\/\",\"name\":\"Sistec\",\"description\":\"\",\"publisher\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/www.sistec-am.com\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"it-IT\"},{\"@type\":\"Organization\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#organization\",\"name\":\"Sistec\",\"url\":\"https:\\/\\/www.sistec-am.com\\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"it-IT\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#\\/schema\\/logo\\/image\\/\",\"url\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2026\\/04\\/logo_sistec.png\",\"contentUrl\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2026\\/04\\/logo_sistec.png\",\"width\":142,\"height\":102,\"caption\":\"Sistec\"},\"image\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/#\\/schema\\/logo\\/image\\/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+  "yoast_head_json": {
+   "title": "Progettista Elettrico | Sistec",
+   "robots": {
+    "index": "noindex",
+    "follow": "follow"
+   },
+   "og_locale": "it_IT",
+   "og_type": "article",
+   "og_title": "Progettista Elettrico | Sistec",
+   "og_description": "Siamo alla ricerca di un Progettista Elettrico da inserire nel nostro team tecnico per contribuire allo sviluppo di soluzioni innovative nel settore dell&#8217;automazione industriale e della robotica. La risorsa si occuperà della progettazione degli impianti elettrici per macchine e linee automatiche, coordinando fornitori esterni e supportando le attività di sviluppo commessa fino alla fase di...",
+   "og_url": "https://www.sistec-am.com/posizione/progettista-elettrico/",
+   "og_site_name": "Sistec",
+   "article_modified_time": "2026-09-23T10:19:40+00:00",
+   "og_image": [
+    {
+     "width": 142,
+     "height": 102,
+     "url": "https://www.sistec-am.com/wp-content/uploads/2026/04/logo_sistec.png",
+     "type": "image/png"
+    }
+   ],
+   "twitter_card": "summary_large_image",
+   "schema": {
+    "@context": "https://schema.org",
+    "@graph": [
+     {
+      "@type": "WebPage",
+      "@id": "https://www.sistec-am.com/posizione/progettista-elettrico/",
+      "url": "https://www.sistec-am.com/posizione/progettista-elettrico/",
+      "name": "Progettista Elettrico | Sistec",
+      "isPartOf": {
+       "@id": "https://www.sistec-am.com/#website"
+      },
+      "datePublished": "2026-09-22T11:17:42+00:00",
+      "dateModified": "2026-09-23T10:19:40+00:00",
+      "breadcrumb": {
+       "@id": "https://www.sistec-am.com/posizione/progettista-elettrico/#breadcrumb"
+      },
+      "inLanguage": "it-IT",
+      "potentialAction": [
+       {
+        "@type": "ReadAction",
+        "target": [
+         "https://www.sistec-am.com/posizione/progettista-elettrico/"
+        ]
+       }
+      ]
+     },
+     {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.sistec-am.com/posizione/progettista-elettrico/#breadcrumb",
+      "itemListElement": [
+       {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.sistec-am.com/"
+       },
+       {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Progettista Elettrico"
+       }
+      ]
+     },
+     {
+      "@type": "WebSite",
+      "@id": "https://www.sistec-am.com/#website",
+      "url": "https://www.sistec-am.com/",
+      "name": "Sistec",
+      "description": "",
+      "publisher": {
+       "@id": "https://www.sistec-am.com/#organization"
+      },
+      "potentialAction": [
+       {
+        "@type": "SearchAction",
+        "target": {
+         "@type": "EntryPoint",
+         "urlTemplate": "https://www.sistec-am.com/?s={search_term_string}"
+        },
+        "query-input": {
+         "@type": "PropertyValueSpecification",
+         "valueRequired": true,
+         "valueName": "search_term_string"
+        }
+       }
+      ],
+      "inLanguage": "it-IT"
+     },
+     {
+      "@type": "Organization",
+      "@id": "https://www.sistec-am.com/#organization",
+      "name": "Sistec",
+      "url": "https://www.sistec-am.com/",
+      "logo": {
+       "@type": "ImageObject",
+       "inLanguage": "it-IT",
+       "@id": "https://www.sistec-am.com/#/schema/logo/image/",
+       "url": "https://www.sistec-am.com/wp-content/uploads/2026/04/logo_sistec.png",
+       "contentUrl": "https://www.sistec-am.com/wp-content/uploads/2026/04/logo_sistec.png",
+       "width": 142,
+       "height": 102,
+       "caption": "Sistec"
+      },
+      "image": {
+       "@id": "https://www.sistec-am.com/#/schema/logo/image/"
+      }
+     }
+    ]
+   }
+  },
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/posizione/2587",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/posizione"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/types/posizione"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/media?parent=2587"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 2585,
+  "date": "2026-09-22T13:11:49",
+  "date_gmt": "2026-09-22T11:11:49",
+  "guid": {
+   "rendered": "https://www.sistec-am.com/?post_type=posizione&#038;p=2585"
+  },
+  "modified": "2026-09-23T12:20:30",
+  "modified_gmt": "2026-09-23T10:20:30",
+  "slug": "tecnico-service-after-sales",
+  "status": "publish",
+  "type": "posizione",
+  "link": "https://www.sistec-am.com/posizione/tecnico-service-after-sales/",
+  "title": {
+   "rendered": "Tecnico Service &#038; After Sales"
+  },
+  "content": {
+   "rendered": "<p>Siamo alla ricerca di un <strong>Tecnico Service &amp; After Sales</strong> da inserire nell&#8217;area dedicata all&#8217;<strong>assistenza post-vendita</strong>, con l&#8217;obiettivo di garantire un supporto rapido, efficace e di qualità ai clienti.</p>\n<div></div>\n<div>La risorsa si occuperà della gestione delle richieste di assistenza tecnica, del coordinamento delle attività di supporto da remoto e presso il cliente, della pianificazione degli interventi e della gestione dei ricambi necessari, collaborando con i reparti tecnici per il miglioramento continuo di prodotti e processi.</div>\n<div></div>\n<div>Cerchiamo una persona organizzata, orientata al problem solving e alla soddisfazione del cliente, desiderosa di crescere in un contesto industriale tecnologicamente avanzato.</div>\n",
+   "protected": false
+  },
+  "template": "",
+  "meta": {
+   "_acf_changed": false
+  },
+  "class_list": [
+   "post-2585",
+   "posizione",
+   "type-posizione",
+   "status-publish",
+   "hentry"
+  ],
+  "acf": [],
+  "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v28.6 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Tecnico Service &amp; After Sales | Sistec</title>\n<meta name=\"robots\" content=\"noindex, follow\" />\n<meta property=\"og:locale\" content=\"it_IT\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Tecnico Service &amp; After Sales | Sistec\" />\n<meta property=\"og:description\" content=\"Siamo alla ricerca di un Tecnico Service &amp; After Sales da inserire nell&#8217;area dedicata all&#8217;assistenza post-vendita, con l&#8217;obiettivo di garantire un supporto rapido, efficace e di qualità ai clienti. La risorsa si occuperà della gestione delle richieste di assistenza tecnica, del coordinamento delle attività di supporto da remoto e presso il cliente, della pianificazione degli...\" />\n<meta property=\"og:url\" content=\"https://www.sistec-am.com/posizione/tecnico-service-after-sales/\" />\n<meta property=\"og:site_name\" content=\"Sistec\" />\n<meta property=\"article:modified_time\" content=\"2026-09-23T10:20:30+00:00\" />\n<meta property=\"og:image\" content=\"https://www.sistec-am.com/wp-content/uploads/2026/04/logo_sistec.png\" />\n\t<meta property=\"og:image:width\" content=\"142\" />\n\t<meta property=\"og:image:height\" content=\"102\" />\n\t<meta property=\"og:image:type\" content=\"image/png\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"WebPage\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/posizione\\/tecnico-service-after-sales\\/\",\"url\":\"https:\\/\\/www.sistec-am.com\\/posizione\\/tecnico-service-after-sales\\/\",\"name\":\"Tecnico Service & After Sales | Sistec\",\"isPartOf\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/#website\"},\"datePublished\":\"2026-09-22T11:11:49+00:00\",\"dateModified\":\"2026-09-23T10:20:30+00:00\",\"breadcrumb\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/posizione\\/tecnico-service-after-sales\\/#breadcrumb\"},\"inLanguage\":\"it-IT\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https:\\/\\/www.sistec-am.com\\/posizione\\/tecnico-service-after-sales\\/\"]}]},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/posizione\\/tecnico-service-after-sales\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/www.sistec-am.com\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Tecnico Service &#038; After Sales\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#website\",\"url\":\"https:\\/\\/www.sistec-am.com\\/\",\"name\":\"Sistec\",\"description\":\"\",\"publisher\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/www.sistec-am.com\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"it-IT\"},{\"@type\":\"Organization\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#organization\",\"name\":\"Sistec\",\"url\":\"https:\\/\\/www.sistec-am.com\\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"it-IT\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#\\/schema\\/logo\\/image\\/\",\"url\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2026\\/04\\/logo_sistec.png\",\"contentUrl\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2026\\/04\\/logo_sistec.png\",\"width\":142,\"height\":102,\"caption\":\"Sistec\"},\"image\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/#\\/schema\\/logo\\/image\\/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+  "yoast_head_json": {
+   "title": "Tecnico Service & After Sales | Sistec",
+   "robots": {
+    "index": "noindex",
+    "follow": "follow"
+   },
+   "og_locale": "it_IT",
+   "og_type": "article",
+   "og_title": "Tecnico Service & After Sales | Sistec",
+   "og_description": "Siamo alla ricerca di un Tecnico Service &amp; After Sales da inserire nell&#8217;area dedicata all&#8217;assistenza post-vendita, con l&#8217;obiettivo di garantire un supporto rapido, efficace e di qualità ai clienti. La risorsa si occuperà della gestione delle richieste di assistenza tecnica, del coordinamento delle attività di supporto da remoto e presso il cliente, della pianificazione degli...",
+   "og_url": "https://www.sistec-am.com/posizione/tecnico-service-after-sales/",
+   "og_site_name": "Sistec",
+   "article_modified_time": "2026-09-23T10:20:30+00:00",
+   "og_image": [
+    {
+     "width": 142,
+     "height": 102,
+     "url": "https://www.sistec-am.com/wp-content/uploads/2026/04/logo_sistec.png",
+     "type": "image/png"
+    }
+   ],
+   "twitter_card": "summary_large_image",
+   "schema": {
+    "@context": "https://schema.org",
+    "@graph": [
+     {
+      "@type": "WebPage",
+      "@id": "https://www.sistec-am.com/posizione/tecnico-service-after-sales/",
+      "url": "https://www.sistec-am.com/posizione/tecnico-service-after-sales/",
+      "name": "Tecnico Service & After Sales | Sistec",
+      "isPartOf": {
+       "@id": "https://www.sistec-am.com/#website"
+      },
+      "datePublished": "2026-09-22T11:11:49+00:00",
+      "dateModified": "2026-09-23T10:20:30+00:00",
+      "breadcrumb": {
+       "@id": "https://www.sistec-am.com/posizione/tecnico-service-after-sales/#breadcrumb"
+      },
+      "inLanguage": "it-IT",
+      "potentialAction": [
+       {
+        "@type": "ReadAction",
+        "target": [
+         "https://www.sistec-am.com/posizione/tecnico-service-after-sales/"
+        ]
+       }
+      ]
+     },
+     {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.sistec-am.com/posizione/tecnico-service-after-sales/#breadcrumb",
+      "itemListElement": [
+       {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.sistec-am.com/"
+       },
+       {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tecnico Service &#038; After Sales"
+       }
+      ]
+     },
+     {
+      "@type": "WebSite",
+      "@id": "https://www.sistec-am.com/#website",
+      "url": "https://www.sistec-am.com/",
+      "name": "Sistec",
+      "description": "",
+      "publisher": {
+       "@id": "https://www.sistec-am.com/#organization"
+      },
+      "potentialAction": [
+       {
+        "@type": "SearchAction",
+        "target": {
+         "@type": "EntryPoint",
+         "urlTemplate": "https://www.sistec-am.com/?s={search_term_string}"
+        },
+        "query-input": {
+         "@type": "PropertyValueSpecification",
+         "valueRequired": true,
+         "valueName": "search_term_string"
+        }
+       }
+      ],
+      "inLanguage": "it-IT"
+     },
+     {
+      "@type": "Organization",
+      "@id": "https://www.sistec-am.com/#organization",
+      "name": "Sistec",
+      "url": "https://www.sistec-am.com/",
+      "logo": {
+       "@type": "ImageObject",
+       "inLanguage": "it-IT",
+       "@id": "https://www.sistec-am.com/#/schema/logo/image/",
+       "url": "https://www.sistec-am.com/wp-content/uploads/2026/04/logo_sistec.png",
+       "contentUrl": "https://www.sistec-am.com/wp-content/uploads/2026/04/logo_sistec.png",
+       "width": 142,
+       "height": 102,
+       "caption": "Sistec"
+      },
+      "image": {
+       "@id": "https://www.sistec-am.com/#/schema/logo/image/"
+      }
+     }
+    ]
+   }
+  },
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/posizione/2585",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/posizione"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/types/posizione"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/media?parent=2585"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 2580,
+  "date": "2026-09-22T13:08:08",
+  "date_gmt": "2026-09-22T11:08:08",
+  "guid": {
+   "rendered": "https://www.sistec-am.com/?post_type=posizione&#038;p=2580"
+  },
+  "modified": "2026-09-23T12:21:03",
+  "modified_gmt": "2026-09-23T10:21:03",
+  "slug": "tecnico-commerciale-sales-business-development",
+  "status": "publish",
+  "type": "posizione",
+  "link": "https://www.sistec-am.com/posizione/tecnico-commerciale-sales-business-development/",
+  "title": {
+   "rendered": "Tecnico Commerciale – Sales &#038; Business Development"
+  },
+  "content": {
+   "rendered": "<p>Siamo alla ricerca di un <strong>Tecnico Commerciale</strong> da inserire nell&#8217;area <strong>Sales &amp; Business Development</strong> con l&#8217;obiettivo di sviluppare nuove opportunità di business nel settore dell&#8217;automazione industriale e della robotica.</p>\n<p>La risorsa si occuperà della promozione e vendita di impianti e soluzioni innovative, supportando i clienti dall&#8217;analisi delle esigenze fino alla gestione post-vendita, contribuendo inoltre allo sviluppo dei servizi di assistenza, manutenzione e miglioramento degli impianti esistenti.</p>\n<p>Cerchiamo una persona dinamica, orientata ai risultati e motivata a crescere in un contesto tecnologicamente avanzato e in continua evoluzione.</p>\n",
+   "protected": false
+  },
+  "template": "",
+  "meta": {
+   "_acf_changed": false
+  },
+  "class_list": [
+   "post-2580",
+   "posizione",
+   "type-posizione",
+   "status-publish",
+   "hentry"
+  ],
+  "acf": [],
+  "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v28.6 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Tecnico Commerciale – Sales &amp; Business Development | Sistec</title>\n<meta name=\"robots\" content=\"noindex, follow\" />\n<meta property=\"og:locale\" content=\"it_IT\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Tecnico Commerciale – Sales &amp; Business Development | Sistec\" />\n<meta property=\"og:description\" content=\"Siamo alla ricerca di un Tecnico Commerciale da inserire nell&#8217;area Sales &amp; Business Development con l&#8217;obiettivo di sviluppare nuove opportunità di business nel settore dell&#8217;automazione industriale e della robotica. La risorsa si occuperà della promozione e vendita di impianti e soluzioni innovative, supportando i clienti dall&#8217;analisi delle esigenze fino alla gestione post-vendita, contribuendo inoltre allo...\" />\n<meta property=\"og:url\" content=\"https://www.sistec-am.com/posizione/tecnico-commerciale-sales-business-development/\" />\n<meta property=\"og:site_name\" content=\"Sistec\" />\n<meta property=\"article:modified_time\" content=\"2026-09-23T10:21:03+00:00\" />\n<meta property=\"og:image\" content=\"https://www.sistec-am.com/wp-content/uploads/2026/04/logo_sistec.png\" />\n\t<meta property=\"og:image:width\" content=\"142\" />\n\t<meta property=\"og:image:height\" content=\"102\" />\n\t<meta property=\"og:image:type\" content=\"image/png\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"WebPage\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/posizione\\/tecnico-commerciale-sales-business-development\\/\",\"url\":\"https:\\/\\/www.sistec-am.com\\/posizione\\/tecnico-commerciale-sales-business-development\\/\",\"name\":\"Tecnico Commerciale – Sales & Business Development | Sistec\",\"isPartOf\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/#website\"},\"datePublished\":\"2026-09-22T11:08:08+00:00\",\"dateModified\":\"2026-09-23T10:21:03+00:00\",\"breadcrumb\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/posizione\\/tecnico-commerciale-sales-business-development\\/#breadcrumb\"},\"inLanguage\":\"it-IT\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https:\\/\\/www.sistec-am.com\\/posizione\\/tecnico-commerciale-sales-business-development\\/\"]}]},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/posizione\\/tecnico-commerciale-sales-business-development\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/www.sistec-am.com\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Tecnico Commerciale – Sales &#038; Business Development\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#website\",\"url\":\"https:\\/\\/www.sistec-am.com\\/\",\"name\":\"Sistec\",\"description\":\"\",\"publisher\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/www.sistec-am.com\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"it-IT\"},{\"@type\":\"Organization\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#organization\",\"name\":\"Sistec\",\"url\":\"https:\\/\\/www.sistec-am.com\\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"it-IT\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#\\/schema\\/logo\\/image\\/\",\"url\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2026\\/04\\/logo_sistec.png\",\"contentUrl\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2026\\/04\\/logo_sistec.png\",\"width\":142,\"height\":102,\"caption\":\"Sistec\"},\"image\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/#\\/schema\\/logo\\/image\\/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+  "yoast_head_json": {
+   "title": "Tecnico Commerciale – Sales & Business Development | Sistec",
+   "robots": {
+    "index": "noindex",
+    "follow": "follow"
+   },
+   "og_locale": "it_IT",
+   "og_type": "article",
+   "og_title": "Tecnico Commerciale – Sales & Business Development | Sistec",
+   "og_description": "Siamo alla ricerca di un Tecnico Commerciale da inserire nell&#8217;area Sales &amp; Business Development con l&#8217;obiettivo di sviluppare nuove opportunità di business nel settore dell&#8217;automazione industriale e della robotica. La risorsa si occuperà della promozione e vendita di impianti e soluzioni innovative, supportando i clienti dall&#8217;analisi delle esigenze fino alla gestione post-vendita, contribuendo inoltre allo...",
+   "og_url": "https://www.sistec-am.com/posizione/tecnico-commerciale-sales-business-development/",
+   "og_site_name": "Sistec",
+   "article_modified_time": "2026-09-23T10:21:03+00:00",
+   "og_image": [
+    {
+     "width": 142,
+     "height": 102,
+     "url": "https://www.sistec-am.com/wp-content/uploads/2026/04/logo_sistec.png",
+     "type": "image/png"
+    }
+   ],
+   "twitter_card": "summary_large_image",
+   "schema": {
+    "@context": "https://schema.org",
+    "@graph": [
+     {
+      "@type": "WebPage",
+      "@id": "https://www.sistec-am.com/posizione/tecnico-commerciale-sales-business-development/",
+      "url": "https://www.sistec-am.com/posizione/tecnico-commerciale-sales-business-development/",
+      "name": "Tecnico Commerciale – Sales & Business Development | Sistec",
+      "isPartOf": {
+       "@id": "https://www.sistec-am.com/#website"
+      },
+      "datePublished": "2026-09-22T11:08:08+00:00",
+      "dateModified": "2026-09-23T10:21:03+00:00",
+      "breadcrumb": {
+       "@id": "https://www.sistec-am.com/posizione/tecnico-commerciale-sales-business-development/#breadcrumb"
+      },
+      "inLanguage": "it-IT",
+      "potentialAction": [
+       {
+        "@type": "ReadAction",
+        "target": [
+         "https://www.sistec-am.com/posizione/tecnico-commerciale-sales-business-development/"
+        ]
+       }
+      ]
+     },
+     {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.sistec-am.com/posizione/tecnico-commerciale-sales-business-development/#breadcrumb",
+      "itemListElement": [
+       {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.sistec-am.com/"
+       },
+       {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tecnico Commerciale – Sales &#038; Business Development"
+       }
+      ]
+     },
+     {
+      "@type": "WebSite",
+      "@id": "https://www.sistec-am.com/#website",
+      "url": "https://www.sistec-am.com/",
+      "name": "Sistec",
+      "description": "",
+      "publisher": {
+       "@id": "https://www.sistec-am.com/#organization"
+      },
+      "potentialAction": [
+       {
+        "@type": "SearchAction",
+        "target": {
+         "@type": "EntryPoint",
+         "urlTemplate": "https://www.sistec-am.com/?s={search_term_string}"
+        },
+        "query-input": {
+         "@type": "PropertyValueSpecification",
+         "valueRequired": true,
+         "valueName": "search_term_string"
+        }
+       }
+      ],
+      "inLanguage": "it-IT"
+     },
+     {
+      "@type": "Organization",
+      "@id": "https://www.sistec-am.com/#organization",
+      "name": "Sistec",
+      "url": "https://www.sistec-am.com/",
+      "logo": {
+       "@type": "ImageObject",
+       "inLanguage": "it-IT",
+       "@id": "https://www.sistec-am.com/#/schema/logo/image/",
+       "url": "https://www.sistec-am.com/wp-content/uploads/2026/04/logo_sistec.png",
+       "contentUrl": "https://www.sistec-am.com/wp-content/uploads/2026/04/logo_sistec.png",
+       "width": 142,
+       "height": 102,
+       "caption": "Sistec"
+      },
+      "image": {
+       "@id": "https://www.sistec-am.com/#/schema/logo/image/"
+      }
+     }
+    ]
+   }
+  },
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/posizione/2580",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/posizione"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/types/posizione"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/media?parent=2580"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ }
+]

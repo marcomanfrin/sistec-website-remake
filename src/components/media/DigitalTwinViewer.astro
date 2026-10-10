@@ -1,0 +1,205 @@
+---
+import { getImage } from 'astro:assets';
+import Icon from '../ui/Icon.astro';
+import SectionHeader from '../ui/SectionHeader.astro';
+import { still } from '../../lib/media';
+import { useDict, type Locale } from '../../i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = useDict(locale);
+const tw = t.twin3d;
+const poster = await getImage({ src: still('f0345'), width: 1600, format: 'webp', quality: 75 });
+
+const strings = {
+  loading: tw.loading,
+  preparing: tw.preparing,
+  play: tw.play,
+  pause: tw.pause,
+  fullscreen: tw.fullscreen,
+  exitFullscreen: tw.exitFullscreen,
+  phases: tw.phases,
+};
+---
+
+<section class="relative overflow-hidden bg-ink-950 py-24 text-white lg:py-32" aria-labelledby="twin3d-title">
+  <div class="container-x">
+    <SectionHeader eyebrow={tw.eyebrow} title={tw.title} text={tw.text} tone="dark" id="twin3d-title" />
+
+    <div class="mt-14" data-twin-root data-strings={JSON.stringify(strings)}>
+      <div
+        class="twin-stage relative aspect-[4/3] overflow-hidden rounded-3xl bg-black ring-1 ring-white/10 sm:aspect-video"
+        data-twin-stage
+      >
+        <img src={poster.src} alt="" class="absolute inset-0 size-full object-cover opacity-70" decoding="async" loading="lazy" data-twin-poster />
+        <canvas class="absolute inset-0 size-full" role="img" aria-label={tw.canvasLabel} hidden data-twin-canvas></canvas>
+
+        <!-- Avvio su richiesta: il modello (≈3,5 MB) non viene scaricato finché l'utente non lo chiede -->
+        <div class="absolute inset-0 grid place-items-center bg-gradient-to-t from-ink-950/80 via-ink-950/30 to-ink-950/10 p-6" data-twin-start>
+          <div class="text-center">
+            <button type="button" class="btn btn-primary px-7 text-base" data-twin-launch>
+              <Icon name="play" class="size-4" />
+              {tw.start}
+            </button>
+            <p class="mt-4 font-mono text-xs tracking-wider text-ink-200 uppercase">{tw.startNote}</p>
+          </div>
+        </div>
+
+        <div class="absolute inset-0 grid place-items-center bg-ink-950/70 p-6" hidden data-twin-loading>
+          <div class="w-full max-w-xs text-center">
+            <p class="font-mono text-xs tracking-wider text-ink-200 uppercase" role="status" data-twin-loading-text>{tw.preparing}</p>
+            <div class="mt-4 h-1 overflow-hidden rounded-full bg-white/15" aria-hidden="true">
+              <div class="h-full w-0 bg-signal transition-[width] duration-200" data-twin-bar></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="absolute inset-0 grid place-items-center bg-ink-950/85 p-6 text-center" hidden data-twin-error>
+          <div>
+            <p class="max-w-md text-lg font-semibold">{tw.error}</p>
+            <button type="button" class="btn btn-primary mt-6" data-showreel-open>
+              <Icon name="play" class="size-4" />
+              {tw.errorCta}
+            </button>
+          </div>
+        </div>
+
+        <!-- HUD in stile showreel (informazione visiva; il testo equivalente è nei controlli e nella descrizione) -->
+        <div class="pointer-events-none absolute inset-0 hidden p-4 font-mono text-[0.6875rem] tracking-[0.14em] uppercase sm:p-6 [&[data-on]]:block" aria-hidden="true" data-twin-hud>
+          <span class="absolute top-4 left-4 size-6 border-t border-l border-white/40 sm:top-5 sm:left-5"></span>
+          <span class="absolute top-4 right-4 size-6 border-t border-r border-white/40 sm:top-5 sm:right-5"></span>
+          <span class="absolute bottom-4 left-4 size-6 border-b border-l border-white/40 sm:bottom-5 sm:left-5"></span>
+          <span class="absolute right-4 bottom-4 size-6 border-r border-b border-white/40 sm:right-5 sm:bottom-5"></span>
+          <div class="absolute top-7 left-8 sm:top-9 sm:left-10">
+            <p class="text-white">SISTEC // Cell 5317 · Robotic bending</p>
+            <p class="mt-1 text-signal" data-twin-hud-phase></p>
+          </div>
+          <p class="absolute top-7 right-8 text-right text-white sm:top-9 sm:right-10">
+            Cycle <span data-twin-hud-time>00:00.00</span>
+          </p>
+          <dl class="absolute right-8 bottom-9 hidden w-44 gap-x-3 gap-y-1 text-white md:grid md:grid-cols-[auto_1fr] sm:right-10 sm:bottom-10">
+            <dt class="col-span-2 mb-1 text-signal">KUKA KR120 R2700 · Axes</dt>
+            {
+              [1, 2, 3, 4, 5, 6].map((n) => (
+                <>
+                  <dt class="text-ink-300">A{n}</dt>
+                  <dd class="text-right tabular-nums" data-twin-axis={n}>
+                    +000.0°
+                  </dd>
+                </>
+              ))
+            }
+          </dl>
+        </div>
+      </div>
+
+      <!-- Controlli -->
+      <div class="mt-4 flex flex-wrap items-center gap-3 rounded-2xl bg-white/5 p-3 ring-1 ring-white/10 sm:gap-4 sm:p-4" hidden data-twin-controls>
+        <button type="button" class="grid size-12 shrink-0 place-items-center rounded-full bg-signal text-ink-950 hover:bg-signal-hover" data-twin-play>
+          <Icon name="pause" class="size-5" data-icon-pause />
+          <Icon name="play" class="hidden size-5" data-icon-play />
+          <span class="sr-only" data-twin-play-label>{tw.pause}</span>
+        </button>
+        <button type="button" class="grid size-12 shrink-0 place-items-center rounded-full ring-1 ring-white/25 ring-inset hover:bg-white/10" data-twin-restart>
+          <svg viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 12a8 8 0 1 0 2.3-5.6M4 4v4.5h4.5"></path>
+          </svg>
+          <span class="sr-only">{tw.restart}</span>
+        </button>
+
+        <div class="flex min-w-48 flex-1 items-center gap-3">
+          <label for="twin-progress" class="sr-only">{tw.progress}</label>
+          <input id="twin-progress" type="range" min="0" max="3400" step="1" value="0" class="twin-range w-full" data-twin-range />
+          <span class="w-16 shrink-0 text-right font-mono text-xs text-ink-300 tabular-nums" aria-hidden="true" data-twin-time>0,0 s</span>
+        </div>
+
+        <fieldset class="flex items-center gap-2">
+          <legend class="sr-only">{tw.cameraLabel}</legend>
+          <span class="hidden font-mono text-xs tracking-wider text-ink-300 uppercase sm:inline" aria-hidden="true">{tw.cameraLabel}</span>
+          <div class="flex rounded-full bg-white/8 p-1">
+            <label class="twin-seg">
+              <input type="radio" name="twin-camera" value="guided" class="sr-only" checked data-twin-cam />
+              <span>{tw.cameraGuided}</span>
+            </label>
+            <label class="twin-seg">
+              <input type="radio" name="twin-camera" value="free" class="sr-only" data-twin-cam />
+              <span>{tw.cameraFree}</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <button type="button" class="grid size-12 shrink-0 place-items-center rounded-full ring-1 ring-white/25 ring-inset hover:bg-white/10" data-twin-fullscreen>
+          <svg viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"></path>
+          </svg>
+          <span class="sr-only" data-twin-fs-label>{tw.fullscreen}</span>
+        </button>
+      </div>
+      <p class="mt-3 text-sm text-ink-300" hidden data-twin-hint>{tw.freeHint}</p>
+      <p class="mt-3 text-sm text-ink-300" data-twin-phase-text aria-live="off"></p>
+    </div>
+
+    <details class="group mt-6 max-w-3xl">
+      <summary class="flex min-h-11 items-center gap-2 text-sm font-semibold text-white">
+        {tw.describeTitle}
+        <Icon name="chevron-down" class="size-4 transition-transform group-open:rotate-180" />
+      </summary>
+      <p class="mt-2 text-sm leading-relaxed text-ink-300">{tw.describe}</p>
+    </details>
+  </div>
+</section>
+
+<style>
+  .twin-seg {
+    position: relative;
+    display: inline-flex;
+    min-height: 2.5rem;
+    align-items: center;
+    border-radius: 999px;
+    padding: 0 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-ink-200);
+    cursor: pointer;
+    transition:
+      background-color 0.3s,
+      color 0.3s;
+  }
+  .twin-seg:has(input:checked) {
+    background: var(--color-white, #fff);
+    color: var(--color-ink-950);
+  }
+  .twin-seg:has(input:focus-visible) {
+    outline: 3px solid var(--color-signal);
+    outline-offset: 2px;
+  }
+  .twin-range {
+    accent-color: var(--color-signal);
+    min-height: 2.75rem;
+    cursor: pointer;
+  }
+  [data-twin-root]:fullscreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.75rem;
+    background: var(--color-ink-950);
+    padding: 1rem;
+  }
+  [data-twin-root]:fullscreen .twin-stage {
+    aspect-ratio: auto;
+    flex: 1;
+  }
+  [data-twin-root]:fullscreen [data-twin-hint],
+  [data-twin-root]:fullscreen [data-twin-phase-text] {
+    display: none;
+  }
+</style>
+
+<script>
+  import { initTwin } from '../../scripts/twin/viewer';
+  document.querySelectorAll<HTMLElement>('[data-twin-root]').forEach(initTwin);
+</script>

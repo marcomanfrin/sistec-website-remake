@@ -1,0 +1,70 @@
+---
+import { Picture } from 'astro:assets';
+import Icon from './Icon.astro';
+import { media } from '../../lib/media';
+import { caseUrl, type Locale } from '../../i18n';
+import type { Case } from '../../lib/content';
+
+interface Props {
+  item: Case;
+  locale: Locale;
+  cta: string;
+  headingLevel?: 'h2' | 'h3';
+  tone?: 'light' | 'dark';
+  size?: 'default' | 'large';
+}
+
+const { item, locale, cta, headingLevel: H = 'h3', tone = 'light', size = 'default' } = Astro.props;
+const { data } = item;
+const href = caseUrl(locale, data.slug);
+const dark = tone === 'dark';
+---
+
+<article class="group relative flex h-full flex-col" data-solutions={data.solutions.join(' ')}>
+  <div
+    class:list={[
+      'relative overflow-hidden rounded-3xl bg-ink-800',
+      size === 'large' ? 'aspect-[4/3] lg:aspect-[16/11]' : 'aspect-[4/3]',
+    ]}
+  >
+    <Picture
+      src={media(data.cover)}
+      alt=""
+      formats={['avif', 'webp']}
+      widths={[400, 640, 900, 1200]}
+      sizes={size === 'large' ? '(min-width: 1024px) 60vw, 100vw' : '(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw'}
+      class="size-full object-cover transition-[transform,filter] duration-[1.4s] ease-(--ease-out-expo) group-hover:scale-[1.05] group-focus-within:scale-[1.05]"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-ink-950/60 to-transparent opacity-80"></div>
+    <span
+      class="absolute top-4 left-4 rounded-full bg-ink-950/75 px-3 py-1.5 font-mono text-[0.6875rem] font-semibold tracking-wider text-white uppercase backdrop-blur"
+    >
+      {data.sector}
+    </span>
+    <span
+      class="absolute right-4 bottom-4 grid size-12 translate-y-2 place-items-center rounded-full bg-signal text-ink-950 opacity-0 transition-all duration-500 ease-(--ease-out-expo) group-focus-within:translate-y-0 group-focus-within:opacity-100 group-hover:translate-y-0 group-hover:opacity-100"
+      aria-hidden="true"
+    >
+      <Icon name="arrow-up-right" class="size-5" />
+    </span>
+  </div>
+  <H class:list={['mt-5 font-bold tracking-tight', size === 'large' ? 'text-h3' : 'text-lg leading-snug lg:text-xl']}>
+    <a
+      href={href}
+      class:list={[
+        'after:absolute after:inset-0 after:content-[""] focus-visible:outline-none',
+        dark ? 'text-white' : 'text-ink-950',
+      ]}
+    >
+      {data.cardTitle}
+    </a>
+  </H>
+  <p
+    class:list={['mt-3 inline-flex items-center gap-2 text-sm font-semibold', dark ? 'text-signal' : 'text-signal-ink']}
+    aria-hidden="true"
+  >
+    {cta}
+    <Icon name="arrow-right" class="size-4 transition-transform duration-500 group-hover:translate-x-1.5" />
+  </p>
+  <span class="pointer-events-none absolute -inset-2 rounded-[1.75rem] ring-signal group-focus-within:ring-2"></span>
+</article>

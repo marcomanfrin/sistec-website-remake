@@ -1,0 +1,209 @@
+---
+import { render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/sections/PageHero.astro';
+import SectionHeader from '../components/ui/SectionHeader.astro';
+import Icon from '../components/ui/Icon.astro';
+import CareersForm from '../components/forms/CareersForm.astro';
+import { media } from '../lib/media';
+import { getJobs, paragraphsHtml } from '../lib/content';
+import { useDict, fmt, routes, pageAlternates, withBase, type Locale } from '../i18n';
+import { company } from '../data/site';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = useDict(locale);
+const c = t.careers;
+const jobs = await getJobs(locale);
+const rendered = await Promise.all(jobs.map(async (j) => ({ job: j, Content: (await render(j)).Content })));
+const perkIcons = ['globe', 'software', 'integrated-lines', 'check'] as const;
+
+const crumbs = [
+  { label: t.nav.home, href: routes.home[locale] },
+  { label: t.nav.careers, href: routes.careers[locale] },
+];
+
+const site = Astro.site!;
+const jobsLd = jobs.map((j) => ({
+  '@context': 'https://schema.org',
+  '@type': 'JobPosting',
+  title: j.data.title,
+  description: paragraphsHtml(j.data.summary, j.body ?? ''),
+  datePosted: j.data.date.toISOString().slice(0, 10),
+  employmentType: 'FULL_TIME',
+  hiringOrganization: { '@type': 'Organization', name: company.name, sameAs: site.origin, logo: `${site.origin}/brand/sistec-logo.png` },
+  jobLocation: {
+    '@type': 'Place',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: company.street,
+      addressLocality: company.city,
+      postalCode: company.postalCode,
+      addressRegion: company.province,
+      addressCountry: company.country,
+    },
+  },
+  directApply: true,
+  url: `${new URL(routes.careers[locale], site).href}#${j.data.key}`,
+}));
+---
+
+<BaseLayout
+  locale={locale}
+  title={c.seoTitle}
+  description={c.seoDescription}
+  alternates={pageAlternates('careers')}
+  breadcrumbs={crumbs}
+  jsonLd={jobsLd}
+  image={media('2026/05/sistec-carriera.jpg')}
+>
+  <PageHero
+    eyebrow={c.eyebrow}
+    title={c.title}
+    lead={c.lead}
+    image={media('2026/05/sistec-carriera.jpg')}
+    imageAlt=""
+    breadcrumbs={crumbs}
+    breadcrumbLabel={t.a11y.breadcrumb}
+  >
+    <div class="mt-10 flex flex-wrap gap-4" data-reveal style="--d:350">
+      <a href="#posizioni" class="btn btn-primary">
+        {fmt(c.openingsCount, { n: jobs.length })}
+        <Icon name="arrow-down" class="size-4" />
+      </a>
+      <a href="#candidatura" class="btn btn-ghost-light">{c.formTitle}</a>
+    </div>
+  </PageHero>
+
+  <!-- Perché SISTEC -->
+  <section class="bg-paper py-24 lg:py-32" aria-labelledby="why-title">
+    <div class="container-x grid gap-14 lg:grid-cols-12">
+      <SectionHeader eyebrow={c.eyebrow} title={c.whyTitle} text={c.whyText} id="why-title" class="lg:col-span-5" />
+      <ul class="grid gap-5 sm:grid-cols-2 lg:col-span-7">
+        {
+          c.perks.map((p, i) => (
+            <li class="rounded-3xl bg-white p-7 ring-1 ring-ink-950/8" data-reveal style={`--d:${i * 90}`}>
+              <span class="grid size-12 place-items-center rounded-2xl bg-ink-950 text-signal">
+                <Icon name={perkIcons[i]} class="size-6" />
+              </span>
+              <h3 class="mt-6 text-lg font-bold text-ink-950">{p.title}</h3>
+              <p class="mt-2 leading-relaxed text-ink-600">{p.text}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <!-- Chi cerchiamo -->
+  <section class="bg-paper-2 py-20 lg:py-28" aria-labelledby="who-title">
+    <div class="container-x grid gap-10 lg:grid-cols-12">
+      <h2 id="who-title" class="text-h2 font-bold text-ink-950 lg:col-span-4" data-reveal>{c.whoTitle}</h2>
+      <div class="space-y-6 lg:col-span-7 lg:col-start-6">
+        {
+          c.whoText.map((p, i) => (
+            <p class:list={[i === 0 ? 'text-2xl leading-snug font-semibold tracking-tight text-ink-950' : 'text-lead text-ink-600']} data-reveal style={`--d:${i * 100}`}>
+              {p}
+            </p>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Posizioni aperte -->
+  <section id="posizioni" class="bg-paper py-24 lg:py-32" aria-labelledby="openings-title">
+    <div class="container-x">
+      <SectionHeader eyebrow={c.openingsEyebrow} title={c.openingsTitle} id="openings-title" />
+      <ul class="mt-14 border-t border-ink-200">
+        {
+          rendered.map(({ job, Content }, i) => (
+            <li id={job.data.key} class="border-b border-ink-200" data-reveal style={`--d:${i * 60}`}>
+              <details class="job group">
+                <summary class="grid min-h-12 gap-4 py-8 md:grid-cols-[1fr_auto] md:items-center md:gap-10">
+                  <span>
+                    <span class="font-mono text-xs font-semibold tracking-[0.16em] text-signal-ink uppercase">{job.data.area}</span>
+                    <span class="mt-2 block text-2xl font-bold tracking-tight text-ink-950 md:text-3xl">{job.data.title}</span>
+                    <span class="mt-3 block max-w-2xl text-ink-600">{job.data.summary}</span>
+                  </span>
+                  <span class="flex items-center gap-6">
+                    <span class="flex items-center gap-2 text-sm text-ink-600">
+                      <Icon name="map-pin" class="size-4" />
+                      {job.data.location}
+                    </span>
+                    <span class="grid size-12 shrink-0 place-items-center rounded-full ring-1 ring-ink-950/20 transition-[transform,background-color,color] duration-500 ease-(--ease-out-expo) ring-inset group-open:rotate-45 group-open:bg-ink-950 group-open:text-white">
+                      <Icon name="plus" class="size-5" />
+                    </span>
+                  </span>
+                </summary>
+                <div class="grid gap-10 pb-10 lg:grid-cols-12">
+                  <div class="prose-sistec lg:col-span-7">
+                    <Content />
+                  </div>
+                  <div class="lg:col-span-4 lg:col-start-9">
+                    <dl class="grid gap-4 rounded-2xl bg-white p-6 text-sm ring-1 ring-ink-950/8">
+                      <div>
+                        <dt class="font-mono text-xs tracking-wider text-ink-600 uppercase">{c.area}</dt>
+                        <dd class="mt-1 font-semibold text-ink-950">{job.data.area}</dd>
+                      </div>
+                      <div>
+                        <dt class="font-mono text-xs tracking-wider text-ink-600 uppercase">{c.location}</dt>
+                        <dd class="mt-1 font-semibold text-ink-950">{job.data.location}</dd>
+                      </div>
+                      <div>
+                        <dt class="font-mono text-xs tracking-wider text-ink-600 uppercase">{c.contract}</dt>
+                        <dd class="mt-1 font-semibold text-ink-950">{job.data.type}</dd>
+                      </div>
+                    </dl>
+                    <div class="mt-5 flex flex-wrap gap-3">
+                      <a href="#candidatura" class="btn btn-dark" data-apply={job.data.title}>
+                        {c.apply}
+                        <Icon name="arrow-right" class="btn-arrow" />
+                      </a>
+                      <a href={withBase(job.data.pdf)} class="btn btn-ghost-dark" download>
+                        <Icon name="download" class="size-4" />
+                        {t.common.downloadPdf}
+                        <span class="sr-only">
+                          {' '}
+                          {job.data.title} ({t.a11y.pdf})
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </details>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <!-- Candidatura -->
+  <section id="candidatura" class="noise relative overflow-hidden bg-ink-950 py-24 text-white lg:py-32" aria-labelledby="apply-title">
+    <div class="container-x relative grid gap-14 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <SectionHeader eyebrow={c.formEyebrow} title={c.formTitle} text={c.formText} tone="dark" id="apply-title" />
+      </div>
+      <div class="lg:col-span-7 lg:col-start-6">
+        <CareersForm locale={locale} jobs={jobs} labelledby="apply-title" />
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  // "Candidati" preseleziona la posizione nel modulo
+  document.querySelectorAll<HTMLAnchorElement>('[data-apply]').forEach((a) =>
+    a.addEventListener('click', () => {
+      const select = document.querySelector<HTMLSelectElement>('#f-position');
+      if (select) select.value = a.dataset.apply!;
+    }),
+  );
+  // Apertura automatica della posizione richiesta via hash (#programmatore…)
+  const target = location.hash && document.querySelector<HTMLElement>(`li${CSS.escape(location.hash)} details`);
+  if (target instanceof HTMLDetailsElement) target.open = true;
+</script>

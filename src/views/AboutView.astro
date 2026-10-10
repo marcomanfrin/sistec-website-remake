@@ -1,0 +1,189 @@
+---
+import { Picture } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/sections/PageHero.astro';
+import CtaBand from '../components/sections/CtaBand.astro';
+import SectionHeader from '../components/ui/SectionHeader.astro';
+import CaseCard from '../components/ui/CaseCard.astro';
+import Icon from '../components/ui/Icon.astro';
+import Logo from '../components/brand/Logo.astro';
+import Asterisk from '../components/brand/Asterisk.astro';
+import { media } from '../lib/media';
+import { getCases } from '../lib/content';
+import { useDict, routes, pageAlternates, type Locale } from '../i18n';
+import { company } from '../data/site';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = useDict(locale);
+const a = t.about;
+const cases = (await getCases(locale)).filter((c) => c.data.featured).slice(0, 2);
+const pillarIcons = ['integrated-lines', 'welding', 'software'] as const;
+
+const crumbs = [
+  { label: t.nav.home, href: routes.home[locale] },
+  { label: t.nav.about, href: routes.about[locale] },
+];
+---
+
+<BaseLayout
+  locale={locale}
+  title={a.seoTitle}
+  description={a.seoDescription}
+  alternates={pageAlternates('about')}
+  breadcrumbs={crumbs}
+  image={media('2026/05/ok-scaled.jpg')}
+>
+  <PageHero
+    eyebrow={a.eyebrow}
+    title={a.title}
+    lead={a.lead}
+    image={media('2026/05/ok-scaled.jpg')}
+    imageAlt=""
+    variant="full"
+    breadcrumbs={crumbs}
+    breadcrumbLabel={t.a11y.breadcrumb}
+  />
+
+  <!-- Storia + numeri -->
+  <section class="bg-paper py-24 lg:py-36" aria-labelledby="story-title">
+    <div class="container-x grid gap-16 lg:grid-cols-12">
+      <div class="lg:col-span-7">
+        <h2 id="story-title" class="sr-only">{a.eyebrow}</h2>
+        <div class="space-y-8">
+          {
+            a.story.map((p, i) => (
+              <p
+                class:list={[
+                  i === 0
+                    ? 'text-[clamp(1.5rem,1.2rem+1.3vw,2.5rem)] leading-[1.25] font-semibold tracking-tight text-ink-950'
+                    : 'text-lead text-ink-600',
+                ]}
+                data-reveal
+                style={`--d:${i * 100}`}
+              >
+                {p}
+              </p>
+            ))
+          }
+        </div>
+        <div class="mt-14" data-reveal>
+          <p class="eyebrow text-signal-ink">{a.driversLabel}</p>
+          <ul class="mt-5 flex flex-wrap gap-3">
+            {
+              a.drivers.map((d) => (
+                <li class="rounded-full bg-ink-950 px-5 py-3 text-sm font-semibold text-white">{d}</li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+      <div class="lg:col-span-4 lg:col-start-9">
+        <dl class="grid gap-px overflow-hidden rounded-3xl bg-ink-950/10">
+          {
+            a.stats.map((s, i) => (
+              <div class="flex flex-col gap-3 bg-white p-8" data-reveal style={`--d:${i * 120}`}>
+                <dt class="order-2 text-ink-600">{s.label}</dt>
+                <dd class="order-1 text-6xl leading-none font-bold tracking-tight text-ink-950">
+                  {s.value}
+                </dd>
+              </div>
+            ))
+          }
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- Immagini -->
+  <section class="bg-paper pb-24 lg:pb-36" aria-hidden="true">
+    <div class="container-x grid gap-5 md:grid-cols-12">
+      <div class="relative aspect-[4/5] overflow-hidden rounded-3xl bg-ink-800 md:col-span-5" data-reveal="clip">
+        <Picture src={media('2026/05/9.jpg')} alt="" formats={['avif', 'webp']} widths={[480, 768]} sizes="40vw" class="parallax-y size-full object-cover" />
+      </div>
+      <div class="relative aspect-[4/5] overflow-hidden rounded-3xl bg-ink-800 md:col-span-7 md:aspect-auto" data-reveal="clip" style="--d:150">
+        <Picture src={media('2026/04/12.jpg')} alt="" formats={['avif', 'webp']} widths={[640, 960, 1400]} sizes="60vw" class="parallax-y size-full object-cover" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Perché SISTEC AM -->
+  <section class="noise relative overflow-hidden bg-ink-950 py-24 text-white lg:py-36" aria-labelledby="why-title">
+    <div class="bg-blueprint pointer-events-none absolute inset-0 text-white opacity-50"></div>
+    <div class="container-x relative">
+      <SectionHeader eyebrow={a.whyEyebrow} title={a.whyTitle} tone="dark" id="why-title" />
+      <ol class="mt-16 grid gap-6 lg:mt-20 lg:grid-cols-3">
+        {
+          a.pillars.map((p, i) => (
+            <li class="flex flex-col rounded-3xl bg-white/[0.04] p-8 ring-1 ring-white/10 lg:p-10" data-reveal style={`--d:${i * 120}`}>
+              <div class="flex items-center justify-between">
+                <span class="grid size-14 place-items-center rounded-2xl bg-signal text-ink-950">
+                  <Icon name={pillarIcons[i]} class="size-7" />
+                </span>
+                <span class="font-mono text-sm font-semibold text-ink-300">{String(i + 1).padStart(2, '0')}</span>
+              </div>
+              <h3 class="mt-10 text-h3 font-bold">{p.title}</h3>
+              <p class="mt-3 text-ink-300">{p.text}</p>
+              <ul class="mt-8 space-y-5 border-t border-white/10 pt-8">
+                {p.points.map((pt) => (
+                  <li class="flex gap-3">
+                    <Icon name="check" class="mt-0.5 size-5 shrink-0 text-signal" />
+                    <p class="text-sm leading-relaxed text-ink-300">
+                      <strong class="font-semibold text-white">{pt.title}</strong>: {pt.text}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+
+  <!-- Gruppo -->
+  <section class="relative overflow-hidden bg-signal py-24 text-ink-950 lg:py-32" aria-labelledby="group-title">
+    <Asterisk class="pointer-events-none absolute -bottom-40 -left-40 w-[36rem] opacity-15" fill="fill-ink-950" spin />
+    <div class="container-x relative grid items-center gap-14 lg:grid-cols-12">
+      <div class="lg:col-span-5" data-reveal="scale">
+        <Logo tone="dark" mono class="w-full max-w-lg" label="SISTEC, part of Prima Power" />
+      </div>
+      <div class="lg:col-span-6 lg:col-start-7">
+        <h2 id="group-title" class="text-h2 font-bold" data-reveal>{a.groupTitle}</h2>
+        <p class="mt-6 text-lead font-medium" data-reveal style="--d:120">{a.groupText}</p>
+        <a href={company.parent.url} class="btn btn-dark mt-10" target="_blank" rel="noopener" data-reveal style="--d:200">
+          {a.groupLink}
+          <Icon name="external" class="size-4" />
+          <span class="sr-only">{t.a11y.opensNewTab}</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case history -->
+  <section class="bg-paper py-24 lg:py-36" aria-labelledby="about-cases-title">
+    <div class="container-x grid gap-14 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <SectionHeader eyebrow={t.home.cases.eyebrow} title={t.home.cases.title} text={t.home.cases.text} id="about-cases-title" />
+        <a href={routes.cases[locale]} class="btn btn-dark mt-10" data-reveal>
+          {t.common.discoverMore}
+          <Icon name="arrow-right" class="btn-arrow" />
+        </a>
+      </div>
+      <ul class="grid gap-x-6 gap-y-14 md:grid-cols-2 lg:col-span-8">
+        {
+          cases.map((c, i) => (
+            <li data-reveal style={`--d:${i * 120}`}>
+              <CaseCard item={c} locale={locale} cta={t.common.readCase} />
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <CtaBand locale={locale} />
+</BaseLayout>

@@ -1,0 +1,175 @@
+---
+import { Picture } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HomeHero from '../components/sections/HomeHero.astro';
+import Marquee from '../components/sections/Marquee.astro';
+import SolutionsExplorer from '../components/sections/SolutionsExplorer.astro';
+import Stats from '../components/sections/Stats.astro';
+import DigitalTwin from '../components/sections/DigitalTwin.astro';
+import Process from '../components/sections/Process.astro';
+import CtaBand from '../components/sections/CtaBand.astro';
+import ShowreelDialog from '../components/media/ShowreelDialog.astro';
+import NewsletterForm from '../components/forms/NewsletterForm.astro';
+import SectionHeader from '../components/ui/SectionHeader.astro';
+import CaseCard from '../components/ui/CaseCard.astro';
+import Icon from '../components/ui/Icon.astro';
+import Logo from '../components/brand/Logo.astro';
+import Asterisk from '../components/brand/Asterisk.astro';
+import { media } from '../lib/media';
+import { getCases } from '../lib/content';
+import { useDict, routes, pageAlternates, type Locale } from '../i18n';
+import { company } from '../data/site';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = useDict(locale);
+const h = t.home;
+const cases = (await getCases(locale)).slice(0, 3);
+
+const introWords = h.intro.title.split(' ');
+
+const websiteLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'SISTEC',
+  url: new URL(routes.home[locale], Astro.site).href,
+  inLanguage: locale,
+  publisher: { '@id': `${Astro.site!.origin}/#organization` },
+};
+---
+
+<BaseLayout
+  locale={locale}
+  title={h.seoTitle}
+  description={h.seoDescription}
+  alternates={pageAlternates('home')}
+  jsonLd={[websiteLd]}
+>
+  <HomeHero locale={locale} />
+
+  <Marquee items={h.marquee} locale={locale} />
+
+  <!-- Manifesto: il testo si "accende" parola per parola durante lo scroll -->
+  <section id="intro" class="relative bg-paper py-24 lg:py-40" aria-labelledby="intro-title">
+    <div class="container-x grid gap-12 lg:grid-cols-12">
+      <p class="eyebrow text-signal-ink lg:col-span-3 lg:pt-4" data-reveal="fade">{h.intro.eyebrow}</p>
+      <div class="lg:col-span-9">
+        <h2 id="intro-title" class="manifesto text-[clamp(2rem,1.3rem+3vw,4.25rem)] leading-[1.05] font-bold tracking-[-0.03em] text-ink-950">
+          {
+            introWords.map((w) => (
+              <>
+                <span>{w}</span>{' '}
+              </>
+            ))
+          }
+        </h2>
+        <div class="mt-12 grid gap-10 md:grid-cols-[1fr_auto] md:items-end">
+          <p class="max-w-2xl text-lead text-ink-600" data-reveal>{h.intro.text}</p>
+          <a href={routes.about[locale]} class="btn btn-dark shrink-0" data-reveal style="--d:120">
+            {h.intro.cta}
+            <Icon name="arrow-right" class="btn-arrow" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <SolutionsExplorer locale={locale} />
+
+  <Stats eyebrow={h.numbers.eyebrow} title={h.numbers.title} items={h.numbers.items} locale={locale} />
+
+  <Process eyebrow={h.process.eyebrow} title={h.process.title} steps={h.process.steps} />
+
+  <DigitalTwin locale={locale} />
+
+  <!-- Prima Power -->
+  <section class="relative overflow-hidden bg-paper-2 py-24 lg:py-32" aria-labelledby="group-title">
+    <div class="container-x grid items-center gap-14 lg:grid-cols-12">
+      <div class="relative lg:col-span-5" data-reveal="clip">
+        <div class="relative flex aspect-[4/3] items-end overflow-hidden rounded-3xl bg-signal p-10 sm:p-14">
+          <Asterisk class="absolute -top-16 -right-16 w-72 opacity-20" fill="fill-ink-950" spin />
+          <Logo tone="dark" mono class="relative w-full max-w-md" label="SISTEC, part of Prima Power" />
+        </div>
+      </div>
+      <div class="lg:col-span-6 lg:col-start-7">
+        <SectionHeader eyebrow={h.group.eyebrow} title={h.group.title} text={h.group.text} id="group-title" />
+        <div class="mt-10 flex flex-wrap gap-4" data-reveal style="--d:200">
+          <a href={routes.about[locale]} class="btn btn-dark">
+            {h.group.cta}
+            <Icon name="arrow-right" class="btn-arrow" />
+          </a>
+          <a href={company.parent.url} class="btn btn-ghost-dark" target="_blank" rel="noopener">
+            primapower.com
+            <Icon name="external" class="size-4" />
+            <span class="sr-only">{t.a11y.opensNewTab}</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case history -->
+  <section class="bg-paper py-24 lg:py-36" aria-labelledby="home-cases-title">
+    <div class="container-x">
+      <div class="flex flex-wrap items-end justify-between gap-8">
+        <SectionHeader eyebrow={h.cases.eyebrow} title={h.cases.title} text={h.cases.text} id="home-cases-title" />
+        <a href={routes.cases[locale]} class="btn btn-ghost-dark shrink-0" data-reveal>
+          {t.common.allCases}
+          <Icon name="arrow-right" class="btn-arrow" />
+        </a>
+      </div>
+      <ul class="mt-16 grid gap-x-6 gap-y-14 md:grid-cols-2 lg:mt-20 lg:grid-cols-3">
+        {
+          cases.map((c, i) => (
+            <li data-reveal style={`--d:${i * 120}`}>
+              <CaseCard item={c} locale={locale} cta={t.common.readCase} />
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="noise relative overflow-hidden bg-ink-950 py-24 text-white lg:py-32" aria-labelledby="newsletter-title">
+    <div class="absolute inset-0 opacity-25">
+      <Picture src={media('2026/04/sfondo.jpg')} alt="" formats={['avif', 'webp']} widths={[960, 1440]} class="size-full object-cover grayscale" />
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-r from-ink-950 via-ink-950/95 to-ink-950/70"></div>
+    <div class="container-x relative grid gap-14 lg:grid-cols-12">
+      <div class="lg:col-span-5">
+        <SectionHeader eyebrow={h.newsletter.eyebrow} title={h.newsletter.title} text={h.newsletter.text} tone="dark" id="newsletter-title" />
+      </div>
+      <div class="lg:col-span-6 lg:col-start-7">
+        <NewsletterForm locale={locale} labelledby="newsletter-title" />
+      </div>
+    </div>
+  </section>
+
+  <CtaBand locale={locale} />
+
+  <ShowreelDialog locale={locale} />
+</BaseLayout>
+
+<style>
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: view()) {
+      .manifesto span {
+        animation: word-on linear both;
+        animation-timeline: view();
+        animation-range: cover 10% cover 35%;
+      }
+      @keyframes word-on {
+        from {
+          color: var(--color-ink-500);
+        }
+        to {
+          color: var(--color-ink-950);
+        }
+      }
+    }
+  }
+</style>

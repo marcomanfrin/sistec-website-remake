@@ -1,0 +1,45 @@
+---
+import { useDict, routes, type Locale, type Alternates, locales } from '../../i18n';
+
+interface Props {
+  locale: Locale;
+  alternates: Alternates;
+  class?: string;
+}
+
+const { locale, alternates, class: className } = Astro.props;
+const t = useDict(locale);
+const names: Record<Locale, string> = { it: 'Italiano', en: 'English' };
+---
+
+<ul class:list={['items-center gap-0.5 font-mono text-xs font-semibold tracking-wider', className]} aria-label={t.a11y.languageSwitch}>
+  {
+    locales.map((l) => {
+      const href = alternates[l] ?? routes.home[l];
+      return (
+        <li>
+          {l === locale ? (
+            <span
+              class="grid size-11 place-items-center rounded-full bg-white/12 text-white uppercase"
+              aria-current="true"
+              title={names[l]}
+            >
+              <span class="sr-only">{t.a11y.currentLanguage}: {names[l]}</span>
+              <span aria-hidden="true">{l}</span>
+            </span>
+          ) : (
+            <a
+              href={href}
+              hreflang={l}
+              lang={l}
+              class="grid size-11 place-items-center rounded-full text-ink-300 uppercase transition-colors hover:bg-white/10 hover:text-white"
+            >
+              <span class="sr-only">{names[l]}</span>
+              <span aria-hidden="true">{l}</span>
+            </a>
+          )}
+        </li>
+      );
+    })
+  }
+</ul>

@@ -1,0 +1,243 @@
+---
+import { getImage } from 'astro:assets';
+import Icon from '../ui/Icon.astro';
+import Asterisk from '../brand/Asterisk.astro';
+import { still } from '../../lib/media';
+import { useDict, routes, withBase, type Locale } from '../../i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = useDict(locale);
+const h = t.home.hero;
+const poster = await getImage({ src: still('hero-poster'), width: 1600, format: 'webp', quality: 72 });
+const posterMobile = await getImage({ src: still('hero-poster'), width: 900, format: 'webp', quality: 70 });
+const titleA = h.titleA.split(' ');
+const titleB = h.titleB.split(' ');
+---
+
+<section class="hero relative isolate flex min-h-[100svh] flex-col overflow-hidden bg-ink-950 text-white" aria-labelledby="hero-title">
+  <!-- Video di sfondo decorativo (senza audio). Pausa disponibile per WCAG 2.2.2 -->
+  <div class="absolute inset-0 -z-10" aria-hidden="true">
+    <picture>
+      <source media="(max-width: 767px)" srcset={posterMobile.src} />
+      <img src={poster.src} alt="" class="hero-media size-full object-cover" fetchpriority="high" decoding="async" />
+    </picture>
+    <video
+      class="hero-media absolute inset-0 size-full object-cover opacity-0 transition-opacity duration-1000"
+      muted
+      loop
+      playsinline
+      preload="none"
+      poster={poster.src}
+      data-hero-video
+      tabindex="-1"
+    >
+      <source src={withBase('/video/hero-cell-960.mp4')} type="video/mp4" media="(max-width: 900px)" />
+      <source src={withBase('/video/hero-cell-1600.mp4')} type="video/mp4" />
+    </video>
+    <div class="absolute inset-0 bg-gradient-to-r from-ink-950 via-ink-950/75 to-ink-950/10"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-ink-950 via-transparent to-ink-950/50"></div>
+    <div class="bg-blueprint absolute inset-0 text-white opacity-60 [mask-image:linear-gradient(to_right,black,transparent_70%)]"></div>
+  </div>
+
+  <!-- HUD in stile showreel -->
+  <div class="pointer-events-none absolute inset-x-5 top-[calc(var(--header-h)+1rem)] bottom-24 hidden sm:inset-x-8 md:block lg:inset-x-12" aria-hidden="true">
+    <span class="hud-corner absolute top-0 left-0 border-t border-l"></span>
+    <span class="hud-corner absolute top-0 right-0 border-t border-r"></span>
+    <span class="hud-corner absolute bottom-0 left-0 border-b border-l"></span>
+    <span class="hud-corner absolute right-0 bottom-0 border-r border-b"></span>
+    <div class="absolute top-5 right-6 text-right font-mono text-[0.6875rem] leading-relaxed tracking-[0.16em] uppercase">
+      <p class="text-white/80">{h.hud[0]} <span class="text-signal">●</span> {h.hud[1]}</p>
+      <p class="text-signal" data-hud-clock>Cycle 00:00.00</p>
+    </div>
+  </div>
+
+  <Asterisk
+    class="hero-asterisk pointer-events-none absolute top-1/2 -right-[18vw] -z-10 w-[62vw] max-w-[56rem] -translate-y-1/2 opacity-[0.12] mix-blend-screen"
+  />
+
+  <div class="hero-fade container-x relative flex flex-1 flex-col justify-end pt-[calc(var(--header-h)+4rem)] pb-28 md:pb-32">
+    <p class="eyebrow text-signal" data-reveal="fade">{h.eyebrow}</p>
+    <h1 id="hero-title" class="split-words mt-6 max-w-[14ch] text-display font-bold">
+      {
+        titleA.map((w, i) => (
+          <>
+            <span class="w">
+              <span style={`--i:${i}`}>{w}</span>
+            </span>{' '}
+          </>
+        ))
+      }
+      <span class="block text-signal">
+        {
+          titleB.map((w, i) => (
+            <>
+              <span class="w">
+                <span style={`--i:${titleA.length + i}`}>{w}</span>
+              </span>{' '}
+            </>
+          ))
+        }
+      </span>
+    </h1>
+    <p class="mt-8 max-w-xl text-lead text-ink-200" data-reveal style="--d:450">{h.lead}</p>
+    <div class="mt-10 flex flex-wrap items-center gap-4" data-reveal style="--d:600">
+      <a href={routes.solutions[locale]} class="btn btn-primary px-7" data-magnetic>
+        {h.ctaPrimary}
+        <Icon name="arrow-right" class="btn-arrow" />
+      </a>
+      <button type="button" class="btn btn-ghost-light px-6" data-showreel-open>
+        <span class="grid size-7 place-items-center rounded-full bg-white text-ink-950">
+          <Icon name="play" class="size-3.5 translate-x-px" />
+        </span>
+        {t.common.watchShowreel}
+      </button>
+    </div>
+  </div>
+
+  <div class="container-x relative flex items-center justify-between gap-4 pb-8">
+    <div class="flex items-center gap-4">
+      <button
+        type="button"
+        class="grid size-12 place-items-center rounded-full bg-ink-950/50 ring-1 ring-white/25 backdrop-blur ring-inset hover:bg-white hover:text-ink-950"
+        aria-pressed="false"
+        data-hero-toggle
+        hidden
+      >
+        <Icon name="pause" class="size-5" data-icon-pause />
+        <Icon name="play" class="hidden size-5" data-icon-play />
+        <span class="sr-only" data-label>{t.a11y.pauseVideo}</span>
+      </button>
+      <a
+        href="#intro"
+        class="group flex min-h-11 items-center gap-3 font-mono text-xs tracking-[0.18em] text-ink-300 uppercase hover:text-white"
+      >
+        <span class="relative grid h-11 w-7 place-items-start justify-center rounded-full ring-1 ring-white/30 ring-inset">
+          <span class="scroll-dot mt-2 block h-2 w-1 rounded-full bg-signal"></span>
+        </span>
+        {t.a11y.scrollDown}
+      </a>
+    </div>
+    <p class="hidden items-center gap-3 text-sm text-ink-300 sm:flex">
+      <span class="h-px w-10 bg-signal"></span>
+      {h.badge}
+    </p>
+  </div>
+</section>
+
+<script define:vars={{ pauseLabel: t.a11y.pauseVideo, playLabel: t.a11y.playVideo }} is:inline>
+  window.__SISTEC_HERO_LABELS__ = { pauseLabel, playLabel };
+</script>
+
+<script>
+  const video = document.querySelector<HTMLVideoElement>('[data-hero-video]');
+  const toggle = document.querySelector<HTMLButtonElement>('[data-hero-toggle]');
+  const clock = document.querySelector<HTMLElement>('[data-hud-clock]');
+  const labels = (window as any).__SISTEC_HERO_LABELS__ as { pauseLabel: string; playLabel: string };
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const conn = (navigator as any).connection;
+  const saveData = conn?.saveData || /2g/.test(conn?.effectiveType ?? '');
+
+  if (video && toggle) {
+    const setState = (playing: boolean) => {
+      toggle.setAttribute('aria-pressed', String(!playing));
+      toggle.querySelector('[data-label]')!.textContent = playing ? labels.pauseLabel : labels.playLabel;
+      toggle.querySelector('[data-icon-pause]')!.classList.toggle('hidden', !playing);
+      toggle.querySelector('[data-icon-play]')!.classList.toggle('hidden', playing);
+    };
+
+    const start = () => {
+      video.preload = 'auto';
+      video.play().then(
+        () => {
+          video.classList.remove('opacity-0');
+          setState(true);
+        },
+        () => setState(false),
+      );
+    };
+
+    // Il video parte solo senza "riduci movimento" e senza risparmio dati
+    if (!reduce.matches && !saveData) {
+      toggle.hidden = false;
+      // Avvio differito: il video non compete con il caricamento iniziale della pagina
+      const kick = () => ('requestIdleCallback' in window ? requestIdleCallback(start, { timeout: 2500 }) : setTimeout(start, 1200));
+      if (document.readyState === 'complete') kick();
+      else window.addEventListener('load', kick, { once: true });
+    } else {
+      toggle.hidden = false;
+      setState(false);
+    }
+
+    toggle.addEventListener('click', () => {
+      if (video.paused) start();
+      else {
+        video.pause();
+        setState(false);
+      }
+    });
+
+    // Risparmia risorse quando l'hero non è visibile
+    new IntersectionObserver(([e]) => {
+      if (!e.isIntersecting && !video.paused) video.pause();
+      else if (e.isIntersecting && toggle.getAttribute('aria-pressed') === 'false' && video.paused && video.preload === 'auto') video.play().catch(() => {});
+    }).observe(video);
+
+    // Timecode HUD sincronizzato al video
+    if (clock) {
+      const fmt = (s: number) => {
+        const m = Math.floor(s / 60);
+        const sec = (s % 60).toFixed(2).padStart(5, '0');
+        return `Cycle ${String(m).padStart(2, '0')}:${sec}`;
+      };
+      video.addEventListener('timeupdate', () => (clock.textContent = fmt(video.currentTime * 1.5)));
+    }
+  }
+</script>
+
+<style>
+  .hud-corner {
+    width: 1.75rem;
+    height: 1.75rem;
+    border-color: rgb(255 255 255 / 0.35);
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .hero-media {
+      animation: hero-zoom 2.4s var(--ease-out-expo) both;
+    }
+    @keyframes hero-zoom {
+      from {
+        transform: scale(1.12);
+        opacity: 0.3;
+      }
+    }
+    .hero-asterisk {
+      animation: ast-in 2.2s 0.2s var(--ease-out-expo) both;
+    }
+    @keyframes ast-in {
+      from {
+        opacity: 0;
+        transform: rotate(-120deg) scale(0.6);
+      }
+    }
+    .scroll-dot {
+      animation: scroll-dot 2s var(--ease-in-out-quint) 2;
+    }
+    @keyframes scroll-dot {
+      0% {
+        transform: translateY(0);
+        opacity: 0;
+      }
+      30% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(18px);
+        opacity: 0;
+      }
+    }
+  }
+</style>

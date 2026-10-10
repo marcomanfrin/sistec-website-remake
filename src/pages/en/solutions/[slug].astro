@@ -1,0 +1,14 @@
+---
+import type { GetStaticPaths } from 'astro';
+import SolutionView from '../../../views/SolutionView.astro';
+import { getSolutions } from '../../../lib/content';
+
+export const getStaticPaths = (async () => {
+  const solutions = await getSolutions('en');
+  return solutions.map((solution) => ({ params: { slug: solution.data.slug }, props: { solution } }));
+}) satisfies GetStaticPaths;
+
+const { solution } = Astro.props;
+---
+
+<SolutionView locale="en" solution={solution} />

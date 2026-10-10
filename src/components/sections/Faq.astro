@@ -1,0 +1,58 @@
+---
+import Icon from '../ui/Icon.astro';
+import SectionHeader from '../ui/SectionHeader.astro';
+
+interface Props {
+  eyebrow: string;
+  title: string;
+  items: { q: string; a: string }[];
+  id?: string;
+}
+
+const { eyebrow, title, items, id = 'faq' } = Astro.props;
+---
+
+<section class="bg-paper py-24 lg:py-32" aria-labelledby={`${id}-title`}>
+  <div class="container-x grid gap-12 lg:grid-cols-12">
+    <SectionHeader eyebrow={eyebrow} title={title} id={`${id}-title`} class="lg:col-span-4" />
+    <div class="lg:col-span-8">
+      <ul class="divide-y divide-ink-200 border-y border-ink-200">
+        {
+          items.map((item, i) => (
+            <li data-reveal style={`--d:${i * 80}`}>
+              <details class="faq group" name={id}>
+                <summary class="flex min-h-12 items-center justify-between gap-6 py-6 text-lg font-semibold text-ink-950 lg:text-xl">
+                  <span class="text-balance">{item.q}</span>
+                  <span class="grid size-11 shrink-0 place-items-center rounded-full ring-1 ring-ink-950/20 transition-[background-color,color,transform] duration-500 ease-(--ease-out-expo) ring-inset group-open:rotate-45 group-open:bg-ink-950 group-open:text-white">
+                    <Icon name="plus" class="size-5" />
+                  </span>
+                </summary>
+                <div class="faq-body">
+                  <p class="max-w-3xl pb-7 text-[1.0625rem] leading-relaxed text-ink-600">{item.a}</p>
+                </div>
+              </details>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+  @media (prefers-reduced-motion: no-preference) {
+    .faq::details-content {
+      block-size: 0;
+      overflow-y: clip;
+      transition:
+        block-size 0.5s var(--ease-out-expo),
+        content-visibility 0.5s allow-discrete;
+    }
+    .faq[open]::details-content {
+      block-size: auto;
+    }
+  }
+  :global(:root) {
+    interpolate-size: allow-keywords;
+  }
+</style>

@@ -1,0 +1,144 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/sections/PageHero.astro';
+import CtaBand from '../components/sections/CtaBand.astro';
+import CaseCard from '../components/ui/CaseCard.astro';
+import { getCases, getSolutions } from '../lib/content';
+import { media } from '../lib/media';
+import { useDict, fmt, routes, pageAlternates, caseUrl, type Locale } from '../i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = useDict(locale);
+const cp = t.casesPage;
+const cases = await getCases(locale);
+const solutions = (await getSolutions(locale)).filter((s) => cases.some((c) => c.data.solutions.includes(s.data.key)));
+
+const crumbs = [
+  { label: t.nav.home, href: routes.home[locale] },
+  { label: t.nav.cases, href: routes.cases[locale] },
+];
+
+const listLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  itemListElement: cases.map((c, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: c.data.title,
+    url: new URL(caseUrl(locale, c.data.slug), Astro.site).href,
+  })),
+};
+---
+
+<BaseLayout
+  locale={locale}
+  title={cp.seoTitle}
+  description={cp.seoDescription}
+  alternates={pageAlternates('cases')}
+  breadcrumbs={crumbs}
+  jsonLd={[listLd]}
+  image={media('2026/04/10.jpg')}
+>
+  <PageHero
+    eyebrow={cp.eyebrow}
+    title={cp.title}
+    lead={cp.lead}
+    image={media('2026/04/10.jpg')}
+    imageAlt=""
+    breadcrumbs={crumbs}
+    breadcrumbLabel={t.a11y.breadcrumb}
+  />
+
+  <section class="bg-paper py-20 lg:py-28" aria-labelledby="cases-list-title" data-case-filter>
+    <div class="container-x">
+      <h2 id="cases-list-title" class="sr-only">{cp.title}</h2>
+      <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between" data-reveal>
+        <div role="group" aria-labelledby="filter-label" class="flex flex-wrap items-center gap-2" data-filter-group hidden>
+          <span id="filter-label" class="mr-2 text-sm font-semibold text-ink-700">{cp.filterLabel}:</span>
+          <button type="button" class="chip" aria-pressed="true" data-filter="">{cp.filterAll}</button>
+          {
+            solutions.map((s) => (
+              <button type="button" class="chip" aria-pressed="false" data-filter={s.data.key}>
+                {s.data.shortTitle}
+              </button>
+            ))
+          }
+        </div>
+        <p class="font-mono text-xs tracking-wider text-ink-600 uppercase" role="status" data-filter-count>
+          {fmt(cp.resultsCount, { n: cases.length })}
+        </p>
+      </div>
+
+      <ul class="mt-12 grid gap-x-6 gap-y-16 md:grid-cols-2 lg:grid-cols-3" data-filter-list>
+        {
+          cases.map((c, i) => (
+            <li data-reveal style={`--d:${(i % 3) * 110}`} data-keys={c.data.solutions.join(' ')} class:list={[i === 0 && 'md:col-span-2 lg:row-span-1']}>
+              <CaseCard item={c} locale={locale} cta={t.common.readCase} headingLevel="h3" size={i === 0 ? 'large' : 'default'} />
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <CtaBand locale={locale} />
+</BaseLayout>
+
+<script define:vars={{ one: cp.resultsCountOne, many: cp.resultsCount }} is:inline>
+  window.__SISTEC_COUNT__ = { one, many };
+</script>
+
+<script>
+  const root = document.querySelector<HTMLElement>('[data-case-filter]');
+  if (root) {
+    const group = root.querySelector<HTMLElement>('[data-filter-group]')!;
+    const items = [...root.querySelectorAll<HTMLElement>('[data-filter-list] > li')];
+    const count = root.querySelector<HTMLElement>('[data-filter-count]')!;
+    const labels = (window as any).__SISTEC_COUNT__ as { one: string; many: string };
+    group.hidden = false; // il filtro è un miglioramento progressivo
+    group.addEventListener('click', (e) => {
+      const btn = (e.target as HTMLElement).closest<HTMLButtonElement>('[data-filter]');
+      if (!btn) return;
+      const key = btn.dataset.filter!;
+      group.querySelectorAll('[data-filter]').forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
+      let visible = 0;
+      items.forEach((li, i) => {
+        const show = !key || li.dataset.keys!.split(' ').includes(key);
+        li.hidden = !show;
+        li.classList.add('is-in');
+        if (show) visible++;
+        li.classList.toggle('md:col-span-2', !key && i === 0);
+      });
+      count.textContent = visible === 1 ? labels.one : labels.many.replace('{n}', String(visible));
+    });
+  }
+</script>
+
+<style>
+  .chip {
+    display: inline-flex;
+    min-height: 2.75rem;
+    align-items: center;
+    border-radius: 999px;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-ink-800);
+    box-shadow: inset 0 0 0 1px rgb(13 14 15 / 0.2);
+    transition:
+      background-color 0.3s,
+      color 0.3s;
+    cursor: pointer;
+  }
+  .chip:hover {
+    background: rgb(13 14 15 / 0.06);
+  }
+  .chip[aria-pressed='true'] {
+    background: var(--color-ink-950);
+    color: #fff;
+  }
+</style>

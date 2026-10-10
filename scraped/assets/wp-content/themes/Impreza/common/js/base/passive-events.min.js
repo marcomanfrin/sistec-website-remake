@@ -1,0 +1,4 @@
+!function($,_undefined){"use strict";const supportsPassive=(()=>{var supported=!1;try{const opts=Object.defineProperty({},'passive',{get(){supported=!0}});window.addEventListener('testPassive',null,opts);window.removeEventListener('testPassive',null,opts)}catch(e){}
+return supported})();if(!supportsPassive){return}
+const REGEXP_NO_PREVENT_DEFAULT=/^(.*)\.noPreventDefault$/;['scroll','wheel','mousewheel','touchstart','touchmove','touchend',].map((eventType)=>{jQuery.event.special[eventType]={setup:function(_,ns,handle){const options={};if(ns.includes('noPreventDefault')&&!REGEXP_NO_PREVENT_DEFAULT.test(eventType)){options.passive=!0}
+if(document.documentMode){this.addEventListener(eventType,handle,options)}else{return!1}},}})}(jQuery)

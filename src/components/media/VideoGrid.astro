@@ -1,0 +1,173 @@
+---
+import { Image } from 'astro:assets';
+import Icon from '../ui/Icon.astro';
+import { ytThumb } from '../../lib/media';
+import { useDict, fmt, routes, type Locale } from '../../i18n';
+import videoData from '../../data/youtube.json';
+
+interface Props {
+  ids: string[];
+  locale: Locale;
+  id: string;
+  initial?: number;
+  tone?: 'light' | 'dark';
+}
+
+const { ids, locale, id, initial = 6, tone = 'dark' } = Astro.props;
+const t = useDict(locale);
+const data = videoData as Record<string, { title: string }>;
+const videos = ids.map((vid) => ({ id: vid, title: data[vid]?.title ?? 'SISTEC video', thumb: ytThumb(vid) }));
+const dark = tone === 'dark';
+---
+
+<div data-video-grid id={id}>
+  <ul class="grid gap-x-5 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+    {
+      videos.map((v, i) => (
+        <li data-video-item hidden={i >= initial ? true : undefined} data-reveal style={`--d:${(i % 3) * 90}`}>
+          <div class="yt relative aspect-video overflow-hidden rounded-2xl bg-ink-800" data-yt={v.id} data-title={v.title}>
+            <button type="button" class="group absolute inset-0 block size-full cursor-pointer" data-yt-play>
+              {v.thumb && (
+                <Image
+                  src={v.thumb}
+                  alt=""
+                  widths={[400, 640, 960]}
+                  sizes="(min-width: 1024px) 30vw, (min-width: 640px) 48vw, 100vw"
+                  class="size-full object-cover transition-transform duration-[1.2s] ease-(--ease-out-expo) group-hover:scale-[1.04]"
+                />
+              )}
+              <span class="absolute inset-0 bg-gradient-to-t from-ink-950/70 via-ink-950/10 to-transparent" />
+              <span class="absolute bottom-4 left-4 grid size-14 place-items-center rounded-full bg-signal text-ink-950 shadow-xl transition-transform duration-500 ease-(--ease-out-expo) group-hover:scale-110">
+                <Icon name="play" class="size-6 translate-x-0.5" />
+              </span>
+              <span class="sr-only">
+                {t.video.play}: <span lang="en">{v.title}</span>
+              </span>
+            </button>
+            <div
+              class="absolute inset-0 hidden flex-col justify-center gap-3 bg-ink-900 p-5 text-sm text-ink-200 [&[data-open]]:flex"
+              data-yt-consent
+              role="group"
+              aria-label={t.video.consentTitle}
+            >
+              <p class="font-semibold text-white">{t.video.consentTitle}</p>
+              <p class="leading-snug">
+                {t.video.consentText}{' '}
+                <a href={routes.cookies[locale]} class="text-signal underline underline-offset-2">
+                  {t.consent.policy}
+                </a>
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <button type="button" class="btn btn-primary min-h-11 px-4 py-2 text-sm" data-yt-once>
+                  {t.video.loadOnce}
+                </button>
+                <button type="button" class="btn btn-ghost-light min-h-11 px-4 py-2 text-sm" data-yt-always>
+                  {t.video.loadAlways}
+                </button>
+              </div>
+            </div>
+          </div>
+          <p class:list={['mt-4 font-semibold leading-snug', dark ? 'text-white' : 'text-ink-950']} lang="en">
+            {v.title}
+          </p>
+          <a
+            href={`https://www.youtube.com/watch?v=${v.id}`}
+            class:list={['mt-1 inline-flex items-center gap-1.5 text-sm', dark ? 'text-ink-300 hover:text-white' : 'text-ink-600 hover:text-ink-950']}
+            target="_blank"
+            rel="noopener"
+          >
+            {t.video.watchOnYoutube}
+            <Icon name="external" class="size-3.5" />
+            <span class="sr-only">
+              : <span lang="en">{v.title}</span> {t.a11y.opensNewTab}
+            </span>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+  {
+    videos.length > initial && (
+      <div class="mt-12 flex justify-center">
+        <button
+          type="button"
+          class:list={['btn', dark ? 'btn-ghost-light' : 'btn-ghost-dark']}
+          data-video-more
+          aria-expanded="false"
+          aria-controls={id}
+        >
+          <span data-label-more>{fmt(t.common.showMore, { n: videos.length - initial })}</span>
+          <span data-label-less hidden>
+            {t.common.showLess}
+          </span>
+          <Icon name="chevron-down" class="size-4 transition-transform in-aria-expanded:rotate-180" />
+        </button>
+      </div>
+    )
+  }
+</div>
+
+<script>
+  import { readConsent, writeConsent } from '../../scripts/consent';
+
+  const embed = (box: HTMLElement) => {
+    const id = box.dataset.yt!;
+    const iframe = document.createElement('iframe');
+    iframe.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}?autoplay=1&rel=0&modestbranding=1`;
+    iframe.title = box.dataset.title ?? 'YouTube';
+    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    iframe.allowFullscreen = true;
+    iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+    iframe.className = 'absolute inset-0 size-full';
+    box.replaceChildren(iframe);
+    iframe.focus();
+  };
+
+  document.querySelectorAll<HTMLElement>('[data-video-grid]').forEach((root) => {
+    root.addEventListener('click', (e) => {
+      const el = e.target as HTMLElement;
+      const box = el.closest<HTMLElement>('[data-yt]');
+      if (!box) return;
+      const consentBox = box.querySelector<HTMLElement>('[data-yt-consent]')!;
+      if (el.closest('[data-yt-play]')) {
+        if (readConsent()?.media) embed(box);
+        else {
+          consentBox.toggleAttribute('data-open', true);
+          consentBox.querySelector<HTMLButtonElement>('[data-yt-once]')!.focus();
+        }
+      } else if (el.closest('[data-yt-once]')) {
+        embed(box);
+      } else if (el.closest('[data-yt-always]')) {
+        const c = readConsent();
+        writeConsent({ analytics: !!c?.analytics, media: true });
+        document.querySelector<HTMLElement>('[data-cookie-banner]')?.setAttribute('hidden', '');
+        embed(box);
+      }
+    });
+    root.addEventListener('keydown', (e) => {
+      if (e.key !== 'Escape') return;
+      const consentBox = (e.target as HTMLElement).closest<HTMLElement>('[data-yt-consent]');
+      if (!consentBox) return;
+      consentBox.removeAttribute('data-open');
+      consentBox.parentElement?.querySelector<HTMLElement>('[data-yt-play]')?.focus();
+    });
+
+    const more = root.querySelector<HTMLButtonElement>('[data-video-more]');
+    more?.addEventListener('click', () => {
+      const expanded = more.getAttribute('aria-expanded') === 'true';
+      const items = [...root.querySelectorAll<HTMLElement>('[data-video-item]')];
+      const firstHidden = items.findIndex((li) => li.hidden);
+      items.forEach((li) => {
+        if (!expanded && li.hidden) {
+          li.hidden = false;
+          li.dataset.extra = '';
+          li.classList.add('is-in');
+        } else if (expanded && li.dataset.extra !== undefined) li.hidden = true;
+      });
+      more.setAttribute('aria-expanded', String(!expanded));
+      more.querySelector<HTMLElement>('[data-label-more]')!.hidden = !expanded;
+      more.querySelector<HTMLElement>('[data-label-less]')!.hidden = expanded;
+      if (!expanded && firstHidden >= 0) items[firstHidden].querySelector<HTMLElement>('[data-yt-play]')?.focus();
+    });
+  });
+</script>

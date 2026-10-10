@@ -1,0 +1,26 @@
+---
+import { ASTERISK } from './logo-paths';
+
+/** Asterisco del marchio SISTEC come elemento grafico decorativo. */
+interface Props {
+  class?: string;
+  /** Classe del riempimento (default arancio di brand) */
+  fill?: string;
+  /** Rotazione legata allo scroll (solo se il browser supporta le scroll-driven animations) */
+  spin?: boolean;
+  style?: string;
+}
+
+const { class: className, fill = 'fill-signal', spin = false, style } = Astro.props;
+---
+
+<svg
+  class:list={[className, spin && 'scroll-spin']}
+  viewBox={ASTERISK.viewBox}
+  xmlns="http://www.w3.org/2000/svg"
+  aria-hidden="true"
+  focusable="false"
+  style={style}
+>
+  <path class={fill} d={ASTERISK.d}></path>
+</svg>

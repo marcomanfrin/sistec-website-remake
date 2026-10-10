@@ -1,0 +1,90 @@
+---
+import { getImage } from 'astro:assets';
+import Icon from '../ui/Icon.astro';
+import { still } from '../../lib/media';
+import { useDict, withBase, type Locale } from '../../i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = useDict(locale);
+const poster = await getImage({ src: still('f1500'), width: 1600, format: 'webp' });
+---
+
+<dialog
+  data-showreel
+  aria-labelledby="showreel-title"
+  class="showreel m-auto w-[min(72rem,calc(100%-1.5rem))] max-w-none overflow-visible bg-transparent p-0 text-white"
+>
+  <div class="overflow-hidden rounded-3xl bg-ink-900 ring-1 ring-white/10">
+    <div class="flex items-center justify-between gap-4 px-5 py-3 sm:px-6">
+      <h2 id="showreel-title" class="font-mono text-xs tracking-[0.18em] text-ink-300 uppercase">{t.common.showreelTitle}</h2>
+      <button
+        type="button"
+        class="grid size-11 shrink-0 place-items-center rounded-full ring-1 ring-white/25 ring-inset hover:bg-white hover:text-ink-950"
+        data-showreel-close
+      >
+        <Icon name="close" class="size-5" />
+        <span class="sr-only">{t.a11y.close}</span>
+      </button>
+    </div>
+    <video
+      class="aspect-video w-full bg-black"
+      controls
+      playsinline
+      preload="none"
+      poster={poster.src}
+      data-showreel-video
+    >
+      <source src={withBase('/video/sistec-showreel-720.mp4')} type="video/mp4" media="(max-width: 900px)" />
+      <source src={withBase('/video/sistec-showreel-1080.mp4')} type="video/mp4" />
+      <track kind="captions" src={withBase(`/video/sistec-showreel.${locale}.vtt`)} srclang={locale} label={locale === 'it' ? 'Italiano' : 'English'} default />
+    </video>
+    <details class="group border-t border-white/10 px-5 py-4 sm:px-6">
+      <summary class="flex min-h-11 items-center justify-between gap-4 text-sm font-semibold">
+        {t.common.showreelTranscript}
+        <Icon name="chevron-down" class="size-4 transition-transform group-open:rotate-180" />
+      </summary>
+      <p class="mt-2 max-w-3xl pb-2 text-sm leading-relaxed text-ink-300">{t.common.showreelDescription}</p>
+    </details>
+  </div>
+</dialog>
+
+<script>
+  const dialog = document.querySelector<HTMLDialogElement>('[data-showreel]');
+  if (dialog) {
+    const video = dialog.querySelector<HTMLVideoElement>('[data-showreel-video]')!;
+    let opener: HTMLElement | null = null;
+    document.addEventListener('click', (e) => {
+      const trigger = (e.target as HTMLElement).closest<HTMLElement>('[data-showreel-open]');
+      if (!trigger) return;
+      opener = trigger;
+      dialog.showModal();
+      video.play().catch(() => {});
+    });
+    dialog.querySelector('[data-showreel-close]')!.addEventListener('click', () => dialog.close());
+    dialog.addEventListener('click', (e) => {
+      if (e.target === dialog) dialog.close();
+    });
+    dialog.addEventListener('close', () => {
+      video.pause();
+      opener?.focus();
+    });
+  }
+</script>
+
+<style>
+  @media (prefers-reduced-motion: no-preference) {
+    .showreel[open] {
+      animation: sr-in 0.6s var(--ease-out-expo);
+    }
+    @keyframes sr-in {
+      from {
+        opacity: 0;
+        transform: translateY(24px) scale(0.97);
+      }
+    }
+  }
+</style>

@@ -1,0 +1,37 @@
+---
+import Icon from './Icon.astro';
+import type { Crumb } from '../../layouts/BaseLayout.astro';
+
+interface Props {
+  items: Crumb[];
+  label: string;
+}
+
+const { items, label } = Astro.props;
+---
+
+<nav aria-label={label} class="font-mono text-xs tracking-wider text-ink-300 uppercase">
+  <ol class="flex flex-wrap items-center gap-x-2 gap-y-1">
+    {
+      items.map((c, i) => {
+        const last = i === items.length - 1;
+        return (
+          <li class="flex items-center gap-2">
+            {last ? (
+              <span aria-current="page" class="line-clamp-1 max-w-[40ch] text-white">
+                {c.label}
+              </span>
+            ) : (
+              <>
+                <a href={c.href} class="link-underline inline-block py-2 hover:text-white">
+                  {c.label}
+                </a>
+                <Icon name="chevron-right" class="size-3.5 opacity-60" />
+              </>
+            )}
+          </li>
+        );
+      })
+    }
+  </ol>
+</nav>

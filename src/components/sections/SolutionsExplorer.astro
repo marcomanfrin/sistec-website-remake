@@ -1,0 +1,122 @@
+---
+import { Picture } from 'astro:assets';
+import Icon, { type IconName } from '../ui/Icon.astro';
+import SectionHeader from '../ui/SectionHeader.astro';
+import { media } from '../../lib/media';
+import { useDict, solutionUrl, routes, type Locale } from '../../i18n';
+import { getSolutions } from '../../lib/content';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = useDict(locale);
+const solutions = await getSolutions(locale);
+---
+
+<section class="bg-paper py-24 lg:py-36" aria-labelledby="explorer-title" data-explorer>
+  <div class="container-x">
+    <div class="flex flex-wrap items-end justify-between gap-8">
+      <SectionHeader eyebrow={t.home.solutions.eyebrow} title={t.home.solutions.title} text={t.home.solutions.text} id="explorer-title" />
+      <a href={routes.solutions[locale]} class="btn btn-ghost-dark shrink-0" data-reveal>
+        {t.common.allSolutions}
+        <Icon name="arrow-right" class="btn-arrow" />
+      </a>
+    </div>
+
+    <div class="mt-16 grid gap-10 lg:mt-24 lg:grid-cols-12 lg:gap-16">
+      <!-- Anteprima immagine (decorativa) che segue la voce attiva -->
+      <div class="hidden lg:col-span-5 lg:block" aria-hidden="true">
+        <div class="sticky top-[calc(var(--header-h)+2rem)] aspect-square overflow-hidden rounded-3xl bg-ink-900">
+          {
+            solutions.map((s, i) => (
+              <div class:list={['explorer-img absolute inset-0', i === 0 && 'is-active']} data-explorer-img={i}>
+                <Picture
+                  src={media(s.data.cover)}
+                  alt=""
+                  formats={['avif', 'webp']}
+                  widths={[480, 720, 820]}
+                  sizes="40vw"
+                  class="size-full object-cover"
+                />
+              </div>
+            ))
+          }
+          <div class="absolute inset-0 bg-gradient-to-t from-ink-950/80 via-transparent to-transparent"></div>
+          <div class="absolute inset-x-6 bottom-6 flex items-end justify-between text-white">
+            <p class="font-mono text-xs tracking-[0.18em] uppercase">
+              <span data-explorer-num>01</span> / {String(solutions.length).padStart(2, '0')}
+            </p>
+            <span class="grid size-14 place-items-center rounded-2xl bg-signal text-ink-950" data-explorer-icon>
+              {
+                solutions.map((s, i) => (
+                  <Icon name={s.data.key as IconName} class:list={['size-7', i !== 0 && 'hidden']} />
+                ))
+              }
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <ol class="border-t border-ink-200 lg:col-span-7">
+        {
+          solutions.map((s, i) => (
+            <li class="border-b border-ink-200" data-reveal style={`--d:${i * 50}`}>
+              <a
+                href={solutionUrl(locale, s.data.slug)}
+                class="explorer-row group grid grid-cols-[auto_1fr_auto] items-center gap-5 py-7 md:gap-8 md:py-9"
+                data-explorer-item={i}
+              >
+                <span class="font-mono text-sm font-semibold text-ink-500 transition-colors group-hover:text-signal-ink">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <span>
+                  <span class="block text-2xl font-bold tracking-tight text-ink-950 transition-transform duration-500 ease-(--ease-out-expo) group-hover:translate-x-2 md:text-[2rem]">
+                    {s.data.shortTitle}
+                  </span>
+                  <span class="mt-2 block max-w-lg text-ink-600">{s.data.tagline}</span>
+                </span>
+                <span class="grid size-12 place-items-center rounded-full ring-1 ring-ink-950/20 transition-all duration-500 ease-(--ease-out-expo) ring-inset group-hover:bg-signal group-hover:ring-signal">
+                  <Icon name="arrow-up-right" class="size-5 transition-transform duration-500 group-hover:rotate-45" />
+                </span>
+              </a>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </div>
+</section>
+
+<style>
+  .explorer-img {
+    opacity: 0;
+    transition:
+      opacity 0.7s var(--ease-out-expo),
+      transform 1.2s var(--ease-out-expo);
+    transform: scale(1.08);
+  }
+  .explorer-img.is-active {
+    opacity: 1;
+    transform: none;
+  }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-explorer]').forEach((root) => {
+    const imgs = root.querySelectorAll<HTMLElement>('[data-explorer-img]');
+    const icons = root.querySelectorAll<SVGElement>('[data-explorer-icon] svg');
+    const num = root.querySelector<HTMLElement>('[data-explorer-num]');
+    const activate = (i: number) => {
+      imgs.forEach((el, k) => el.classList.toggle('is-active', k === i));
+      icons.forEach((el, k) => el.classList.toggle('hidden', k !== i));
+      if (num) num.textContent = String(i + 1).padStart(2, '0');
+    };
+    root.querySelectorAll<HTMLElement>('[data-explorer-item]').forEach((a) => {
+      const i = Number(a.dataset.explorerItem);
+      a.addEventListener('pointerenter', () => activate(i));
+      a.addEventListener('focus', () => activate(i));
+    });
+  });
+</script>

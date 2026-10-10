@@ -1,0 +1,48 @@
+---
+import FormShell from './FormShell.astro';
+import Field from './Field.astro';
+import Consent from './Consent.astro';
+import { useDict, routes, type Locale } from '../../i18n';
+import { formEndpoints } from '../../data/site';
+import type { Job } from '../../lib/content';
+
+interface Props {
+  locale: Locale;
+  jobs: Job[];
+  labelledby?: string;
+}
+
+const { locale, jobs, labelledby } = Astro.props;
+const t = useDict(locale);
+const f = t.forms;
+const [privacyBefore, privacyAfter] = f.privacyConsent.split('{link}');
+const options = [
+  { value: '', label: '—' },
+  ...jobs.map((j) => ({ value: j.data.title, label: j.data.title })),
+  { value: f.spontaneous, label: f.spontaneous },
+];
+---
+
+<FormShell
+  locale={locale}
+  name="careers"
+  endpoint={formEndpoints.careers}
+  submitLabel={f.sendApplication}
+  successMessage={f.successApplication}
+  multipart
+  tone="dark"
+  labelledby={labelledby}
+>
+  <div class="grid gap-6 sm:grid-cols-2">
+    <Field name="firstName" label={f.firstName} required autocomplete="given-name" requiredLabel={f.required} tone="dark" />
+    <Field name="lastName" label={f.lastName} required autocomplete="family-name" requiredLabel={f.required} tone="dark" />
+    <Field name="email" type="email" label={f.email} required autocomplete="email" requiredLabel={f.required} tone="dark" />
+    <Field name="phone" type="tel" label={f.phone} autocomplete="tel" requiredLabel={f.required} tone="dark" />
+  </div>
+  <Field name="position" type="select" label={f.position} hint={f.positionHint} required options={options} requiredLabel={f.required} tone="dark" />
+  <Field name="cv" type="file" label={f.cv} hint={f.cvHint} required accept=".pdf,.doc,.docx,.odt,application/pdf" requiredLabel={f.required} tone="dark" />
+  <Field name="message" type="textarea" label={f.message} rows={5} requiredLabel={f.required} tone="dark" />
+  <Consent name="privacy" required requiredLabel={f.required} tone="dark">
+    {privacyBefore}<a href={routes.privacy[locale]} class="font-semibold text-white underline underline-offset-2" target="_blank" rel="noopener">{f.privacyLink}<span class="sr-only"> {t.a11y.opensNewTab}</span></a>{privacyAfter}
+  </Consent>
+</FormShell>

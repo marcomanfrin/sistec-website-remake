@@ -1,0 +1,235 @@
+---
+import Icon from '../ui/Icon.astro';
+import { useDict, routes, type Locale } from '../../i18n';
+import { analytics } from '../../data/site';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = useDict(locale);
+---
+
+<!--
+  Banner cookie conforme alle Linee guida del Garante (10 giugno 2021):
+  - nessuno strumento non tecnico prima del consenso;
+  - "Rifiuta" con la stessa evidenza di "Accetta";
+  - scelte granulari e revocabili in qualsiasi momento ("Preferenze cookie" nel footer);
+  - scelta memorizzata per 6 mesi.
+-->
+<section
+  data-cookie-banner
+  hidden
+  aria-labelledby="consent-title"
+  class="fixed inset-x-3 bottom-3 z-[60] mx-auto max-w-3xl rounded-3xl bg-ink-900 p-6 text-ink-200 shadow-[0_24px_80px_-12px_rgb(0_0_0/0.6)] ring-1 ring-white/10 sm:inset-x-6 sm:bottom-6 sm:p-7"
+>
+  <h2 id="consent-title" class="text-lg font-bold text-white">{t.consent.title}</h2>
+  <p class="mt-2 text-[0.9375rem] leading-relaxed">
+    {t.consent.text}
+    <a href={routes.cookies[locale]} class="font-semibold text-signal underline underline-offset-4 hover:no-underline">
+      {t.consent.policy}
+    </a>
+  </p>
+  <div class="mt-5 flex flex-col-reverse gap-3 sm:flex-row sm:items-center">
+    <button type="button" class="btn min-h-11 px-0 text-white underline underline-offset-4 hover:no-underline sm:mr-auto" data-consent-customize>
+      {t.consent.customize}
+    </button>
+    <button type="button" class="btn btn-ghost-light min-h-11 sm:min-w-40" data-consent-reject>{t.consent.rejectAll}</button>
+    <button type="button" class="btn btn-ghost-light min-h-11 sm:min-w-40" data-consent-accept>{t.consent.acceptAll}</button>
+  </div>
+</section>
+
+<dialog
+  data-consent-dialog
+  aria-labelledby="consent-prefs-title"
+  class="m-auto w-[min(40rem,calc(100%-1.5rem))] rounded-3xl bg-paper p-0 text-ink-900 shadow-2xl"
+>
+  <form method="dialog" class="on-light p-6 sm:p-8" data-consent-form>
+    <div class="flex items-start justify-between gap-4">
+      <h2 id="consent-prefs-title" class="text-2xl font-bold tracking-tight">{t.consent.prefsTitle}</h2>
+      <button type="button" class="-mt-2 -mr-2 grid size-11 place-items-center rounded-full hover:bg-ink-950/8" data-consent-close>
+        <Icon name="close" class="size-5" />
+        <span class="sr-only">{t.a11y.close}</span>
+      </button>
+    </div>
+    <p class="mt-3 leading-relaxed text-ink-600">{t.consent.prefsIntro}</p>
+
+    <fieldset class="mt-6 divide-y divide-ink-200 rounded-2xl bg-white ring-1 ring-ink-200">
+      <legend class="sr-only">{t.consent.prefsTitle}</legend>
+      <div class="flex items-start gap-4 p-5">
+        <div class="flex-1">
+          <p class="font-semibold" id="c-nec">{t.consent.necessary}</p>
+          <p class="mt-1 text-sm text-ink-600">{t.consent.necessaryText}</p>
+        </div>
+        <span class="shrink-0 rounded-full bg-paper-2 px-3 py-1 text-xs font-semibold text-ink-700">{t.consent.alwaysOn}</span>
+      </div>
+      {
+        (
+          [
+            ['analytics', t.consent.analytics, t.consent.analyticsText],
+            ['media', t.consent.media, t.consent.mediaText],
+          ] as const
+        ).map(([name, label, text]) => (
+          <div class="flex items-start gap-4 p-5">
+            <div class="flex-1">
+              <label for={`consent-${name}`} class="cursor-pointer font-semibold">
+                {label}
+              </label>
+              <p class="mt-1 text-sm text-ink-600" id={`consent-${name}-desc`}>
+                {text}
+              </p>
+            </div>
+            <input
+              type="checkbox"
+              role="switch"
+              id={`consent-${name}`}
+              name={name}
+              aria-describedby={`consent-${name}-desc`}
+              class="switch mt-1 shrink-0"
+            />
+          </div>
+        ))
+      }
+    </fieldset>
+
+    <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-end">
+      <button type="button" class="btn btn-ghost-dark min-h-11" data-consent-reject>{t.consent.rejectAll}</button>
+      <button type="button" class="btn btn-ghost-dark min-h-11" data-consent-accept>{t.consent.acceptAll}</button>
+      <button type="submit" class="btn btn-dark min-h-11" data-consent-save>{t.consent.save}</button>
+    </div>
+  </form>
+</dialog>
+
+<p class="sr-only" role="status" aria-live="polite" data-consent-status></p>
+
+<script is:inline define:vars={{ gtmId: analytics.gtmId, savedMsg: t.consent.saved }}>
+  window.__SISTEC_GTM__ = gtmId;
+  window.__SISTEC_CONSENT_SAVED__ = savedMsg;
+</script>
+
+<script>
+  import { readConsent, writeConsent, onConsentChange, type Consent } from '../../scripts/consent';
+
+  const banner = document.querySelector<HTMLElement>('[data-cookie-banner]')!;
+  const dialog = document.querySelector<HTMLDialogElement>('[data-consent-dialog]')!;
+  const form = dialog.querySelector<HTMLFormElement>('[data-consent-form]')!;
+  const status = document.querySelector<HTMLElement>('[data-consent-status]')!;
+  const savedMsg = (window as any).__SISTEC_CONSENT_SAVED__ as string;
+
+  const syncForm = (c: Consent | null) => {
+    (form.elements.namedItem('analytics') as HTMLInputElement).checked = !!c?.analytics;
+    (form.elements.namedItem('media') as HTMLInputElement).checked = !!c?.media;
+  };
+
+  const decide = (c: Pick<Consent, 'analytics' | 'media'>) => {
+    writeConsent(c);
+    banner.hidden = true;
+    if (dialog.open) dialog.close();
+    status.textContent = savedMsg;
+  };
+
+  const current = readConsent();
+  if (!current) banner.hidden = false;
+
+  document.addEventListener('click', (e) => {
+    const target = (e.target as HTMLElement).closest<HTMLElement>(
+      '[data-consent-accept],[data-consent-reject],[data-consent-customize],[data-open-consent],[data-consent-close]',
+    );
+    if (!target) return;
+    if (target.matches('[data-consent-accept]')) decide({ analytics: true, media: true });
+    else if (target.matches('[data-consent-reject]')) decide({ analytics: false, media: false });
+    else if (target.matches('[data-consent-close]')) dialog.close();
+    else {
+      syncForm(readConsent());
+      dialog.showModal();
+    }
+  });
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    decide({
+      analytics: (form.elements.namedItem('analytics') as HTMLInputElement).checked,
+      media: (form.elements.namedItem('media') as HTMLInputElement).checked,
+    });
+  });
+
+  // Google Tag Manager con Consent Mode v2: caricato solo dopo il consenso alle statistiche
+  let gtmLoaded = false;
+  const loadGtm = (c: Consent | null) => {
+    const w = window as any;
+    w.dataLayer = w.dataLayer || [];
+    w.gtag = w.gtag || function () { w.dataLayer.push(arguments); };
+    if (!c?.analytics) {
+      if (gtmLoaded) w.gtag('consent', 'update', { analytics_storage: 'denied' });
+      // Revoca: rimuove gli eventuali cookie di Google Analytics già installati
+      const host = location.hostname.replace(/^www\./, '');
+      document.cookie.split(';').forEach((pair) => {
+        const name = pair.split('=')[0].trim();
+        if (!name.startsWith('_ga')) return;
+        for (const domain of ['', `; domain=.${host}`, `; domain=${location.hostname}`]) {
+          document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/${domain}`;
+        }
+      });
+      return;
+    }
+    w.gtag('consent', gtmLoaded ? 'update' : 'default', {
+      analytics_storage: 'granted',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+    });
+    if (gtmLoaded || !w.__SISTEC_GTM__) return;
+    gtmLoaded = true;
+    // Il consenso copre solo Google Analytics: blocca nel container i tag che caricano script di terze parti
+    // (es. il CMP iubenda ereditato dal vecchio sito, che mostrerebbe un secondo banner/pulsante privacy).
+    w.dataLayer.push({ 'gtm.blocklist': ['nonGoogleScripts', 'customScripts'] });
+    w.dataLayer.push({ 'gtm.start': Date.now(), event: 'gtm.js' });
+    const s = document.createElement('script');
+    s.async = true;
+    s.src = `https://www.googletagmanager.com/gtm.js?id=${encodeURIComponent(w.__SISTEC_GTM__)}`;
+    document.head.appendChild(s);
+  };
+  loadGtm(current);
+  onConsentChange(loadGtm);
+</script>
+
+<style>
+  .switch {
+    appearance: none;
+    position: relative;
+    width: 3.25rem;
+    height: 1.875rem;
+    border-radius: 999px;
+    background: var(--color-ink-400);
+    cursor: pointer;
+    transition: background-color 0.25s var(--ease-out-expo);
+  }
+  .switch::after {
+    content: '';
+    position: absolute;
+    top: 0.1875rem;
+    left: 0.1875rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 999px;
+    background: #fff;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 0.3);
+    transition: transform 0.35s var(--ease-out-expo);
+  }
+  .switch:checked {
+    background: var(--color-ink-950);
+  }
+  .switch:checked::after {
+    transform: translateX(1.375rem);
+    background: var(--color-signal);
+  }
+  @media (forced-colors: active) {
+    .switch {
+      border: 1px solid CanvasText;
+    }
+    .switch::after {
+      background: CanvasText;
+    }
+  }
+</style>

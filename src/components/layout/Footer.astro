@@ -1,0 +1,142 @@
+---
+import Logo from '../brand/Logo.astro';
+import Asterisk from '../brand/Asterisk.astro';
+import Icon from '../ui/Icon.astro';
+import { useDict, routes, solutionUrl, type Locale } from '../../i18n';
+import { getSolutions } from '../../lib/content';
+import { company } from '../../data/site';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = useDict(locale);
+const solutions = await getSolutions(locale);
+const year = new Date().getFullYear();
+
+const companyLinks = [
+  { href: routes.about[locale], label: t.nav.about },
+  { href: routes.cases[locale], label: t.nav.cases },
+  { href: routes.careers[locale], label: t.nav.careers },
+  { href: routes.contact[locale], label: t.nav.contact },
+];
+---
+
+<footer id="page-footer" class="relative overflow-hidden bg-ink-950 text-ink-300" tabindex="-1">
+  <Asterisk
+    class="pointer-events-none absolute -right-40 -bottom-48 w-[42rem] max-w-none opacity-[0.04]"
+    fill="fill-white"
+    spin
+  />
+  <div class="container-x relative pt-20 pb-10 lg:pt-28">
+    <div class="grid gap-14 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <a href={routes.home[locale]} class="inline-block" aria-label={t.a11y.homeLink}>
+          <Logo class="h-14 w-auto" />
+        </a>
+        <p class="mt-8 text-xl font-semibold tracking-tight text-white">{t.footer.claim}</p>
+        <p class="mt-3 max-w-sm leading-relaxed">{t.footer.pitch}</p>
+        <ul class="mt-8 flex gap-2" aria-label={t.footer.follow}>
+          <li>
+            <a
+              href={company.social.linkedin}
+              class="grid size-12 place-items-center rounded-full ring-1 ring-white/15 transition-colors ring-inset hover:bg-white hover:text-ink-950"
+              rel="noopener"
+              target="_blank"
+            >
+              <Icon name="linkedin" class="size-5" />
+              <span class="sr-only">LinkedIn {t.a11y.opensNewTab}</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href={company.social.youtube}
+              class="grid size-12 place-items-center rounded-full ring-1 ring-white/15 transition-colors ring-inset hover:bg-white hover:text-ink-950"
+              rel="noopener"
+              target="_blank"
+            >
+              <Icon name="youtube" class="size-5" />
+              <span class="sr-only">YouTube {t.a11y.opensNewTab}</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <nav class="grid gap-10 sm:grid-cols-2 lg:col-span-5" aria-label={t.a11y.footerNav}>
+        <div>
+          <h2 class="eyebrow eyebrow--plain text-white">{t.footer.solutions}</h2>
+          <ul class="mt-5 space-y-1">
+            {
+              solutions.map((s) => (
+                <li>
+                  <a href={solutionUrl(locale, s.data.slug)} class="link-underline inline-block py-1.5 hover:text-white">
+                    {s.data.shortTitle}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+        <div>
+          <h2 class="eyebrow eyebrow--plain text-white">{t.footer.company_}</h2>
+          <ul class="mt-5 space-y-1">
+            {
+              companyLinks.map((l) => (
+                <li>
+                  <a href={l.href} class="link-underline inline-block py-1.5 hover:text-white">
+                    {l.label}
+                  </a>
+                </li>
+              ))
+            }
+            <li>
+              <a href={company.parent.url} class="link-underline inline-flex items-center gap-1.5 py-1.5 hover:text-white" rel="noopener" target="_blank">
+                Prima Power <Icon name="external" class="size-3.5" /><span class="sr-only">{t.a11y.opensNewTab}</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="lg:col-span-3">
+        <h2 class="eyebrow eyebrow--plain text-white">{t.footer.headquarters}</h2>
+        <address class="mt-5 space-y-4 not-italic">
+          <p class="flex gap-3">
+            <Icon name="map-pin" class="mt-0.5 size-5 shrink-0 text-signal" />
+            <span>{t.footer.address}</span>
+          </p>
+          <p class="flex gap-3">
+            <Icon name="phone" class="mt-0.5 size-5 shrink-0 text-signal" />
+            <a href={company.phoneHref} class="link-underline hover:text-white">{company.phone}</a>
+          </p>
+          <p class="flex gap-3">
+            <Icon name="mail" class="mt-0.5 size-5 shrink-0 text-signal" />
+            <a href={`mailto:${company.email}`} class="link-underline hover:text-white">{company.email}</a>
+          </p>
+          <p class="flex gap-3">
+            <Icon name="clock" class="mt-0.5 size-5 shrink-0 text-signal" />
+            <span>{t.footer.hours}</span>
+          </p>
+        </address>
+      </div>
+    </div>
+
+    <div
+      class="mt-20 flex flex-col gap-6 border-t border-white/10 pt-8 text-sm lg:flex-row lg:items-center lg:justify-between"
+    >
+      <p>
+        © {year} {t.footer.company} · {t.footer.vat}
+      </p>
+      <ul class="flex flex-wrap items-center gap-x-6 gap-y-2" aria-label={t.a11y.legalNav}>
+        <li><a href={routes.privacy[locale]} class="link-underline inline-block py-2 hover:text-white">{t.footer.privacy}</a></li>
+        <li><a href={routes.cookies[locale]} class="link-underline inline-block py-2 hover:text-white">{t.footer.cookies}</a></li>
+        <li>
+          <button type="button" data-open-consent class="link-underline inline-block cursor-pointer py-2 hover:text-white">
+            {t.footer.cookiePrefs}
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>

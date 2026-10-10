@@ -1,0 +1,69 @@
+---
+import Icon from '../ui/Icon.astro';
+import { useDict, type Locale } from '../../i18n';
+import { ASTERISK } from '../brand/logo-paths';
+
+interface Props {
+  items: string[];
+  locale: Locale;
+}
+
+const { items, locale } = Astro.props;
+const t = useDict(locale);
+---
+
+<!-- Elenco statico per le tecnologie assistive; la copia animata è decorativa. Pausa disponibile (WCAG 2.2.2). -->
+<section class="marquee relative overflow-hidden bg-signal py-5 text-ink-950" data-marquee>
+  <ul class="sr-only">
+    {items.map((i) => <li>{i}</li>)}
+  </ul>
+  <div class="flex w-max animate-marquee items-center" style="--marquee-duration: 55s" aria-hidden="true" data-marquee-track>
+    {
+      [0, 1].map(() => (
+        <div class="flex shrink-0 items-center">
+          {items.map((item) => (
+            <span class="flex items-center gap-8 pr-8 text-xl font-bold tracking-tight whitespace-nowrap md:text-3xl">
+              {item}
+              <svg viewBox={ASTERISK.viewBox} class="size-5 md:size-7" aria-hidden="true">
+                <path d={ASTERISK.d} class="fill-ink-950" />
+              </svg>
+            </span>
+          ))}
+        </div>
+      ))
+    }
+  </div>
+  <button
+    type="button"
+    class="absolute top-1/2 right-3 grid size-11 -translate-y-1/2 place-items-center rounded-full bg-ink-950 text-white shadow-lg hover:bg-ink-700"
+    aria-pressed="false"
+    data-marquee-toggle
+  >
+    <Icon name="pause" class="size-4" data-icon-pause />
+    <Icon name="play" class="hidden size-4" data-icon-play />
+    <span class="sr-only">{t.a11y.pauseAnimation}</span>
+  </button>
+</section>
+
+<style>
+  .marquee[data-paused] [data-marquee-track] {
+    animation-play-state: paused;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    [data-marquee-toggle] {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-marquee]').forEach((root) => {
+    const btn = root.querySelector<HTMLButtonElement>('[data-marquee-toggle]')!;
+    btn.addEventListener('click', () => {
+      const paused = root.toggleAttribute('data-paused');
+      btn.setAttribute('aria-pressed', String(paused));
+      btn.querySelector('[data-icon-pause]')!.classList.toggle('hidden', paused);
+      btn.querySelector('[data-icon-play]')!.classList.toggle('hidden', !paused);
+    });
+  });
+</script>

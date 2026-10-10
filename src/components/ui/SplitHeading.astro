@@ -1,0 +1,46 @@
+---
+/**
+ * Titolo che entra parola per parola. Il testo resta un normale nodo di testo
+ * (le parole sono separate da spazi reali), quindi viene letto correttamente dagli screen reader.
+ * `highlight` colora di arancio le parole indicate (indice a partire da 0) oppure un intero segmento.
+ */
+interface Props {
+  as?: 'h1' | 'h2' | 'h3' | 'p';
+  text: string;
+  /** Secondo segmento, mostrato su una nuova riga e in colore di accento */
+  accent?: string;
+  class?: string;
+  accentClass?: string;
+  delay?: number;
+  id?: string;
+}
+
+const { as: Tag = 'h2', text, accent, class: className, accentClass = 'text-signal', delay = 0, id } = Astro.props;
+const words = text.split(/\s+/).filter(Boolean);
+const accentWords = accent ? accent.split(/\s+/).filter(Boolean) : [];
+---
+
+<Tag class:list={['split-words', className]} style={`--d:${delay}`} id={id}>
+  {
+    words.map((w, i) => (
+      <>
+        <span class="w">
+          <span style={`--i:${i}`}>{w}</span>
+        </span>{' '}
+      </>
+    ))
+  }
+  {
+    accentWords.length > 0 && (
+      <span class:list={['block', accentClass]}>
+        {accentWords.map((w, i) => (
+          <>
+            <span class="w">
+              <span style={`--i:${words.length + i}`}>{w}</span>
+            </span>{' '}
+          </>
+        ))}
+      </span>
+    )
+  }
+</Tag>

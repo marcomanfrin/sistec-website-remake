@@ -1,0 +1,316 @@
+---
+import Logo from '../brand/Logo.astro';
+import Icon, { type IconName } from '../ui/Icon.astro';
+import LangSwitch from './LangSwitch.astro';
+import { useDict, routes, solutionUrl, type Locale, type Alternates } from '../../i18n';
+import { getSolutions } from '../../lib/content';
+
+interface Props {
+  locale: Locale;
+  alternates: Alternates;
+}
+
+const { locale, alternates } = Astro.props;
+const t = useDict(locale);
+const solutions = await getSolutions(locale);
+const path = Astro.url.pathname;
+
+const isCurrent = (href: string) => path === href;
+const isSection = (href: string) => path.startsWith(href) && href !== routes.home[locale];
+
+const solutionsActive = path.startsWith(routes.solutions[locale]) || path.startsWith(routes.solutionBase[locale]);
+
+const links = [
+  { href: routes.about[locale], label: t.nav.about },
+  { href: routes.cases[locale], label: t.nav.cases },
+  { href: routes.careers[locale], label: t.nav.careers },
+];
+---
+
+<header
+  data-site-header
+  class="group/header fixed inset-x-0 top-0 z-50 text-white transition-[background-color,box-shadow,transform] duration-500 ease-(--ease-out-expo) data-[scrolled]:bg-ink-950/88 data-[scrolled]:shadow-[0_1px_0_0_rgb(255_255_255/0.08)] data-[scrolled]:backdrop-blur-xl data-[hidden]:-translate-y-full data-[menu-open]:translate-y-0"
+  style="view-transition-name: site-header"
+>
+  <div class="container-x flex h-(--header-h) items-center gap-6">
+    <a href={routes.home[locale]} class="relative z-10 -my-2 shrink-0 py-2" aria-label={t.a11y.homeLink}>
+      <Logo class="h-9 w-auto sm:h-10" />
+    </a>
+
+    <nav aria-label={t.a11y.mainNav} class="ml-auto hidden lg:block">
+      <ul class="flex items-center gap-1 text-[0.9375rem] font-medium">
+        <li class="relative" data-disclosure>
+          <div class="flex items-center rounded-full transition-colors hover:bg-white/10 has-aria-expanded:bg-white/10">
+            <a
+              href={routes.solutions[locale]}
+              aria-current={isCurrent(routes.solutions[locale]) ? 'page' : solutionsActive ? 'true' : undefined}
+              class="flex min-h-11 items-center rounded-l-full pr-1 pl-4 aria-[current]:text-signal"
+            >
+              {t.nav.solutions}
+            </a>
+            <button
+              type="button"
+              class="grid min-h-11 place-items-center rounded-r-full pr-3.5 pl-1"
+              aria-expanded="false"
+              aria-controls="mega-solutions"
+              aria-label={t.a11y.showSolutions}
+              data-disclosure-trigger
+            >
+              <Icon name="chevron-down" class="size-4 transition-transform duration-300 in-aria-expanded:rotate-180" />
+            </button>
+          </div>
+
+          <div
+            id="mega-solutions"
+            class="fixed inset-x-0 top-(--header-h) hidden px-5 pt-3 sm:px-8 lg:px-12 [&[data-open]]:block"
+            data-disclosure-panel
+          >
+            <div
+              class="mega-panel mx-auto grid max-w-[90rem] grid-cols-[1fr_20rem] overflow-hidden rounded-3xl bg-ink-900/96 shadow-2xl ring-1 ring-white/10 backdrop-blur-xl"
+            >
+              <ul class="grid grid-cols-2 gap-1 p-4 xl:grid-cols-3">
+                {
+                  solutions.map((s) => {
+                    const href = solutionUrl(locale, s.data.slug);
+                    return (
+                      <li>
+                        <a
+                          href={href}
+                          aria-current={isCurrent(href) ? 'page' : undefined}
+                          class="group/item flex h-full gap-4 rounded-2xl p-4 transition-colors hover:bg-white/6 aria-[current=page]:bg-white/8"
+                        >
+                          <span class="grid size-11 shrink-0 place-items-center rounded-xl bg-signal/12 text-signal ring-1 ring-signal/25 transition-colors group-hover/item:bg-signal group-hover/item:text-ink-950">
+                            <Icon name={s.data.key as IconName} class="size-6" />
+                          </span>
+                          <span>
+                            <span class="block font-semibold text-white">{s.data.shortTitle}</span>
+                            <span class="mt-1 line-clamp-2 block text-sm leading-snug font-normal text-ink-300">
+                              {s.data.tagline}
+                            </span>
+                          </span>
+                        </a>
+                      </li>
+                    );
+                  })
+                }
+              </ul>
+              <a
+                href={routes.solutions[locale]}
+                class="group/all relative flex flex-col justify-end overflow-hidden bg-signal p-7 text-ink-950"
+              >
+                <span class="absolute -top-10 -right-10 size-48 opacity-20 transition-transform duration-700 ease-(--ease-out-expo) group-hover/all:rotate-45">
+                  <svg viewBox="0 0 24 24" class="size-full" aria-hidden="true"><path d="M12 2v20M3 7l18 10M21 7 3 17" stroke="currentColor" stroke-width="3" stroke-linecap="round" /></svg>
+                </span>
+                <span class="font-mono text-xs tracking-[0.18em] uppercase">0{solutions.length} · {t.nav.solutions}</span>
+                <span class="mt-3 text-2xl leading-tight font-bold">{t.nav.allSolutions}</span>
+                <span class="mt-2 text-sm font-medium">{t.nav.allSolutionsText}</span>
+                <Icon name="arrow-right" class="mt-6 size-6 transition-transform duration-500 group-hover/all:translate-x-2" />
+              </a>
+            </div>
+          </div>
+        </li>
+        {
+          links.map((l) => (
+            <li>
+              <a
+                href={l.href}
+                aria-current={isCurrent(l.href) ? 'page' : isSection(l.href) ? 'true' : undefined}
+                class="flex min-h-11 items-center rounded-full px-4 transition-colors hover:bg-white/10 aria-[current]:text-signal"
+              >
+                {l.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <div class="ml-auto flex items-center gap-2 lg:ml-2">
+      <LangSwitch locale={locale} alternates={alternates} class="hidden sm:flex" />
+      <a
+        href={routes.contact[locale]}
+        class="btn btn-primary hidden min-h-11 px-5 py-2 text-sm md:inline-flex"
+        aria-current={isCurrent(routes.contact[locale]) ? 'page' : undefined}
+      >
+        {t.nav.contact}
+        <Icon name="arrow-right" class="btn-arrow" />
+      </a>
+      <button
+        type="button"
+        class="grid size-12 place-items-center rounded-full ring-1 ring-white/25 transition-colors ring-inset hover:bg-white/10 lg:hidden"
+        aria-haspopup="dialog"
+        aria-controls="mobile-menu"
+        data-menu-open
+      >
+        <Icon name="menu" class="size-6" />
+        <span class="sr-only">{t.a11y.openMenu}</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Menu mobile: dialog modale nativo (focus trap ed Esc gestiti dal browser) -->
+  <dialog
+    id="mobile-menu"
+    class="mobile-menu m-0 h-dvh max-h-none w-full max-w-none bg-ink-950 p-0 text-white backdrop:bg-transparent"
+    aria-label={t.a11y.mobileNav}
+  >
+    <div class="flex h-full flex-col">
+      <div class="container-x flex h-(--header-h) shrink-0 items-center justify-between">
+        <a href={routes.home[locale]} aria-label={t.a11y.homeLink}><Logo class="h-9 w-auto" /></a>
+        <button
+          type="button"
+          class="grid size-12 place-items-center rounded-full ring-1 ring-white/25 ring-inset hover:bg-white/10"
+          data-menu-close
+        >
+          <Icon name="close" class="size-6" />
+          <span class="sr-only">{t.a11y.closeMenu}</span>
+        </button>
+      </div>
+      <nav class="container-x flex-1 overflow-y-auto pt-6 pb-10" aria-label={t.a11y.mobileNav}>
+        <p class="eyebrow text-signal">{t.nav.solutions}</p>
+        <ul class="mt-4 grid gap-1">
+          {
+            solutions.map((s, i) => {
+              const href = solutionUrl(locale, s.data.slug);
+              return (
+                <li class="mobile-item" style={`--i:${i}`}>
+                  <a
+                    href={href}
+                    aria-current={isCurrent(href) ? 'page' : undefined}
+                    class="flex min-h-12 items-center gap-4 rounded-xl py-2 text-lg font-semibold aria-[current=page]:text-signal"
+                  >
+                    <Icon name={s.data.key as IconName} class="size-6 text-signal" />
+                    {s.data.shortTitle}
+                  </a>
+                </li>
+              );
+            })
+          }
+          <li class="mobile-item" style={`--i:${solutions.length}`}>
+            <a href={routes.solutions[locale]} class="flex min-h-12 items-center gap-2 text-base font-semibold text-signal">
+              {t.nav.allSolutions}
+              <Icon name="arrow-right" class="size-5" />
+            </a>
+          </li>
+        </ul>
+        <ul class="mt-8 grid gap-1 border-t border-white/12 pt-6">
+          {
+            [...links, { href: routes.contact[locale], label: t.nav.contact }].map((l, i) => (
+              <li class="mobile-item" style={`--i:${solutions.length + 1 + i}`}>
+                <a
+                  href={l.href}
+                  aria-current={isCurrent(l.href) ? 'page' : undefined}
+                  class="flex min-h-14 items-center text-3xl font-bold tracking-tight aria-[current=page]:text-signal"
+                >
+                  {l.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+        <LangSwitch locale={locale} alternates={alternates} class="mt-10 flex" />
+      </nav>
+    </div>
+  </dialog>
+</header>
+
+<style>
+  @media (prefers-reduced-motion: no-preference) {
+    .mega-panel {
+      animation: mega-in 0.45s var(--ease-out-expo);
+    }
+    @keyframes mega-in {
+      from {
+        opacity: 0;
+        transform: translateY(-8px) scale(0.99);
+      }
+    }
+    .mobile-menu[open] {
+      animation: menu-in 0.5s var(--ease-out-expo);
+    }
+    .mobile-menu[open] .mobile-item {
+      animation: item-in 0.7s var(--ease-out-expo) both;
+      animation-delay: calc(var(--i) * 35ms + 80ms);
+    }
+    @keyframes menu-in {
+      from {
+        clip-path: inset(0 0 100% 0);
+      }
+      to {
+        clip-path: inset(0 0 0 0);
+      }
+    }
+    @keyframes item-in {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+    }
+  }
+</style>
+
+<script>
+  const header = document.querySelector<HTMLElement>('[data-site-header]')!;
+
+  // Stato "scrolled" e auto-hide durante lo scroll verso il basso
+  let lastY = window.scrollY;
+  const onScroll = () => {
+    const y = window.scrollY;
+    header.toggleAttribute('data-scrolled', y > 24);
+    const goingDown = y > lastY && y > 320;
+    const anyOpen = header.querySelector('[data-disclosure-panel][data-open]');
+    header.toggleAttribute('data-hidden', goingDown && !anyOpen && !header.contains(document.activeElement));
+    lastY = y;
+  };
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+  header.addEventListener('focusin', () => header.removeAttribute('data-hidden'));
+
+  // Mega menu: apertura all'hover (solo mouse) e pattern "disclosure" sul chevron per tastiera/touch;
+  // chiusura con Esc, click esterno e uscita del focus. Il link accanto porta alla pagina di tutte le soluzioni.
+  header.querySelectorAll<HTMLElement>('[data-disclosure]').forEach((root) => {
+    const trigger = root.querySelector<HTMLButtonElement>('[data-disclosure-trigger]')!;
+    const panel = root.querySelector<HTMLElement>('[data-disclosure-panel]')!;
+    let closeTimer: number | undefined;
+    const set = (open: boolean) => {
+      window.clearTimeout(closeTimer);
+      trigger.setAttribute('aria-expanded', String(open));
+      panel.toggleAttribute('data-open', open);
+    };
+    root.addEventListener('pointerenter', (e) => e.pointerType === 'mouse' && set(true));
+    root.addEventListener('pointerleave', (e) => {
+      if (e.pointerType !== 'mouse') return;
+      window.clearTimeout(closeTimer);
+      closeTimer = window.setTimeout(() => set(false), 180);
+    });
+    trigger.addEventListener('click', () => set(trigger.getAttribute('aria-expanded') !== 'true'));
+    root.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && trigger.getAttribute('aria-expanded') === 'true') {
+        set(false);
+        trigger.focus();
+      }
+    });
+    root.addEventListener('focusout', (e) => {
+      if (!root.contains(e.relatedTarget as Node | null)) set(false);
+    });
+    document.addEventListener('click', (e) => {
+      if (!root.contains(e.target as Node)) set(false);
+    });
+  });
+
+  // Menu mobile
+  const dialog = document.getElementById('mobile-menu') as HTMLDialogElement;
+  const opener = header.querySelector<HTMLButtonElement>('[data-menu-open]')!;
+  opener.addEventListener('click', () => {
+    dialog.showModal();
+    header.setAttribute('data-menu-open', '');
+    document.documentElement.style.overflow = 'hidden';
+  });
+  dialog.querySelector('[data-menu-close]')!.addEventListener('click', () => dialog.close());
+  dialog.addEventListener('close', () => {
+    header.removeAttribute('data-menu-open');
+    document.documentElement.style.overflow = '';
+    opener.focus();
+  });
+  window.matchMedia('(min-width: 64rem)').addEventListener('change', (e) => e.matches && dialog.open && dialog.close());
+</script>

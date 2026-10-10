@@ -1,0 +1,1869 @@
+[
+ {
+  "id": 2116,
+  "date": "2026-05-15T15:23:13",
+  "date_gmt": "2026-05-15T13:23:13",
+  "guid": {
+   "rendered": "https://www.sistec-am.com/?p=2116"
+  },
+  "modified": "2026-09-22T12:55:32",
+  "modified_gmt": "2026-09-22T10:55:32",
+  "slug": "dallo-stock-al-pezzo-finito-levoluzione-della-lavorazione-lamiera-tramite-cella-robotizzata-multi-tecnologica",
+  "status": "publish",
+  "type": "post",
+  "link": "https://www.sistec-am.com/case-history/dallo-stock-al-pezzo-finito-levoluzione-della-lavorazione-lamiera-tramite-cella-robotizzata-multi-tecnologica/",
+  "title": {
+   "rendered": "Dallo stock al pezzo finito: l’evoluzione della lavorazione lamiera tramite cella robotizzata multi-tecnologica."
+  },
+  "content": {
+   "rendered": "<p><strong>Le sfide operative</strong></p>\n<p>La produzione tradizionale di componenti in lamiera presenta spesso inefficienze dovute alla frammentazione dei processi:</p>\n<ul>\n<li><strong>Movimentazione manuale</strong>: necessità di spostare i pezzi semilavorati tra macchine isolate, con conseguente aumento dei tempi morti e dei rischi per l’operatore.</li>\n<li><strong>Sincronizzazione tecnologica</strong>: complessità nel coordinare macchinari di produttori diversi (punzonatrici e piegatrici) in un unico ciclo di lavoro fluido.</li>\n<li><strong>Precisione e ripetibilità</strong>: difficoltà nel mantenere tolleranze millimetriche su grandi volumi senza l’ausilio di maschere di posizionamento manuali.</li>\n</ul>\n<p><strong>La soluzione strategica</strong></p>\n<p>L’infrastruttura sviluppata si basa su un&#8217;architettura robotizzata che garantisce la massima sinergia tra le tecnologie coinvolte:</p>\n<ul>\n<li><strong>Processo end-to-end</strong>: il sistema preleva autonomamente la lamiera da una pila e restituisce il pezzo finito, punzonato, piegato e dotato di inserti.</li>\n<li><strong>Integrazione multi-vendor</strong>: coordinamento avanzato tra una punzonatrice LAG Rainer e una pannellatrice Schröder, integrate attraverso una logistica robotizzata centralizzata.</li>\n<li><strong>Manipolazione intelligent</strong>e: utilizzo di robot antropomorfi per il carico/scarico e il posizionamento di estrema precisione durante le fasi di piega e staking.</li>\n<li><strong>Automazione flessibile</strong>: il software di gestione ottimizza l’intero ciclo, rendendo efficiente anche la produzione di piccoli lotti variabili.</li>\n</ul>\n<p><img loading=\"lazy\" decoding=\"async\" class=\"alignnone wp-image-2119\" src=\"https://www.sistec-am.com/wp-content/uploads/2026/05/SJOBERG-2-300x169.jpg\" alt=\"\" width=\"786\" height=\"443\" srcset=\"https://www.sistec-am.com/wp-content/uploads/2026/05/SJOBERG-2-300x169.jpg 300w, https://www.sistec-am.com/wp-content/uploads/2026/05/SJOBERG-2-1024x576.jpg 1024w, https://www.sistec-am.com/wp-content/uploads/2026/05/SJOBERG-2.jpg 1920w\" sizes=\"auto, (max-width: 786px) 100vw, 786px\" /></p>\n<p><strong>Risultati e valore generato</strong></p>\n<p>L’implementazione di questa soluzione di smart manufacturing ha permesso di raggiungere nuovi standard di efficienza:</p>\n<ul>\n<li><strong>Autonomia di processo e sicurezza</strong>: automazione completa della movimentazione dei materiali, eliminando carichi gravosi per l&#8217;operatore e riducendo drasticamente i tempi morti.</li>\n<li><strong>Ottimizzazione del flusso</strong>: eliminazione dei colli di bottiglia grazie a un ciclo di lavoro perfettamente bilanciato tra le stazioni di punzonatura e piegatura.</li>\n<li><strong>Qualità costante</strong>: precisione millimetrica in ogni fase della lavorazione grazie al controllo robotizzato costante e ripetibile.</li>\n<li><strong>Modularità e flessibilità</strong>: capacità del sistema di adattarsi rapidamente a diverse varianti di prodotto senza modifiche strutturali.</li>\n</ul>\n<p><img loading=\"lazy\" decoding=\"async\" class=\"alignnone wp-image-2120\" src=\"https://www.sistec-am.com/wp-content/uploads/2026/05/SJOBERG-3-300x169.jpg\" alt=\"\" width=\"717\" height=\"404\" srcset=\"https://www.sistec-am.com/wp-content/uploads/2026/05/SJOBERG-3-300x169.jpg 300w, https://www.sistec-am.com/wp-content/uploads/2026/05/SJOBERG-3-1024x576.jpg 1024w, https://www.sistec-am.com/wp-content/uploads/2026/05/SJOBERG-3.jpg 1920w\" sizes=\"auto, (max-width: 717px) 100vw, 717px\" /></p>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Le sfide operative La produzione tradizionale di componenti in lamiera presenta spesso inefficienze dovute alla frammentazione dei processi: Movimentazione manuale: necessità di spostare i pezzi semilavorati tra macchine isolate, con conseguente aumento dei tempi morti e dei rischi per l’operatore. Sincronizzazione tecnologica: complessità nel coordinare macchinari di produttori diversi (punzonatrici e piegatrici) in un unico&#8230;</p>\n",
+   "protected": false
+  },
+  "author": 2,
+  "featured_media": 2118,
+  "comment_status": "open",
+  "ping_status": "open",
+  "sticky": false,
+  "template": "",
+  "format": "standard",
+  "meta": {
+   "_acf_changed": false,
+   "footnotes": ""
+  },
+  "categories": [
+   1
+  ],
+  "tags": [],
+  "class_list": [
+   "post-2116",
+   "post",
+   "type-post",
+   "status-publish",
+   "format-standard",
+   "has-post-thumbnail",
+   "hentry",
+   "category-case-history"
+  ],
+  "acf": [],
+  "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v28.6 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Dallo stock al pezzo finito: l’evoluzione della lavorazione lamiera tramite cella robotizzata multi-tecnologica. | Sistec</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://www.sistec-am.com/case-history/dallo-stock-al-pezzo-finito-levoluzione-della-lavorazione-lamiera-tramite-cella-robotizzata-multi-tecnologica/\" />\n<meta property=\"og:locale\" content=\"it_IT\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Dallo stock al pezzo finito: l’evoluzione della lavorazione lamiera tramite cella robotizzata multi-tecnologica. | Sistec\" />\n<meta property=\"og:description\" content=\"Le sfide operative La produzione tradizionale di componenti in lamiera presenta spesso inefficienze dovute alla frammentazione dei processi: Movimentazione manuale: necessità di spostare i pezzi semilavorati tra macchine isolate, con conseguente aumento dei tempi morti e dei rischi per l’operatore. Sincronizzazione tecnologica: complessità nel coordinare macchinari di produttori diversi (punzonatrici e piegatrici) in un unico...\" />\n<meta property=\"og:url\" content=\"https://www.sistec-am.com/case-history/dallo-stock-al-pezzo-finito-levoluzione-della-lavorazione-lamiera-tramite-cella-robotizzata-multi-tecnologica/\" />\n<meta property=\"og:site_name\" content=\"Sistec\" />\n<meta property=\"article:published_time\" content=\"2026-05-15T13:23:13+00:00\" />\n<meta property=\"article:modified_time\" content=\"2026-09-22T10:55:32+00:00\" />\n<meta property=\"og:image\" content=\"https://www.sistec-am.com/wp-content/uploads/2026/05/SJOBERG-square.jpg\" />\n\t<meta property=\"og:image:width\" content=\"1233\" />\n\t<meta property=\"og:image:height\" content=\"1233\" />\n\t<meta property=\"og:image:type\" content=\"image/jpeg\" />\n<meta name=\"author\" content=\"viola\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<meta name=\"twitter:label1\" content=\"Scritto da\" />\n\t<meta name=\"twitter:data1\" content=\"viola\" />\n\t<meta name=\"twitter:label2\" content=\"Tempo di lettura stimato\" />\n\t<meta name=\"twitter:data2\" content=\"3 minuti\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/dallo-stock-al-pezzo-finito-levoluzione-della-lavorazione-lamiera-tramite-cella-robotizzata-multi-tecnologica\\/#article\",\"isPartOf\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/dallo-stock-al-pezzo-finito-levoluzione-della-lavorazione-lamiera-tramite-cella-robotizzata-multi-tecnologica\\/\"},\"author\":{\"name\":\"viola\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#\\/schema\\/person\\/1f2a2cdf52dbb1a80eb9732d58a57b90\"},\"headline\":\"Dallo stock al pezzo finito: l’evoluzione della lavorazione lamiera tramite cella robotizzata multi-tecnologica.\",\"datePublished\":\"2026-05-15T13:23:13+00:00\",\"dateModified\":\"2026-09-22T10:55:32+00:00\",\"mainEntityOfPage\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/dallo-stock-al-pezzo-finito-levoluzione-della-lavorazione-lamiera-tramite-cella-robotizzata-multi-tecnologica\\/\"},\"wordCount\":297,\"commentCount\":0,\"publisher\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/#organization\"},\"image\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/dallo-stock-al-pezzo-finito-levoluzione-della-lavorazione-lamiera-tramite-cella-robotizzata-multi-tecnologica\\/#primaryimage\"},\"thumbnailUrl\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2026\\/05\\/SJOBERG-square.jpg\",\"articleSection\":[\"Case history\"],\"inLanguage\":\"it-IT\",\"potentialAction\":[{\"@type\":\"CommentAction\",\"name\":\"Comment\",\"target\":[\"https:\\/\\/www.sistec-am.com\\/case-history\\/dallo-stock-al-pezzo-finito-levoluzione-della-lavorazione-lamiera-tramite-cella-robotizzata-multi-tecnologica\\/#respond\"]}]},{\"@type\":\"WebPage\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/dallo-stock-al-pezzo-finito-levoluzione-della-lavorazione-lamiera-tramite-cella-robotizzata-multi-tecnologica\\/\",\"url\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/dallo-stock-al-pezzo-finito-levoluzione-della-lavorazione-lamiera-tramite-cella-robotizzata-multi-tecnologica\\/\",\"name\":\"Dallo stock al pezzo finito: l’evoluzione della lavorazione lamiera tramite cella robotizzata multi-tecnologica. | Sistec\",\"isPartOf\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/#website\"},\"primaryImageOfPage\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/dallo-stock-al-pezzo-finito-levoluzione-della-lavorazione-lamiera-tramite-cella-robotizzata-multi-tecnologica\\/#primaryimage\"},\"image\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/dallo-stock-al-pezzo-finito-levoluzione-della-lavorazione-lamiera-tramite-cella-robotizzata-multi-tecnologica\\/#primaryimage\"},\"thumbnailUrl\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2026\\/05\\/SJOBERG-square.jpg\",\"datePublished\":\"2026-05-15T13:23:13+00:00\",\"dateModified\":\"2026-09-22T10:55:32+00:00\",\"breadcrumb\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/dallo-stock-al-pezzo-finito-levoluzione-della-lavorazione-lamiera-tramite-cella-robotizzata-multi-tecnologica\\/#breadcrumb\"},\"inLanguage\":\"it-IT\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https:\\/\\/www.sistec-am.com\\/case-history\\/dallo-stock-al-pezzo-finito-levoluzione-della-lavorazione-lamiera-tramite-cella-robotizzata-multi-tecnologica\\/\"]}]},{\"@type\":\"ImageObject\",\"inLanguage\":\"it-IT\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/dallo-stock-al-pezzo-finito-levoluzione-della-lavorazione-lamiera-tramite-cella-robotizzata-multi-tecnologica\\/#primaryimage\",\"url\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2026\\/05\\/SJOBERG-square.jpg\",\"contentUrl\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2026\\/05\\/SJOBERG-square.jpg\",\"width\":1233,\"height\":1233,\"caption\":\"macchinari sistec per SJOBERG\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/dallo-stock-al-pezzo-finito-levoluzione-della-lavorazione-lamiera-tramite-cella-robotizzata-multi-tecnologica\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/www.sistec-am.com\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Dallo stock al pezzo finito: l’evoluzione della lavorazione lamiera tramite cella robotizzata multi-tecnologica.\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#website\",\"url\":\"https:\\/\\/www.sistec-am.com\\/\",\"name\":\"Sistec\",\"description\":\"\",\"publisher\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/www.sistec-am.com\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"it-IT\"},{\"@type\":\"Organization\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#organization\",\"name\":\"Sistec\",\"url\":\"https:\\/\\/www.sistec-am.com\\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"it-IT\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#\\/schema\\/logo\\/image\\/\",\"url\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2026\\/04\\/logo_sistec.png\",\"contentUrl\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2026\\/04\\/logo_sistec.png\",\"width\":142,\"height\":102,\"caption\":\"Sistec\"},\"image\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/#\\/schema\\/logo\\/image\\/\"}},{\"@type\":\"Person\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#\\/schema\\/person\\/1f2a2cdf52dbb1a80eb9732d58a57b90\",\"name\":\"viola\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+  "yoast_head_json": {
+   "title": "Dallo stock al pezzo finito: l’evoluzione della lavorazione lamiera tramite cella robotizzata multi-tecnologica. | Sistec",
+   "robots": {
+    "index": "index",
+    "follow": "follow",
+    "max-snippet": "max-snippet:-1",
+    "max-image-preview": "max-image-preview:large",
+    "max-video-preview": "max-video-preview:-1"
+   },
+   "canonical": "https://www.sistec-am.com/case-history/dallo-stock-al-pezzo-finito-levoluzione-della-lavorazione-lamiera-tramite-cella-robotizzata-multi-tecnologica/",
+   "og_locale": "it_IT",
+   "og_type": "article",
+   "og_title": "Dallo stock al pezzo finito: l’evoluzione della lavorazione lamiera tramite cella robotizzata multi-tecnologica. | Sistec",
+   "og_description": "Le sfide operative La produzione tradizionale di componenti in lamiera presenta spesso inefficienze dovute alla frammentazione dei processi: Movimentazione manuale: necessità di spostare i pezzi semilavorati tra macchine isolate, con conseguente aumento dei tempi morti e dei rischi per l’operatore. Sincronizzazione tecnologica: complessità nel coordinare macchinari di produttori diversi (punzonatrici e piegatrici) in un unico...",
+   "og_url": "https://www.sistec-am.com/case-history/dallo-stock-al-pezzo-finito-levoluzione-della-lavorazione-lamiera-tramite-cella-robotizzata-multi-tecnologica/",
+   "og_site_name": "Sistec",
+   "article_published_time": "2026-05-15T13:23:13+00:00",
+   "article_modified_time": "2026-09-22T10:55:32+00:00",
+   "og_image": [
+    {
+     "width": 1233,
+     "height": 1233,
+     "url": "https://www.sistec-am.com/wp-content/uploads/2026/05/SJOBERG-square.jpg",
+     "type": "image/jpeg"
+    }
+   ],
+   "author": "viola",
+   "twitter_card": "summary_large_image",
+   "twitter_misc": {
+    "Scritto da": "viola",
+    "Tempo di lettura stimato": "3 minuti"
+   },
+   "schema": {
+    "@context": "https://schema.org",
+    "@graph": [
+     {
+      "@type": "Article",
+      "@id": "https://www.sistec-am.com/case-history/dallo-stock-al-pezzo-finito-levoluzione-della-lavorazione-lamiera-tramite-cella-robotizzata-multi-tecnologica/#article",
+      "isPartOf": {
+       "@id": "https://www.sistec-am.com/case-history/dallo-stock-al-pezzo-finito-levoluzione-della-lavorazione-lamiera-tramite-cella-robotizzata-multi-tecnologica/"
+      },
+      "author": {
+       "name": "viola",
+       "@id": "https://www.sistec-am.com/#/schema/person/1f2a2cdf52dbb1a80eb9732d58a57b90"
+      },
+      "headline": "Dallo stock al pezzo finito: l’evoluzione della lavorazione lamiera tramite cella robotizzata multi-tecnologica.",
+      "datePublished": "2026-05-15T13:23:13+00:00",
+      "dateModified": "2026-09-22T10:55:32+00:00",
+      "mainEntityOfPage": {
+       "@id": "https://www.sistec-am.com/case-history/dallo-stock-al-pezzo-finito-levoluzione-della-lavorazione-lamiera-tramite-cella-robotizzata-multi-tecnologica/"
+      },
+      "wordCount": 297,
+      "commentCount": 0,
+      "publisher": {
+       "@id": "https://www.sistec-am.com/#organization"
+      },
+      "image": {
+       "@id": "https://www.sistec-am.com/case-history/dallo-stock-al-pezzo-finito-levoluzione-della-lavorazione-lamiera-tramite-cella-robotizzata-multi-tecnologica/#primaryimage"
+      },
+      "thumbnailUrl": "https://www.sistec-am.com/wp-content/uploads/2026/05/SJOBERG-square.jpg",
+      "articleSection": [
+       "Case history"
+      ],
+      "inLanguage": "it-IT",
+      "potentialAction": [
+       {
+        "@type": "CommentAction",
+        "name": "Comment",
+        "target": [
+         "https://www.sistec-am.com/case-history/dallo-stock-al-pezzo-finito-levoluzione-della-lavorazione-lamiera-tramite-cella-robotizzata-multi-tecnologica/#respond"
+        ]
+       }
+      ]
+     },
+     {
+      "@type": "WebPage",
+      "@id": "https://www.sistec-am.com/case-history/dallo-stock-al-pezzo-finito-levoluzione-della-lavorazione-lamiera-tramite-cella-robotizzata-multi-tecnologica/",
+      "url": "https://www.sistec-am.com/case-history/dallo-stock-al-pezzo-finito-levoluzione-della-lavorazione-lamiera-tramite-cella-robotizzata-multi-tecnologica/",
+      "name": "Dallo stock al pezzo finito: l’evoluzione della lavorazione lamiera tramite cella robotizzata multi-tecnologica. | Sistec",
+      "isPartOf": {
+       "@id": "https://www.sistec-am.com/#website"
+      },
+      "primaryImageOfPage": {
+       "@id": "https://www.sistec-am.com/case-history/dallo-stock-al-pezzo-finito-levoluzione-della-lavorazione-lamiera-tramite-cella-robotizzata-multi-tecnologica/#primaryimage"
+      },
+      "image": {
+       "@id": "https://www.sistec-am.com/case-history/dallo-stock-al-pezzo-finito-levoluzione-della-lavorazione-lamiera-tramite-cella-robotizzata-multi-tecnologica/#primaryimage"
+      },
+      "thumbnailUrl": "https://www.sistec-am.com/wp-content/uploads/2026/05/SJOBERG-square.jpg",
+      "datePublished": "2026-05-15T13:23:13+00:00",
+      "dateModified": "2026-09-22T10:55:32+00:00",
+      "breadcrumb": {
+       "@id": "https://www.sistec-am.com/case-history/dallo-stock-al-pezzo-finito-levoluzione-della-lavorazione-lamiera-tramite-cella-robotizzata-multi-tecnologica/#breadcrumb"
+      },
+      "inLanguage": "it-IT",
+      "potentialAction": [
+       {
+        "@type": "ReadAction",
+        "target": [
+         "https://www.sistec-am.com/case-history/dallo-stock-al-pezzo-finito-levoluzione-della-lavorazione-lamiera-tramite-cella-robotizzata-multi-tecnologica/"
+        ]
+       }
+      ]
+     },
+     {
+      "@type": "ImageObject",
+      "inLanguage": "it-IT",
+      "@id": "https://www.sistec-am.com/case-history/dallo-stock-al-pezzo-finito-levoluzione-della-lavorazione-lamiera-tramite-cella-robotizzata-multi-tecnologica/#primaryimage",
+      "url": "https://www.sistec-am.com/wp-content/uploads/2026/05/SJOBERG-square.jpg",
+      "contentUrl": "https://www.sistec-am.com/wp-content/uploads/2026/05/SJOBERG-square.jpg",
+      "width": 1233,
+      "height": 1233,
+      "caption": "macchinari sistec per SJOBERG"
+     },
+     {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.sistec-am.com/case-history/dallo-stock-al-pezzo-finito-levoluzione-della-lavorazione-lamiera-tramite-cella-robotizzata-multi-tecnologica/#breadcrumb",
+      "itemListElement": [
+       {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.sistec-am.com/"
+       },
+       {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Dallo stock al pezzo finito: l’evoluzione della lavorazione lamiera tramite cella robotizzata multi-tecnologica."
+       }
+      ]
+     },
+     {
+      "@type": "WebSite",
+      "@id": "https://www.sistec-am.com/#website",
+      "url": "https://www.sistec-am.com/",
+      "name": "Sistec",
+      "description": "",
+      "publisher": {
+       "@id": "https://www.sistec-am.com/#organization"
+      },
+      "potentialAction": [
+       {
+        "@type": "SearchAction",
+        "target": {
+         "@type": "EntryPoint",
+         "urlTemplate": "https://www.sistec-am.com/?s={search_term_string}"
+        },
+        "query-input": {
+         "@type": "PropertyValueSpecification",
+         "valueRequired": true,
+         "valueName": "search_term_string"
+        }
+       }
+      ],
+      "inLanguage": "it-IT"
+     },
+     {
+      "@type": "Organization",
+      "@id": "https://www.sistec-am.com/#organization",
+      "name": "Sistec",
+      "url": "https://www.sistec-am.com/",
+      "logo": {
+       "@type": "ImageObject",
+       "inLanguage": "it-IT",
+       "@id": "https://www.sistec-am.com/#/schema/logo/image/",
+       "url": "https://www.sistec-am.com/wp-content/uploads/2026/04/logo_sistec.png",
+       "contentUrl": "https://www.sistec-am.com/wp-content/uploads/2026/04/logo_sistec.png",
+       "width": 142,
+       "height": 102,
+       "caption": "Sistec"
+      },
+      "image": {
+       "@id": "https://www.sistec-am.com/#/schema/logo/image/"
+      }
+     },
+     {
+      "@type": "Person",
+      "@id": "https://www.sistec-am.com/#/schema/person/1f2a2cdf52dbb1a80eb9732d58a57b90",
+      "name": "viola"
+     }
+    ]
+   }
+  },
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/posts/2116",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/posts"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/types/post"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/users/2"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/comments?post=2116"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 5,
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/posts/2116/revisions"
+    }
+   ],
+   "predecessor-version": [
+    {
+     "id": 2571,
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/posts/2116/revisions/2571"
+    }
+   ],
+   "wp:featuredmedia": [
+    {
+     "embeddable": true,
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/media/2118"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/media?parent=2116"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "category",
+     "embeddable": true,
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/categories?post=2116"
+    },
+    {
+     "taxonomy": "post_tag",
+     "embeddable": true,
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/tags?post=2116"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 2084,
+  "date": "2026-05-14T16:58:33",
+  "date_gmt": "2026-05-14T14:58:33",
+  "guid": {
+   "rendered": "https://www.sistec-am.com/?p=2084"
+  },
+  "modified": "2026-09-22T12:49:32",
+  "modified_gmt": "2026-09-22T10:49:32",
+  "slug": "lautomazione-flessibile-applicata-ai-sistemi-di-fissaggio-come-ottimizzare-la-produzione-di-lotti-variabili-attraverso-la-robotica-integrata",
+  "status": "publish",
+  "type": "post",
+  "link": "https://www.sistec-am.com/case-history/lautomazione-flessibile-applicata-ai-sistemi-di-fissaggio-come-ottimizzare-la-produzione-di-lotti-variabili-attraverso-la-robotica-integrata/",
+  "title": {
+   "rendered": "L’automazione flessibile applicata ai sistemi di fissaggio: come ottimizzare la produzione di lotti variabili attraverso la robotica integrata."
+  },
+  "content": {
+   "rendered": "<p><strong>Le sfide operative</strong></p>\n<p>Il modello di produzione tradizionale per questi componenti presentava criticità legate alla varietà della gamma:</p>\n<ul>\n<li><strong>Gestione della varietà</strong>: necessità di processare diverse dimensioni di tubi, forme e tipologie di flange.</li>\n<li><strong>Tempi di attrezzaggio</strong>: i sistemi meccanici convenzionali richiedevano lunghi tempi di fermo macchina per ogni cambio prodotto.</li>\n<li><strong>Efficienza di processo</strong>: difficoltà nel bilanciare le operazioni di taglio, foratura, filettatura e saldatura in un unico flusso continuo.</li>\n</ul>\n<p><strong>La soluzione strategica</strong></p>\n<p>L&#8217;infrastruttura si basa su un&#8217;architettura a quattro robot antropomorfi che operano in sinergia, integrando tutte le fasi tecnologiche:</p>\n<ul>\n<li><strong>Processo integrato</strong>: il tubo da 6 metri viene automaticamente tagliato a misura, punzonato e filettato.</li>\n<li><strong>Saldatura robotizzata</strong>: integrazione di flange stampate tramite saldatura a punti gestita dai robot per una precisione costante.</li>\n<li><strong>Visione Artificiale</strong>: utilizzo di sistemi di visione per il riconoscimento e il posizionamento dei pezzi, garantendo la massima flessibilità di carico.</li>\n<li><strong>Produzione &#8220;batch-one&#8221;</strong>: il software di gestione permette di passare da un formato all&#8217;altro istantaneamente, rendendo efficiente anche la produzione di minimi lotti.</li>\n</ul>\n<p><img loading=\"lazy\" decoding=\"async\" class=\"alignnone wp-image-2087\" src=\"https://www.sistec-am.com/wp-content/uploads/2026/05/piedini-1-300x169.jpg\" alt=\"\" width=\"699\" height=\"394\" srcset=\"https://www.sistec-am.com/wp-content/uploads/2026/05/piedini-1-300x169.jpg 300w, https://www.sistec-am.com/wp-content/uploads/2026/05/piedini-1-1024x576.jpg 1024w, https://www.sistec-am.com/wp-content/uploads/2026/05/piedini-1.jpg 1920w\" sizes=\"auto, (max-width: 699px) 100vw, 699px\" /></p>\n<p><strong>Risultati e valore generato</strong></p>\n<p>L’implementazione di questa soluzione di smart manufacturing ha permesso di raggiungere nuovi standard:</p>\n<ul>\n<li><strong>Ottimizzazione del ciclo</strong>: carico di lavoro perfettamente bilanciato tra i robot per massimizzare l&#8217;output e ridurre i tempi morti.</li>\n<li><strong>Flessibilità totale</strong>: capacità di rispondere in tempo reale alle richieste del mercato per lotti piccoli e diversificati.</li>\n<li><strong>Qualità e ripetibilità</strong>: precisione millimetrica nelle lavorazioni CNC e nella saldatura, con una drastica riduzione degli scarti.</li>\n<li><strong>Modularità</strong>: il sistema è progettato per adattarsi rapidamente a nuove varianti di prodotto senza modifiche strutturali.</li>\n</ul>\n<p><img loading=\"lazy\" decoding=\"async\" class=\"alignnone wp-image-2088\" src=\"https://www.sistec-am.com/wp-content/uploads/2026/05/piedini-3-300x169.jpg\" alt=\"\" width=\"604\" height=\"340\" srcset=\"https://www.sistec-am.com/wp-content/uploads/2026/05/piedini-3-300x169.jpg 300w, https://www.sistec-am.com/wp-content/uploads/2026/05/piedini-3-1024x576.jpg 1024w, https://www.sistec-am.com/wp-content/uploads/2026/05/piedini-3.jpg 1920w\" sizes=\"auto, (max-width: 604px) 100vw, 604px\" /></p>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Le sfide operative Il modello di produzione tradizionale per questi componenti presentava criticità legate alla varietà della gamma: Gestione della varietà: necessità di processare diverse dimensioni di tubi, forme e tipologie di flange. Tempi di attrezzaggio: i sistemi meccanici convenzionali richiedevano lunghi tempi di fermo macchina per ogni cambio prodotto. Efficienza di processo: difficoltà nel&#8230;</p>\n",
+   "protected": false
+  },
+  "author": 2,
+  "featured_media": 2086,
+  "comment_status": "open",
+  "ping_status": "open",
+  "sticky": false,
+  "template": "",
+  "format": "standard",
+  "meta": {
+   "_acf_changed": false,
+   "footnotes": ""
+  },
+  "categories": [
+   1
+  ],
+  "tags": [],
+  "class_list": [
+   "post-2084",
+   "post",
+   "type-post",
+   "status-publish",
+   "format-standard",
+   "has-post-thumbnail",
+   "hentry",
+   "category-case-history"
+  ],
+  "acf": [],
+  "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v28.6 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>L’automazione flessibile applicata ai sistemi di fissaggio: come ottimizzare la produzione di lotti variabili attraverso la robotica integrata. | Sistec</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://www.sistec-am.com/case-history/lautomazione-flessibile-applicata-ai-sistemi-di-fissaggio-come-ottimizzare-la-produzione-di-lotti-variabili-attraverso-la-robotica-integrata/\" />\n<meta property=\"og:locale\" content=\"it_IT\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"L’automazione flessibile applicata ai sistemi di fissaggio: come ottimizzare la produzione di lotti variabili attraverso la robotica integrata. | Sistec\" />\n<meta property=\"og:description\" content=\"Le sfide operative Il modello di produzione tradizionale per questi componenti presentava criticità legate alla varietà della gamma: Gestione della varietà: necessità di processare diverse dimensioni di tubi, forme e tipologie di flange. Tempi di attrezzaggio: i sistemi meccanici convenzionali richiedevano lunghi tempi di fermo macchina per ogni cambio prodotto. Efficienza di processo: difficoltà nel...\" />\n<meta property=\"og:url\" content=\"https://www.sistec-am.com/case-history/lautomazione-flessibile-applicata-ai-sistemi-di-fissaggio-come-ottimizzare-la-produzione-di-lotti-variabili-attraverso-la-robotica-integrata/\" />\n<meta property=\"og:site_name\" content=\"Sistec\" />\n<meta property=\"article:published_time\" content=\"2026-05-14T14:58:33+00:00\" />\n<meta property=\"article:modified_time\" content=\"2026-09-22T10:49:32+00:00\" />\n<meta property=\"og:image\" content=\"https://www.sistec-am.com/wp-content/uploads/2026/05/piedini-square.jpg\" />\n\t<meta property=\"og:image:width\" content=\"1233\" />\n\t<meta property=\"og:image:height\" content=\"1233\" />\n\t<meta property=\"og:image:type\" content=\"image/jpeg\" />\n<meta name=\"author\" content=\"viola\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<meta name=\"twitter:label1\" content=\"Scritto da\" />\n\t<meta name=\"twitter:data1\" content=\"viola\" />\n\t<meta name=\"twitter:label2\" content=\"Tempo di lettura stimato\" />\n\t<meta name=\"twitter:data2\" content=\"2 minuti\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/lautomazione-flessibile-applicata-ai-sistemi-di-fissaggio-come-ottimizzare-la-produzione-di-lotti-variabili-attraverso-la-robotica-integrata\\/#article\",\"isPartOf\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/lautomazione-flessibile-applicata-ai-sistemi-di-fissaggio-come-ottimizzare-la-produzione-di-lotti-variabili-attraverso-la-robotica-integrata\\/\"},\"author\":{\"name\":\"viola\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#\\/schema\\/person\\/1f2a2cdf52dbb1a80eb9732d58a57b90\"},\"headline\":\"L’automazione flessibile applicata ai sistemi di fissaggio: come ottimizzare la produzione di lotti variabili attraverso la robotica integrata.\",\"datePublished\":\"2026-05-14T14:58:33+00:00\",\"dateModified\":\"2026-09-22T10:49:32+00:00\",\"mainEntityOfPage\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/lautomazione-flessibile-applicata-ai-sistemi-di-fissaggio-come-ottimizzare-la-produzione-di-lotti-variabili-attraverso-la-robotica-integrata\\/\"},\"wordCount\":273,\"commentCount\":0,\"publisher\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/#organization\"},\"image\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/lautomazione-flessibile-applicata-ai-sistemi-di-fissaggio-come-ottimizzare-la-produzione-di-lotti-variabili-attraverso-la-robotica-integrata\\/#primaryimage\"},\"thumbnailUrl\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2026\\/05\\/piedini-square.jpg\",\"articleSection\":[\"Case history\"],\"inLanguage\":\"it-IT\",\"potentialAction\":[{\"@type\":\"CommentAction\",\"name\":\"Comment\",\"target\":[\"https:\\/\\/www.sistec-am.com\\/case-history\\/lautomazione-flessibile-applicata-ai-sistemi-di-fissaggio-come-ottimizzare-la-produzione-di-lotti-variabili-attraverso-la-robotica-integrata\\/#respond\"]}]},{\"@type\":\"WebPage\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/lautomazione-flessibile-applicata-ai-sistemi-di-fissaggio-come-ottimizzare-la-produzione-di-lotti-variabili-attraverso-la-robotica-integrata\\/\",\"url\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/lautomazione-flessibile-applicata-ai-sistemi-di-fissaggio-come-ottimizzare-la-produzione-di-lotti-variabili-attraverso-la-robotica-integrata\\/\",\"name\":\"L’automazione flessibile applicata ai sistemi di fissaggio: come ottimizzare la produzione di lotti variabili attraverso la robotica integrata. | Sistec\",\"isPartOf\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/#website\"},\"primaryImageOfPage\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/lautomazione-flessibile-applicata-ai-sistemi-di-fissaggio-come-ottimizzare-la-produzione-di-lotti-variabili-attraverso-la-robotica-integrata\\/#primaryimage\"},\"image\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/lautomazione-flessibile-applicata-ai-sistemi-di-fissaggio-come-ottimizzare-la-produzione-di-lotti-variabili-attraverso-la-robotica-integrata\\/#primaryimage\"},\"thumbnailUrl\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2026\\/05\\/piedini-square.jpg\",\"datePublished\":\"2026-05-14T14:58:33+00:00\",\"dateModified\":\"2026-09-22T10:49:32+00:00\",\"breadcrumb\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/lautomazione-flessibile-applicata-ai-sistemi-di-fissaggio-come-ottimizzare-la-produzione-di-lotti-variabili-attraverso-la-robotica-integrata\\/#breadcrumb\"},\"inLanguage\":\"it-IT\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https:\\/\\/www.sistec-am.com\\/case-history\\/lautomazione-flessibile-applicata-ai-sistemi-di-fissaggio-come-ottimizzare-la-produzione-di-lotti-variabili-attraverso-la-robotica-integrata\\/\"]}]},{\"@type\":\"ImageObject\",\"inLanguage\":\"it-IT\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/lautomazione-flessibile-applicata-ai-sistemi-di-fissaggio-come-ottimizzare-la-produzione-di-lotti-variabili-attraverso-la-robotica-integrata\\/#primaryimage\",\"url\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2026\\/05\\/piedini-square.jpg\",\"contentUrl\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2026\\/05\\/piedini-square.jpg\",\"width\":1233,\"height\":1233,\"caption\":\"piedini\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/lautomazione-flessibile-applicata-ai-sistemi-di-fissaggio-come-ottimizzare-la-produzione-di-lotti-variabili-attraverso-la-robotica-integrata\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/www.sistec-am.com\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"L’automazione flessibile applicata ai sistemi di fissaggio: come ottimizzare la produzione di lotti variabili attraverso la robotica integrata.\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#website\",\"url\":\"https:\\/\\/www.sistec-am.com\\/\",\"name\":\"Sistec\",\"description\":\"\",\"publisher\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/www.sistec-am.com\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"it-IT\"},{\"@type\":\"Organization\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#organization\",\"name\":\"Sistec\",\"url\":\"https:\\/\\/www.sistec-am.com\\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"it-IT\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#\\/schema\\/logo\\/image\\/\",\"url\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2026\\/04\\/logo_sistec.png\",\"contentUrl\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2026\\/04\\/logo_sistec.png\",\"width\":142,\"height\":102,\"caption\":\"Sistec\"},\"image\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/#\\/schema\\/logo\\/image\\/\"}},{\"@type\":\"Person\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#\\/schema\\/person\\/1f2a2cdf52dbb1a80eb9732d58a57b90\",\"name\":\"viola\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+  "yoast_head_json": {
+   "title": "L’automazione flessibile applicata ai sistemi di fissaggio: come ottimizzare la produzione di lotti variabili attraverso la robotica integrata. | Sistec",
+   "robots": {
+    "index": "index",
+    "follow": "follow",
+    "max-snippet": "max-snippet:-1",
+    "max-image-preview": "max-image-preview:large",
+    "max-video-preview": "max-video-preview:-1"
+   },
+   "canonical": "https://www.sistec-am.com/case-history/lautomazione-flessibile-applicata-ai-sistemi-di-fissaggio-come-ottimizzare-la-produzione-di-lotti-variabili-attraverso-la-robotica-integrata/",
+   "og_locale": "it_IT",
+   "og_type": "article",
+   "og_title": "L’automazione flessibile applicata ai sistemi di fissaggio: come ottimizzare la produzione di lotti variabili attraverso la robotica integrata. | Sistec",
+   "og_description": "Le sfide operative Il modello di produzione tradizionale per questi componenti presentava criticità legate alla varietà della gamma: Gestione della varietà: necessità di processare diverse dimensioni di tubi, forme e tipologie di flange. Tempi di attrezzaggio: i sistemi meccanici convenzionali richiedevano lunghi tempi di fermo macchina per ogni cambio prodotto. Efficienza di processo: difficoltà nel...",
+   "og_url": "https://www.sistec-am.com/case-history/lautomazione-flessibile-applicata-ai-sistemi-di-fissaggio-come-ottimizzare-la-produzione-di-lotti-variabili-attraverso-la-robotica-integrata/",
+   "og_site_name": "Sistec",
+   "article_published_time": "2026-05-14T14:58:33+00:00",
+   "article_modified_time": "2026-09-22T10:49:32+00:00",
+   "og_image": [
+    {
+     "width": 1233,
+     "height": 1233,
+     "url": "https://www.sistec-am.com/wp-content/uploads/2026/05/piedini-square.jpg",
+     "type": "image/jpeg"
+    }
+   ],
+   "author": "viola",
+   "twitter_card": "summary_large_image",
+   "twitter_misc": {
+    "Scritto da": "viola",
+    "Tempo di lettura stimato": "2 minuti"
+   },
+   "schema": {
+    "@context": "https://schema.org",
+    "@graph": [
+     {
+      "@type": "Article",
+      "@id": "https://www.sistec-am.com/case-history/lautomazione-flessibile-applicata-ai-sistemi-di-fissaggio-come-ottimizzare-la-produzione-di-lotti-variabili-attraverso-la-robotica-integrata/#article",
+      "isPartOf": {
+       "@id": "https://www.sistec-am.com/case-history/lautomazione-flessibile-applicata-ai-sistemi-di-fissaggio-come-ottimizzare-la-produzione-di-lotti-variabili-attraverso-la-robotica-integrata/"
+      },
+      "author": {
+       "name": "viola",
+       "@id": "https://www.sistec-am.com/#/schema/person/1f2a2cdf52dbb1a80eb9732d58a57b90"
+      },
+      "headline": "L’automazione flessibile applicata ai sistemi di fissaggio: come ottimizzare la produzione di lotti variabili attraverso la robotica integrata.",
+      "datePublished": "2026-05-14T14:58:33+00:00",
+      "dateModified": "2026-09-22T10:49:32+00:00",
+      "mainEntityOfPage": {
+       "@id": "https://www.sistec-am.com/case-history/lautomazione-flessibile-applicata-ai-sistemi-di-fissaggio-come-ottimizzare-la-produzione-di-lotti-variabili-attraverso-la-robotica-integrata/"
+      },
+      "wordCount": 273,
+      "commentCount": 0,
+      "publisher": {
+       "@id": "https://www.sistec-am.com/#organization"
+      },
+      "image": {
+       "@id": "https://www.sistec-am.com/case-history/lautomazione-flessibile-applicata-ai-sistemi-di-fissaggio-come-ottimizzare-la-produzione-di-lotti-variabili-attraverso-la-robotica-integrata/#primaryimage"
+      },
+      "thumbnailUrl": "https://www.sistec-am.com/wp-content/uploads/2026/05/piedini-square.jpg",
+      "articleSection": [
+       "Case history"
+      ],
+      "inLanguage": "it-IT",
+      "potentialAction": [
+       {
+        "@type": "CommentAction",
+        "name": "Comment",
+        "target": [
+         "https://www.sistec-am.com/case-history/lautomazione-flessibile-applicata-ai-sistemi-di-fissaggio-come-ottimizzare-la-produzione-di-lotti-variabili-attraverso-la-robotica-integrata/#respond"
+        ]
+       }
+      ]
+     },
+     {
+      "@type": "WebPage",
+      "@id": "https://www.sistec-am.com/case-history/lautomazione-flessibile-applicata-ai-sistemi-di-fissaggio-come-ottimizzare-la-produzione-di-lotti-variabili-attraverso-la-robotica-integrata/",
+      "url": "https://www.sistec-am.com/case-history/lautomazione-flessibile-applicata-ai-sistemi-di-fissaggio-come-ottimizzare-la-produzione-di-lotti-variabili-attraverso-la-robotica-integrata/",
+      "name": "L’automazione flessibile applicata ai sistemi di fissaggio: come ottimizzare la produzione di lotti variabili attraverso la robotica integrata. | Sistec",
+      "isPartOf": {
+       "@id": "https://www.sistec-am.com/#website"
+      },
+      "primaryImageOfPage": {
+       "@id": "https://www.sistec-am.com/case-history/lautomazione-flessibile-applicata-ai-sistemi-di-fissaggio-come-ottimizzare-la-produzione-di-lotti-variabili-attraverso-la-robotica-integrata/#primaryimage"
+      },
+      "image": {
+       "@id": "https://www.sistec-am.com/case-history/lautomazione-flessibile-applicata-ai-sistemi-di-fissaggio-come-ottimizzare-la-produzione-di-lotti-variabili-attraverso-la-robotica-integrata/#primaryimage"
+      },
+      "thumbnailUrl": "https://www.sistec-am.com/wp-content/uploads/2026/05/piedini-square.jpg",
+      "datePublished": "2026-05-14T14:58:33+00:00",
+      "dateModified": "2026-09-22T10:49:32+00:00",
+      "breadcrumb": {
+       "@id": "https://www.sistec-am.com/case-history/lautomazione-flessibile-applicata-ai-sistemi-di-fissaggio-come-ottimizzare-la-produzione-di-lotti-variabili-attraverso-la-robotica-integrata/#breadcrumb"
+      },
+      "inLanguage": "it-IT",
+      "potentialAction": [
+       {
+        "@type": "ReadAction",
+        "target": [
+         "https://www.sistec-am.com/case-history/lautomazione-flessibile-applicata-ai-sistemi-di-fissaggio-come-ottimizzare-la-produzione-di-lotti-variabili-attraverso-la-robotica-integrata/"
+        ]
+       }
+      ]
+     },
+     {
+      "@type": "ImageObject",
+      "inLanguage": "it-IT",
+      "@id": "https://www.sistec-am.com/case-history/lautomazione-flessibile-applicata-ai-sistemi-di-fissaggio-come-ottimizzare-la-produzione-di-lotti-variabili-attraverso-la-robotica-integrata/#primaryimage",
+      "url": "https://www.sistec-am.com/wp-content/uploads/2026/05/piedini-square.jpg",
+      "contentUrl": "https://www.sistec-am.com/wp-content/uploads/2026/05/piedini-square.jpg",
+      "width": 1233,
+      "height": 1233,
+      "caption": "piedini"
+     },
+     {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.sistec-am.com/case-history/lautomazione-flessibile-applicata-ai-sistemi-di-fissaggio-come-ottimizzare-la-produzione-di-lotti-variabili-attraverso-la-robotica-integrata/#breadcrumb",
+      "itemListElement": [
+       {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.sistec-am.com/"
+       },
+       {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "L’automazione flessibile applicata ai sistemi di fissaggio: come ottimizzare la produzione di lotti variabili attraverso la robotica integrata."
+       }
+      ]
+     },
+     {
+      "@type": "WebSite",
+      "@id": "https://www.sistec-am.com/#website",
+      "url": "https://www.sistec-am.com/",
+      "name": "Sistec",
+      "description": "",
+      "publisher": {
+       "@id": "https://www.sistec-am.com/#organization"
+      },
+      "potentialAction": [
+       {
+        "@type": "SearchAction",
+        "target": {
+         "@type": "EntryPoint",
+         "urlTemplate": "https://www.sistec-am.com/?s={search_term_string}"
+        },
+        "query-input": {
+         "@type": "PropertyValueSpecification",
+         "valueRequired": true,
+         "valueName": "search_term_string"
+        }
+       }
+      ],
+      "inLanguage": "it-IT"
+     },
+     {
+      "@type": "Organization",
+      "@id": "https://www.sistec-am.com/#organization",
+      "name": "Sistec",
+      "url": "https://www.sistec-am.com/",
+      "logo": {
+       "@type": "ImageObject",
+       "inLanguage": "it-IT",
+       "@id": "https://www.sistec-am.com/#/schema/logo/image/",
+       "url": "https://www.sistec-am.com/wp-content/uploads/2026/04/logo_sistec.png",
+       "contentUrl": "https://www.sistec-am.com/wp-content/uploads/2026/04/logo_sistec.png",
+       "width": 142,
+       "height": 102,
+       "caption": "Sistec"
+      },
+      "image": {
+       "@id": "https://www.sistec-am.com/#/schema/logo/image/"
+      }
+     },
+     {
+      "@type": "Person",
+      "@id": "https://www.sistec-am.com/#/schema/person/1f2a2cdf52dbb1a80eb9732d58a57b90",
+      "name": "viola"
+     }
+    ]
+   }
+  },
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/posts/2084",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/posts"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/types/post"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/users/2"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/comments?post=2084"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 5,
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/posts/2084/revisions"
+    }
+   ],
+   "predecessor-version": [
+    {
+     "id": 2566,
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/posts/2084/revisions/2566"
+    }
+   ],
+   "wp:featuredmedia": [
+    {
+     "embeddable": true,
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/media/2086"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/media?parent=2084"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "category",
+     "embeddable": true,
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/categories?post=2084"
+    },
+    {
+     "taxonomy": "post_tag",
+     "embeddable": true,
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/tags?post=2084"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 2058,
+  "date": "2026-05-14T16:31:54",
+  "date_gmt": "2026-05-14T14:31:54",
+  "guid": {
+   "rendered": "https://www.sistec-am.com/?p=2058"
+  },
+  "modified": "2026-09-22T12:52:11",
+  "modified_gmt": "2026-09-22T10:52:11",
+  "slug": "levoluzione-del-workflow-nella-carpenteria-metallica-integrare-saldatura-fissaggio-e-finitura-in-ununica-cella-robotizzata",
+  "status": "publish",
+  "type": "post",
+  "link": "https://www.sistec-am.com/case-history/levoluzione-del-workflow-nella-carpenteria-metallica-integrare-saldatura-fissaggio-e-finitura-in-ununica-cella-robotizzata/",
+  "title": {
+   "rendered": "L’evoluzione del workflow nella carpenteria metallica: integrare saldatura, fissaggio e finitura in un’unica cella robotizzata."
+  },
+  "content": {
+   "rendered": "<p><strong>Le sfide operative</strong></p>\n<p>Il modello di produzione tradizionale per la carpenteria elettrica complessa presentava criticità legate alla frammentazione delle fasi:</p>\n<ul>\n<li>Gestione multimateriale: necessità di processare con la stessa efficienza acciai comuni, inox e leghe di alluminio.</li>\n<li>Tempi di lead time: i passaggi manuali tra saldatura, applicazione dei perni e molatura creavano colli di bottiglia e aumentavano i margini di errore.</li>\n<li>Finitura estetica: la difficoltà nel mantenere una qualità di molatura uniforme senza l&#8217;intervento umano specializzato.</li>\n</ul>\n<p><strong>La soluzione strategica<br />\n</strong><br />\nL&#8217;infrastruttura si basa su una cella robotizzata flessibile che combina tecnologie di giunzione e finitura d&#8217;avanguardia:</p>\n<ul>\n<li><strong>Saldatura LASERT &#8211; MIG &#8211; CMT</strong>: integrazione di processi a basso apporto termico per garantire la massima precisione strutturale e ridurre le deformazioni sui materiali sottili.</li>\n<li><strong>Putatura</strong>: sistema di fissaggio rapido di prigionieri e inserti con posizionamento millimetrico gestito dal robot.</li>\n<li><strong>Smerigliatura</strong>: stazione di smerigliatura e finitura integrata per eliminare le imperfezioni e rendere il prodotto pronto per i trattamenti successivi senza interventi manuali.</li>\n<li><strong>Sistema di movimentazione/gestione pallet</strong>: gestione intelligente dei carichi per garantire una produttività &#8220;non-stop&#8221; e una logistica interna ottimizzata.</li>\n</ul>\n<p>&nbsp;</p>\n<p><img loading=\"lazy\" decoding=\"async\" class=\"alignnone wp-image-2062\" src=\"https://www.sistec-am.com/wp-content/uploads/2026/05/iron-2-300x197.jpg\" alt=\"\" width=\"614\" height=\"403\" srcset=\"https://www.sistec-am.com/wp-content/uploads/2026/05/iron-2-300x197.jpg 300w, https://www.sistec-am.com/wp-content/uploads/2026/05/iron-2.jpg 853w\" sizes=\"auto, (max-width: 614px) 100vw, 614px\" /></p>\n<p><strong>Risultati e valore generato</strong></p>\n<p>Il passaggio a un modello di produzione integrato ha generato un vantaggio competitivo misurabile:</p>\n<ul>\n<li><strong>Precisione millimetrica</strong>: controllo totale sulle fasi di saldatura e molatura, con una drastica riduzione degli scarti e delle ri-lavorazioni.</li>\n<li><strong>Ottimizzazione del flusso</strong>: la sincronizzazione delle quattro tecnologie elimina i colli di bottiglia tipici della carpenteria tradizionale.</li>\n<li><strong>Risposta real-time</strong>: flessibilità operativa che permette di evadere piccoli lotti e prototipi con la stessa efficienza della produzione di serie.</li>\n</ul>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Le sfide operative Il modello di produzione tradizionale per la carpenteria elettrica complessa presentava criticità legate alla frammentazione delle fasi: Gestione multimateriale: necessità di processare con la stessa efficienza acciai comuni, inox e leghe di alluminio. Tempi di lead time: i passaggi manuali tra saldatura, applicazione dei perni e molatura creavano colli di bottiglia e&#8230;</p>\n",
+   "protected": false
+  },
+  "author": 2,
+  "featured_media": 2060,
+  "comment_status": "open",
+  "ping_status": "open",
+  "sticky": false,
+  "template": "",
+  "format": "standard",
+  "meta": {
+   "_acf_changed": false,
+   "footnotes": ""
+  },
+  "categories": [
+   1
+  ],
+  "tags": [],
+  "class_list": [
+   "post-2058",
+   "post",
+   "type-post",
+   "status-publish",
+   "format-standard",
+   "has-post-thumbnail",
+   "hentry",
+   "category-case-history"
+  ],
+  "acf": [],
+  "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v28.6 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>L’evoluzione del workflow nella carpenteria metallica: integrare saldatura, fissaggio e finitura in un’unica cella robotizzata. | Sistec</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://www.sistec-am.com/case-history/levoluzione-del-workflow-nella-carpenteria-metallica-integrare-saldatura-fissaggio-e-finitura-in-ununica-cella-robotizzata/\" />\n<meta property=\"og:locale\" content=\"it_IT\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"L’evoluzione del workflow nella carpenteria metallica: integrare saldatura, fissaggio e finitura in un’unica cella robotizzata. | Sistec\" />\n<meta property=\"og:description\" content=\"Le sfide operative Il modello di produzione tradizionale per la carpenteria elettrica complessa presentava criticità legate alla frammentazione delle fasi: Gestione multimateriale: necessità di processare con la stessa efficienza acciai comuni, inox e leghe di alluminio. Tempi di lead time: i passaggi manuali tra saldatura, applicazione dei perni e molatura creavano colli di bottiglia e...\" />\n<meta property=\"og:url\" content=\"https://www.sistec-am.com/case-history/levoluzione-del-workflow-nella-carpenteria-metallica-integrare-saldatura-fissaggio-e-finitura-in-ununica-cella-robotizzata/\" />\n<meta property=\"og:site_name\" content=\"Sistec\" />\n<meta property=\"article:published_time\" content=\"2026-05-14T14:31:54+00:00\" />\n<meta property=\"article:modified_time\" content=\"2026-09-22T10:52:11+00:00\" />\n<meta property=\"og:image\" content=\"https://www.sistec-am.com/wp-content/uploads/2026/05/iron-square.jpg\" />\n\t<meta property=\"og:image:width\" content=\"804\" />\n\t<meta property=\"og:image:height\" content=\"804\" />\n\t<meta property=\"og:image:type\" content=\"image/jpeg\" />\n<meta name=\"author\" content=\"viola\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<meta name=\"twitter:label1\" content=\"Scritto da\" />\n\t<meta name=\"twitter:data1\" content=\"viola\" />\n\t<meta name=\"twitter:label2\" content=\"Tempo di lettura stimato\" />\n\t<meta name=\"twitter:data2\" content=\"2 minuti\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/levoluzione-del-workflow-nella-carpenteria-metallica-integrare-saldatura-fissaggio-e-finitura-in-ununica-cella-robotizzata\\/#article\",\"isPartOf\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/levoluzione-del-workflow-nella-carpenteria-metallica-integrare-saldatura-fissaggio-e-finitura-in-ununica-cella-robotizzata\\/\"},\"author\":{\"name\":\"viola\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#\\/schema\\/person\\/1f2a2cdf52dbb1a80eb9732d58a57b90\"},\"headline\":\"L’evoluzione del workflow nella carpenteria metallica: integrare saldatura, fissaggio e finitura in un’unica cella robotizzata.\",\"datePublished\":\"2026-05-14T14:31:54+00:00\",\"dateModified\":\"2026-09-22T10:52:11+00:00\",\"mainEntityOfPage\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/levoluzione-del-workflow-nella-carpenteria-metallica-integrare-saldatura-fissaggio-e-finitura-in-ununica-cella-robotizzata\\/\"},\"wordCount\":272,\"commentCount\":0,\"publisher\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/#organization\"},\"image\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/levoluzione-del-workflow-nella-carpenteria-metallica-integrare-saldatura-fissaggio-e-finitura-in-ununica-cella-robotizzata\\/#primaryimage\"},\"thumbnailUrl\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2026\\/05\\/iron-square.jpg\",\"articleSection\":[\"Case history\"],\"inLanguage\":\"it-IT\",\"potentialAction\":[{\"@type\":\"CommentAction\",\"name\":\"Comment\",\"target\":[\"https:\\/\\/www.sistec-am.com\\/case-history\\/levoluzione-del-workflow-nella-carpenteria-metallica-integrare-saldatura-fissaggio-e-finitura-in-ununica-cella-robotizzata\\/#respond\"]}]},{\"@type\":\"WebPage\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/levoluzione-del-workflow-nella-carpenteria-metallica-integrare-saldatura-fissaggio-e-finitura-in-ununica-cella-robotizzata\\/\",\"url\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/levoluzione-del-workflow-nella-carpenteria-metallica-integrare-saldatura-fissaggio-e-finitura-in-ununica-cella-robotizzata\\/\",\"name\":\"L’evoluzione del workflow nella carpenteria metallica: integrare saldatura, fissaggio e finitura in un’unica cella robotizzata. | Sistec\",\"isPartOf\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/#website\"},\"primaryImageOfPage\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/levoluzione-del-workflow-nella-carpenteria-metallica-integrare-saldatura-fissaggio-e-finitura-in-ununica-cella-robotizzata\\/#primaryimage\"},\"image\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/levoluzione-del-workflow-nella-carpenteria-metallica-integrare-saldatura-fissaggio-e-finitura-in-ununica-cella-robotizzata\\/#primaryimage\"},\"thumbnailUrl\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2026\\/05\\/iron-square.jpg\",\"datePublished\":\"2026-05-14T14:31:54+00:00\",\"dateModified\":\"2026-09-22T10:52:11+00:00\",\"breadcrumb\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/levoluzione-del-workflow-nella-carpenteria-metallica-integrare-saldatura-fissaggio-e-finitura-in-ununica-cella-robotizzata\\/#breadcrumb\"},\"inLanguage\":\"it-IT\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https:\\/\\/www.sistec-am.com\\/case-history\\/levoluzione-del-workflow-nella-carpenteria-metallica-integrare-saldatura-fissaggio-e-finitura-in-ununica-cella-robotizzata\\/\"]}]},{\"@type\":\"ImageObject\",\"inLanguage\":\"it-IT\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/levoluzione-del-workflow-nella-carpenteria-metallica-integrare-saldatura-fissaggio-e-finitura-in-ununica-cella-robotizzata\\/#primaryimage\",\"url\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2026\\/05\\/iron-square.jpg\",\"contentUrl\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2026\\/05\\/iron-square.jpg\",\"width\":804,\"height\":804,\"caption\":\"vista dell'azienda iron\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/levoluzione-del-workflow-nella-carpenteria-metallica-integrare-saldatura-fissaggio-e-finitura-in-ununica-cella-robotizzata\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/www.sistec-am.com\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"L’evoluzione del workflow nella carpenteria metallica: integrare saldatura, fissaggio e finitura in un’unica cella robotizzata.\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#website\",\"url\":\"https:\\/\\/www.sistec-am.com\\/\",\"name\":\"Sistec\",\"description\":\"\",\"publisher\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/www.sistec-am.com\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"it-IT\"},{\"@type\":\"Organization\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#organization\",\"name\":\"Sistec\",\"url\":\"https:\\/\\/www.sistec-am.com\\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"it-IT\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#\\/schema\\/logo\\/image\\/\",\"url\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2026\\/04\\/logo_sistec.png\",\"contentUrl\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2026\\/04\\/logo_sistec.png\",\"width\":142,\"height\":102,\"caption\":\"Sistec\"},\"image\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/#\\/schema\\/logo\\/image\\/\"}},{\"@type\":\"Person\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#\\/schema\\/person\\/1f2a2cdf52dbb1a80eb9732d58a57b90\",\"name\":\"viola\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+  "yoast_head_json": {
+   "title": "L’evoluzione del workflow nella carpenteria metallica: integrare saldatura, fissaggio e finitura in un’unica cella robotizzata. | Sistec",
+   "robots": {
+    "index": "index",
+    "follow": "follow",
+    "max-snippet": "max-snippet:-1",
+    "max-image-preview": "max-image-preview:large",
+    "max-video-preview": "max-video-preview:-1"
+   },
+   "canonical": "https://www.sistec-am.com/case-history/levoluzione-del-workflow-nella-carpenteria-metallica-integrare-saldatura-fissaggio-e-finitura-in-ununica-cella-robotizzata/",
+   "og_locale": "it_IT",
+   "og_type": "article",
+   "og_title": "L’evoluzione del workflow nella carpenteria metallica: integrare saldatura, fissaggio e finitura in un’unica cella robotizzata. | Sistec",
+   "og_description": "Le sfide operative Il modello di produzione tradizionale per la carpenteria elettrica complessa presentava criticità legate alla frammentazione delle fasi: Gestione multimateriale: necessità di processare con la stessa efficienza acciai comuni, inox e leghe di alluminio. Tempi di lead time: i passaggi manuali tra saldatura, applicazione dei perni e molatura creavano colli di bottiglia e...",
+   "og_url": "https://www.sistec-am.com/case-history/levoluzione-del-workflow-nella-carpenteria-metallica-integrare-saldatura-fissaggio-e-finitura-in-ununica-cella-robotizzata/",
+   "og_site_name": "Sistec",
+   "article_published_time": "2026-05-14T14:31:54+00:00",
+   "article_modified_time": "2026-09-22T10:52:11+00:00",
+   "og_image": [
+    {
+     "width": 804,
+     "height": 804,
+     "url": "https://www.sistec-am.com/wp-content/uploads/2026/05/iron-square.jpg",
+     "type": "image/jpeg"
+    }
+   ],
+   "author": "viola",
+   "twitter_card": "summary_large_image",
+   "twitter_misc": {
+    "Scritto da": "viola",
+    "Tempo di lettura stimato": "2 minuti"
+   },
+   "schema": {
+    "@context": "https://schema.org",
+    "@graph": [
+     {
+      "@type": "Article",
+      "@id": "https://www.sistec-am.com/case-history/levoluzione-del-workflow-nella-carpenteria-metallica-integrare-saldatura-fissaggio-e-finitura-in-ununica-cella-robotizzata/#article",
+      "isPartOf": {
+       "@id": "https://www.sistec-am.com/case-history/levoluzione-del-workflow-nella-carpenteria-metallica-integrare-saldatura-fissaggio-e-finitura-in-ununica-cella-robotizzata/"
+      },
+      "author": {
+       "name": "viola",
+       "@id": "https://www.sistec-am.com/#/schema/person/1f2a2cdf52dbb1a80eb9732d58a57b90"
+      },
+      "headline": "L’evoluzione del workflow nella carpenteria metallica: integrare saldatura, fissaggio e finitura in un’unica cella robotizzata.",
+      "datePublished": "2026-05-14T14:31:54+00:00",
+      "dateModified": "2026-09-22T10:52:11+00:00",
+      "mainEntityOfPage": {
+       "@id": "https://www.sistec-am.com/case-history/levoluzione-del-workflow-nella-carpenteria-metallica-integrare-saldatura-fissaggio-e-finitura-in-ununica-cella-robotizzata/"
+      },
+      "wordCount": 272,
+      "commentCount": 0,
+      "publisher": {
+       "@id": "https://www.sistec-am.com/#organization"
+      },
+      "image": {
+       "@id": "https://www.sistec-am.com/case-history/levoluzione-del-workflow-nella-carpenteria-metallica-integrare-saldatura-fissaggio-e-finitura-in-ununica-cella-robotizzata/#primaryimage"
+      },
+      "thumbnailUrl": "https://www.sistec-am.com/wp-content/uploads/2026/05/iron-square.jpg",
+      "articleSection": [
+       "Case history"
+      ],
+      "inLanguage": "it-IT",
+      "potentialAction": [
+       {
+        "@type": "CommentAction",
+        "name": "Comment",
+        "target": [
+         "https://www.sistec-am.com/case-history/levoluzione-del-workflow-nella-carpenteria-metallica-integrare-saldatura-fissaggio-e-finitura-in-ununica-cella-robotizzata/#respond"
+        ]
+       }
+      ]
+     },
+     {
+      "@type": "WebPage",
+      "@id": "https://www.sistec-am.com/case-history/levoluzione-del-workflow-nella-carpenteria-metallica-integrare-saldatura-fissaggio-e-finitura-in-ununica-cella-robotizzata/",
+      "url": "https://www.sistec-am.com/case-history/levoluzione-del-workflow-nella-carpenteria-metallica-integrare-saldatura-fissaggio-e-finitura-in-ununica-cella-robotizzata/",
+      "name": "L’evoluzione del workflow nella carpenteria metallica: integrare saldatura, fissaggio e finitura in un’unica cella robotizzata. | Sistec",
+      "isPartOf": {
+       "@id": "https://www.sistec-am.com/#website"
+      },
+      "primaryImageOfPage": {
+       "@id": "https://www.sistec-am.com/case-history/levoluzione-del-workflow-nella-carpenteria-metallica-integrare-saldatura-fissaggio-e-finitura-in-ununica-cella-robotizzata/#primaryimage"
+      },
+      "image": {
+       "@id": "https://www.sistec-am.com/case-history/levoluzione-del-workflow-nella-carpenteria-metallica-integrare-saldatura-fissaggio-e-finitura-in-ununica-cella-robotizzata/#primaryimage"
+      },
+      "thumbnailUrl": "https://www.sistec-am.com/wp-content/uploads/2026/05/iron-square.jpg",
+      "datePublished": "2026-05-14T14:31:54+00:00",
+      "dateModified": "2026-09-22T10:52:11+00:00",
+      "breadcrumb": {
+       "@id": "https://www.sistec-am.com/case-history/levoluzione-del-workflow-nella-carpenteria-metallica-integrare-saldatura-fissaggio-e-finitura-in-ununica-cella-robotizzata/#breadcrumb"
+      },
+      "inLanguage": "it-IT",
+      "potentialAction": [
+       {
+        "@type": "ReadAction",
+        "target": [
+         "https://www.sistec-am.com/case-history/levoluzione-del-workflow-nella-carpenteria-metallica-integrare-saldatura-fissaggio-e-finitura-in-ununica-cella-robotizzata/"
+        ]
+       }
+      ]
+     },
+     {
+      "@type": "ImageObject",
+      "inLanguage": "it-IT",
+      "@id": "https://www.sistec-am.com/case-history/levoluzione-del-workflow-nella-carpenteria-metallica-integrare-saldatura-fissaggio-e-finitura-in-ununica-cella-robotizzata/#primaryimage",
+      "url": "https://www.sistec-am.com/wp-content/uploads/2026/05/iron-square.jpg",
+      "contentUrl": "https://www.sistec-am.com/wp-content/uploads/2026/05/iron-square.jpg",
+      "width": 804,
+      "height": 804,
+      "caption": "vista dell'azienda iron"
+     },
+     {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.sistec-am.com/case-history/levoluzione-del-workflow-nella-carpenteria-metallica-integrare-saldatura-fissaggio-e-finitura-in-ununica-cella-robotizzata/#breadcrumb",
+      "itemListElement": [
+       {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.sistec-am.com/"
+       },
+       {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "L’evoluzione del workflow nella carpenteria metallica: integrare saldatura, fissaggio e finitura in un’unica cella robotizzata."
+       }
+      ]
+     },
+     {
+      "@type": "WebSite",
+      "@id": "https://www.sistec-am.com/#website",
+      "url": "https://www.sistec-am.com/",
+      "name": "Sistec",
+      "description": "",
+      "publisher": {
+       "@id": "https://www.sistec-am.com/#organization"
+      },
+      "potentialAction": [
+       {
+        "@type": "SearchAction",
+        "target": {
+         "@type": "EntryPoint",
+         "urlTemplate": "https://www.sistec-am.com/?s={search_term_string}"
+        },
+        "query-input": {
+         "@type": "PropertyValueSpecification",
+         "valueRequired": true,
+         "valueName": "search_term_string"
+        }
+       }
+      ],
+      "inLanguage": "it-IT"
+     },
+     {
+      "@type": "Organization",
+      "@id": "https://www.sistec-am.com/#organization",
+      "name": "Sistec",
+      "url": "https://www.sistec-am.com/",
+      "logo": {
+       "@type": "ImageObject",
+       "inLanguage": "it-IT",
+       "@id": "https://www.sistec-am.com/#/schema/logo/image/",
+       "url": "https://www.sistec-am.com/wp-content/uploads/2026/04/logo_sistec.png",
+       "contentUrl": "https://www.sistec-am.com/wp-content/uploads/2026/04/logo_sistec.png",
+       "width": 142,
+       "height": 102,
+       "caption": "Sistec"
+      },
+      "image": {
+       "@id": "https://www.sistec-am.com/#/schema/logo/image/"
+      }
+     },
+     {
+      "@type": "Person",
+      "@id": "https://www.sistec-am.com/#/schema/person/1f2a2cdf52dbb1a80eb9732d58a57b90",
+      "name": "viola"
+     }
+    ]
+   }
+  },
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/posts/2058",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/posts"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/types/post"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/users/2"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/comments?post=2058"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 6,
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/posts/2058/revisions"
+    }
+   ],
+   "predecessor-version": [
+    {
+     "id": 2569,
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/posts/2058/revisions/2569"
+    }
+   ],
+   "wp:featuredmedia": [
+    {
+     "embeddable": true,
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/media/2060"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/media?parent=2058"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "category",
+     "embeddable": true,
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/categories?post=2058"
+    },
+    {
+     "taxonomy": "post_tag",
+     "embeddable": true,
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/tags?post=2058"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 1645,
+  "date": "2026-04-29T12:44:58",
+  "date_gmt": "2026-04-29T10:44:58",
+  "guid": {
+   "rendered": "https://www.sistec-am.com/?p=1645"
+  },
+  "modified": "2026-09-22T12:53:42",
+  "modified_gmt": "2026-09-22T10:53:42",
+  "slug": "dallo-stoccaggio-al-just-in-time-come-zuccato-2-ha-eliminato-i-costi-di-magazzino-con-lautomazione-flessibile-sistec",
+  "status": "publish",
+  "type": "post",
+  "link": "https://www.sistec-am.com/case-history/dallo-stoccaggio-al-just-in-time-come-zuccato-2-ha-eliminato-i-costi-di-magazzino-con-lautomazione-flessibile-sistec/",
+  "title": {
+   "rendered": "L’evoluzione verso il Just-in-Time: come l’automazione flessibile ha ottimizzato il magazzino e la risposta al mercato."
+  },
+  "content": {
+   "rendered": "<p class=\"p1\"><b><img loading=\"lazy\" decoding=\"async\" class=\"alignnone wp-image-1647\" src=\"https://www.sistec-am.com/wp-content/uploads/2026/04/7-300x200.jpg\" alt=\"\" width=\"548\" height=\"365\" srcset=\"https://www.sistec-am.com/wp-content/uploads/2026/04/7-300x200.jpg 300w, https://www.sistec-am.com/wp-content/uploads/2026/04/7.jpg 714w\" sizes=\"auto, (max-width: 548px) 100vw, 548px\" /></b></p>\n<p class=\"p1\"><strong>Le sfide operative</strong></p>\n<p class=\"p1\">Il modello di produzione tradizionale presentava alcune criticità strutturali che limitavano la reattività dell&#8217;azienda:</p>\n<ol class=\"ol1\">\n<li class=\"li1\"><strong>Gestione dei piccoli lotti</strong>: la movimentazione manuale rendeva poco efficiente la produzione di quantità ridotte.</li>\n<li class=\"li1\"><strong>Immobilizzazioni finanziarie</strong>: la necessità di creare scorte per garantire tempi di consegna rapidi comportava costi di magazzino elevati.</li>\n<li class=\"li1\"><strong>Integrità delle finiture</strong>: il settore dell’arredo non ammette imperfezioni; le lavorazioni devono essere predisposte per trattamenti superficiali critici come la cromatura.</li>\n</ol>\n<p><img loading=\"lazy\" decoding=\"async\" class=\"alignnone wp-image-1649\" src=\"https://www.sistec-am.com/wp-content/uploads/2026/04/12-1-300x201.jpg\" alt=\"\" width=\"575\" height=\"385\" srcset=\"https://www.sistec-am.com/wp-content/uploads/2026/04/12-1-300x201.jpg 300w, https://www.sistec-am.com/wp-content/uploads/2026/04/12-1.jpg 613w\" sizes=\"auto, (max-width: 575px) 100vw, 575px\" /></p>\n<p class=\"p1\"><strong>La soluzione strategica </strong></p>\n<p class=\"p1\">Il progetto ha previsto lo sviluppo di un’infrastruttura di automazione basata su quattro celle robotizzate indipendenti, progettate per lavorare in sinergia e garantire la massima flessibilità:</p>\n<ul class=\"ul1\">\n<li class=\"li1\"><span class=\"s1\"></span><strong>Integrazione del processo</strong>: automazione completa dalla sagomatura del profilo metallico (tubo e filo da 12mm) fino alla saldatura finale, riducendo le variabili legate all&#8217;intervento manuale.</li>\n<li class=\"li1\"><strong>Controllo della saldatura</strong>: utilizzo di sistemi a regolazione dinamica dei parametri per assicurare uniformità costante dei cordoni.</li>\n<li class=\"li1\"><strong>Produzione &#8220;batch-one&#8221;</strong>: l’integrazione con il software MES aziendale permette di produrre esattamente quanto richiesto in tempo reale, rendendo sostenibile anche la produzione di minimi lotti.</li>\n</ul>\n<p class=\"p1\"><b><img loading=\"lazy\" decoding=\"async\" class=\"alignnone wp-image-1648\" src=\"https://www.sistec-am.com/wp-content/uploads/2026/04/0-1-300x200.jpg\" alt=\"\" width=\"560\" height=\"373\" srcset=\"https://www.sistec-am.com/wp-content/uploads/2026/04/0-1-300x200.jpg 300w, https://www.sistec-am.com/wp-content/uploads/2026/04/0-1.jpg 998w\" sizes=\"auto, (max-width: 560px) 100vw, 560px\" /></b></p>\n<p class=\"p1\"><strong>Risultati e valore generato</strong></p>\n<p class=\"p1\">L’implementazione della logica Industria 4.0 ha permesso a Zuccato 2 di raggiungere nuovi obiettivi di efficienza:</p>\n<ul class=\"ul1\">\n<li class=\"li1\"><span class=\"s1\"></span><strong>Capacità produttiva</strong>: output consolidato di circa 7.000 pezzi al mese su un unico turno di lavoro.</li>\n<li class=\"li1\"><strong>Ottimizzazione del cash flow</strong>: la transizione al Just-in-Time ha drasticamente ridotto la necessità di magazzino.</li>\n<li class=\"li1\"><strong>Qualità e precisione</strong>: la ripetibilità millimetrica dei processi robotizzati ha eliminato quasi totalmente gli scarti di lavorazione.</li>\n<li class=\"li1\"><strong>Modularità</strong>: il sistema è già predisposto per future implementazioni, come l’integrazione di sistemi di movimentazione autonoma AGV.</li>\n</ul>\n<p><img loading=\"lazy\" decoding=\"async\" class=\"alignnone wp-image-1936\" src=\"https://www.sistec-am.com/wp-content/uploads/2026/04/image4-300x200.jpeg\" alt=\"zuccato\" width=\"686\" height=\"457\" srcset=\"https://www.sistec-am.com/wp-content/uploads/2026/04/image4-300x200.jpeg 300w, https://www.sistec-am.com/wp-content/uploads/2026/04/image4.jpeg 714w\" sizes=\"auto, (max-width: 686px) 100vw, 686px\" /></p>\n<p class=\"p1\"><strong>Architettura tecnica e performance</strong></p>\n<p>L&#8217;eccellenza operativa del sistema si riflette in una capacità produttiva di circa<strong> 7.000 pezzi al mese su un singolo turno</strong>, garantendo volumi elevati senza compromettere la precisione. Il cuore tecnologico dell&#8217;impianto è costituito da <strong>quattro celle robotizzate</strong>, progettate per operare sia in totale autonomia che in perfetta sinergia tra loro.</p>\n<p>Questa configurazione permette una gestione estremamente flessibile del <strong>tubo e del filo metallico (fino a 12mm)</strong>, assicurando lavorazioni impeccabili per i mercati più esigenti. Grazie a questo assetto, l&#8217;azienda si posiziona come partner ideale per il settore dell&#8217;<strong>arredo Design e del Contract internazionale</strong>, dove la velocità di risposta e la qualità del dettaglio sono requisiti imprescindibili.</p>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Le sfide operative Il modello di produzione tradizionale presentava alcune criticità strutturali che limitavano la reattività dell&#8217;azienda: Gestione dei piccoli lotti: la movimentazione manuale rendeva poco efficiente la produzione di quantità ridotte. Immobilizzazioni finanziarie: la necessità di creare scorte per garantire tempi di consegna rapidi comportava costi di magazzino elevati. Integrità delle finiture: il settore&#8230;</p>\n",
+   "protected": false
+  },
+  "author": 2,
+  "featured_media": 1651,
+  "comment_status": "open",
+  "ping_status": "open",
+  "sticky": false,
+  "template": "",
+  "format": "standard",
+  "meta": {
+   "_acf_changed": false,
+   "footnotes": ""
+  },
+  "categories": [
+   1
+  ],
+  "tags": [],
+  "class_list": [
+   "post-1645",
+   "post",
+   "type-post",
+   "status-publish",
+   "format-standard",
+   "has-post-thumbnail",
+   "hentry",
+   "category-case-history"
+  ],
+  "acf": [],
+  "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v28.6 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>L’evoluzione verso il Just-in-Time: come l’automazione flessibile ha ottimizzato il magazzino e la risposta al mercato. | Sistec</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://www.sistec-am.com/case-history/dallo-stoccaggio-al-just-in-time-come-zuccato-2-ha-eliminato-i-costi-di-magazzino-con-lautomazione-flessibile-sistec/\" />\n<meta property=\"og:locale\" content=\"it_IT\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"L’evoluzione verso il Just-in-Time: come l’automazione flessibile ha ottimizzato il magazzino e la risposta al mercato. | Sistec\" />\n<meta property=\"og:description\" content=\"Le sfide operative Il modello di produzione tradizionale presentava alcune criticità strutturali che limitavano la reattività dell&#8217;azienda: Gestione dei piccoli lotti: la movimentazione manuale rendeva poco efficiente la produzione di quantità ridotte. Immobilizzazioni finanziarie: la necessità di creare scorte per garantire tempi di consegna rapidi comportava costi di magazzino elevati. Integrità delle finiture: il settore...\" />\n<meta property=\"og:url\" content=\"https://www.sistec-am.com/case-history/dallo-stoccaggio-al-just-in-time-come-zuccato-2-ha-eliminato-i-costi-di-magazzino-con-lautomazione-flessibile-sistec/\" />\n<meta property=\"og:site_name\" content=\"Sistec\" />\n<meta property=\"article:published_time\" content=\"2026-04-29T10:44:58+00:00\" />\n<meta property=\"article:modified_time\" content=\"2026-09-22T10:53:42+00:00\" />\n<meta property=\"og:image\" content=\"https://www.sistec-am.com/wp-content/uploads/2026/04/zuccato.jpg\" />\n\t<meta property=\"og:image:width\" content=\"503\" />\n\t<meta property=\"og:image:height\" content=\"504\" />\n\t<meta property=\"og:image:type\" content=\"image/jpeg\" />\n<meta name=\"author\" content=\"viola\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<meta name=\"twitter:label1\" content=\"Scritto da\" />\n\t<meta name=\"twitter:data1\" content=\"viola\" />\n\t<meta name=\"twitter:label2\" content=\"Tempo di lettura stimato\" />\n\t<meta name=\"twitter:data2\" content=\"3 minuti\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/dallo-stoccaggio-al-just-in-time-come-zuccato-2-ha-eliminato-i-costi-di-magazzino-con-lautomazione-flessibile-sistec\\/#article\",\"isPartOf\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/dallo-stoccaggio-al-just-in-time-come-zuccato-2-ha-eliminato-i-costi-di-magazzino-con-lautomazione-flessibile-sistec\\/\"},\"author\":{\"name\":\"viola\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#\\/schema\\/person\\/1f2a2cdf52dbb1a80eb9732d58a57b90\"},\"headline\":\"L’evoluzione verso il Just-in-Time: come l’automazione flessibile ha ottimizzato il magazzino e la risposta al mercato.\",\"datePublished\":\"2026-04-29T10:44:58+00:00\",\"dateModified\":\"2026-09-22T10:53:42+00:00\",\"mainEntityOfPage\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/dallo-stoccaggio-al-just-in-time-come-zuccato-2-ha-eliminato-i-costi-di-magazzino-con-lautomazione-flessibile-sistec\\/\"},\"wordCount\":385,\"commentCount\":0,\"publisher\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/#organization\"},\"image\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/dallo-stoccaggio-al-just-in-time-come-zuccato-2-ha-eliminato-i-costi-di-magazzino-con-lautomazione-flessibile-sistec\\/#primaryimage\"},\"thumbnailUrl\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2026\\/04\\/zuccato.jpg\",\"articleSection\":[\"Case history\"],\"inLanguage\":\"it-IT\",\"potentialAction\":[{\"@type\":\"CommentAction\",\"name\":\"Comment\",\"target\":[\"https:\\/\\/www.sistec-am.com\\/case-history\\/dallo-stoccaggio-al-just-in-time-come-zuccato-2-ha-eliminato-i-costi-di-magazzino-con-lautomazione-flessibile-sistec\\/#respond\"]}]},{\"@type\":\"WebPage\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/dallo-stoccaggio-al-just-in-time-come-zuccato-2-ha-eliminato-i-costi-di-magazzino-con-lautomazione-flessibile-sistec\\/\",\"url\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/dallo-stoccaggio-al-just-in-time-come-zuccato-2-ha-eliminato-i-costi-di-magazzino-con-lautomazione-flessibile-sistec\\/\",\"name\":\"L’evoluzione verso il Just-in-Time: come l’automazione flessibile ha ottimizzato il magazzino e la risposta al mercato. | Sistec\",\"isPartOf\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/#website\"},\"primaryImageOfPage\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/dallo-stoccaggio-al-just-in-time-come-zuccato-2-ha-eliminato-i-costi-di-magazzino-con-lautomazione-flessibile-sistec\\/#primaryimage\"},\"image\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/dallo-stoccaggio-al-just-in-time-come-zuccato-2-ha-eliminato-i-costi-di-magazzino-con-lautomazione-flessibile-sistec\\/#primaryimage\"},\"thumbnailUrl\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2026\\/04\\/zuccato.jpg\",\"datePublished\":\"2026-04-29T10:44:58+00:00\",\"dateModified\":\"2026-09-22T10:53:42+00:00\",\"breadcrumb\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/dallo-stoccaggio-al-just-in-time-come-zuccato-2-ha-eliminato-i-costi-di-magazzino-con-lautomazione-flessibile-sistec\\/#breadcrumb\"},\"inLanguage\":\"it-IT\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https:\\/\\/www.sistec-am.com\\/case-history\\/dallo-stoccaggio-al-just-in-time-come-zuccato-2-ha-eliminato-i-costi-di-magazzino-con-lautomazione-flessibile-sistec\\/\"]}]},{\"@type\":\"ImageObject\",\"inLanguage\":\"it-IT\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/dallo-stoccaggio-al-just-in-time-come-zuccato-2-ha-eliminato-i-costi-di-magazzino-con-lautomazione-flessibile-sistec\\/#primaryimage\",\"url\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2026\\/04\\/zuccato.jpg\",\"contentUrl\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2026\\/04\\/zuccato.jpg\",\"width\":503,\"height\":504},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/dallo-stoccaggio-al-just-in-time-come-zuccato-2-ha-eliminato-i-costi-di-magazzino-con-lautomazione-flessibile-sistec\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/www.sistec-am.com\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"L’evoluzione verso il Just-in-Time: come l’automazione flessibile ha ottimizzato il magazzino e la risposta al mercato.\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#website\",\"url\":\"https:\\/\\/www.sistec-am.com\\/\",\"name\":\"Sistec\",\"description\":\"\",\"publisher\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/www.sistec-am.com\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"it-IT\"},{\"@type\":\"Organization\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#organization\",\"name\":\"Sistec\",\"url\":\"https:\\/\\/www.sistec-am.com\\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"it-IT\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#\\/schema\\/logo\\/image\\/\",\"url\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2026\\/04\\/logo_sistec.png\",\"contentUrl\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2026\\/04\\/logo_sistec.png\",\"width\":142,\"height\":102,\"caption\":\"Sistec\"},\"image\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/#\\/schema\\/logo\\/image\\/\"}},{\"@type\":\"Person\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#\\/schema\\/person\\/1f2a2cdf52dbb1a80eb9732d58a57b90\",\"name\":\"viola\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+  "yoast_head_json": {
+   "title": "L’evoluzione verso il Just-in-Time: come l’automazione flessibile ha ottimizzato il magazzino e la risposta al mercato. | Sistec",
+   "robots": {
+    "index": "index",
+    "follow": "follow",
+    "max-snippet": "max-snippet:-1",
+    "max-image-preview": "max-image-preview:large",
+    "max-video-preview": "max-video-preview:-1"
+   },
+   "canonical": "https://www.sistec-am.com/case-history/dallo-stoccaggio-al-just-in-time-come-zuccato-2-ha-eliminato-i-costi-di-magazzino-con-lautomazione-flessibile-sistec/",
+   "og_locale": "it_IT",
+   "og_type": "article",
+   "og_title": "L’evoluzione verso il Just-in-Time: come l’automazione flessibile ha ottimizzato il magazzino e la risposta al mercato. | Sistec",
+   "og_description": "Le sfide operative Il modello di produzione tradizionale presentava alcune criticità strutturali che limitavano la reattività dell&#8217;azienda: Gestione dei piccoli lotti: la movimentazione manuale rendeva poco efficiente la produzione di quantità ridotte. Immobilizzazioni finanziarie: la necessità di creare scorte per garantire tempi di consegna rapidi comportava costi di magazzino elevati. Integrità delle finiture: il settore...",
+   "og_url": "https://www.sistec-am.com/case-history/dallo-stoccaggio-al-just-in-time-come-zuccato-2-ha-eliminato-i-costi-di-magazzino-con-lautomazione-flessibile-sistec/",
+   "og_site_name": "Sistec",
+   "article_published_time": "2026-04-29T10:44:58+00:00",
+   "article_modified_time": "2026-09-22T10:53:42+00:00",
+   "og_image": [
+    {
+     "width": 503,
+     "height": 504,
+     "url": "https://www.sistec-am.com/wp-content/uploads/2026/04/zuccato.jpg",
+     "type": "image/jpeg"
+    }
+   ],
+   "author": "viola",
+   "twitter_card": "summary_large_image",
+   "twitter_misc": {
+    "Scritto da": "viola",
+    "Tempo di lettura stimato": "3 minuti"
+   },
+   "schema": {
+    "@context": "https://schema.org",
+    "@graph": [
+     {
+      "@type": "Article",
+      "@id": "https://www.sistec-am.com/case-history/dallo-stoccaggio-al-just-in-time-come-zuccato-2-ha-eliminato-i-costi-di-magazzino-con-lautomazione-flessibile-sistec/#article",
+      "isPartOf": {
+       "@id": "https://www.sistec-am.com/case-history/dallo-stoccaggio-al-just-in-time-come-zuccato-2-ha-eliminato-i-costi-di-magazzino-con-lautomazione-flessibile-sistec/"
+      },
+      "author": {
+       "name": "viola",
+       "@id": "https://www.sistec-am.com/#/schema/person/1f2a2cdf52dbb1a80eb9732d58a57b90"
+      },
+      "headline": "L’evoluzione verso il Just-in-Time: come l’automazione flessibile ha ottimizzato il magazzino e la risposta al mercato.",
+      "datePublished": "2026-04-29T10:44:58+00:00",
+      "dateModified": "2026-09-22T10:53:42+00:00",
+      "mainEntityOfPage": {
+       "@id": "https://www.sistec-am.com/case-history/dallo-stoccaggio-al-just-in-time-come-zuccato-2-ha-eliminato-i-costi-di-magazzino-con-lautomazione-flessibile-sistec/"
+      },
+      "wordCount": 385,
+      "commentCount": 0,
+      "publisher": {
+       "@id": "https://www.sistec-am.com/#organization"
+      },
+      "image": {
+       "@id": "https://www.sistec-am.com/case-history/dallo-stoccaggio-al-just-in-time-come-zuccato-2-ha-eliminato-i-costi-di-magazzino-con-lautomazione-flessibile-sistec/#primaryimage"
+      },
+      "thumbnailUrl": "https://www.sistec-am.com/wp-content/uploads/2026/04/zuccato.jpg",
+      "articleSection": [
+       "Case history"
+      ],
+      "inLanguage": "it-IT",
+      "potentialAction": [
+       {
+        "@type": "CommentAction",
+        "name": "Comment",
+        "target": [
+         "https://www.sistec-am.com/case-history/dallo-stoccaggio-al-just-in-time-come-zuccato-2-ha-eliminato-i-costi-di-magazzino-con-lautomazione-flessibile-sistec/#respond"
+        ]
+       }
+      ]
+     },
+     {
+      "@type": "WebPage",
+      "@id": "https://www.sistec-am.com/case-history/dallo-stoccaggio-al-just-in-time-come-zuccato-2-ha-eliminato-i-costi-di-magazzino-con-lautomazione-flessibile-sistec/",
+      "url": "https://www.sistec-am.com/case-history/dallo-stoccaggio-al-just-in-time-come-zuccato-2-ha-eliminato-i-costi-di-magazzino-con-lautomazione-flessibile-sistec/",
+      "name": "L’evoluzione verso il Just-in-Time: come l’automazione flessibile ha ottimizzato il magazzino e la risposta al mercato. | Sistec",
+      "isPartOf": {
+       "@id": "https://www.sistec-am.com/#website"
+      },
+      "primaryImageOfPage": {
+       "@id": "https://www.sistec-am.com/case-history/dallo-stoccaggio-al-just-in-time-come-zuccato-2-ha-eliminato-i-costi-di-magazzino-con-lautomazione-flessibile-sistec/#primaryimage"
+      },
+      "image": {
+       "@id": "https://www.sistec-am.com/case-history/dallo-stoccaggio-al-just-in-time-come-zuccato-2-ha-eliminato-i-costi-di-magazzino-con-lautomazione-flessibile-sistec/#primaryimage"
+      },
+      "thumbnailUrl": "https://www.sistec-am.com/wp-content/uploads/2026/04/zuccato.jpg",
+      "datePublished": "2026-04-29T10:44:58+00:00",
+      "dateModified": "2026-09-22T10:53:42+00:00",
+      "breadcrumb": {
+       "@id": "https://www.sistec-am.com/case-history/dallo-stoccaggio-al-just-in-time-come-zuccato-2-ha-eliminato-i-costi-di-magazzino-con-lautomazione-flessibile-sistec/#breadcrumb"
+      },
+      "inLanguage": "it-IT",
+      "potentialAction": [
+       {
+        "@type": "ReadAction",
+        "target": [
+         "https://www.sistec-am.com/case-history/dallo-stoccaggio-al-just-in-time-come-zuccato-2-ha-eliminato-i-costi-di-magazzino-con-lautomazione-flessibile-sistec/"
+        ]
+       }
+      ]
+     },
+     {
+      "@type": "ImageObject",
+      "inLanguage": "it-IT",
+      "@id": "https://www.sistec-am.com/case-history/dallo-stoccaggio-al-just-in-time-come-zuccato-2-ha-eliminato-i-costi-di-magazzino-con-lautomazione-flessibile-sistec/#primaryimage",
+      "url": "https://www.sistec-am.com/wp-content/uploads/2026/04/zuccato.jpg",
+      "contentUrl": "https://www.sistec-am.com/wp-content/uploads/2026/04/zuccato.jpg",
+      "width": 503,
+      "height": 504
+     },
+     {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.sistec-am.com/case-history/dallo-stoccaggio-al-just-in-time-come-zuccato-2-ha-eliminato-i-costi-di-magazzino-con-lautomazione-flessibile-sistec/#breadcrumb",
+      "itemListElement": [
+       {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.sistec-am.com/"
+       },
+       {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "L’evoluzione verso il Just-in-Time: come l’automazione flessibile ha ottimizzato il magazzino e la risposta al mercato."
+       }
+      ]
+     },
+     {
+      "@type": "WebSite",
+      "@id": "https://www.sistec-am.com/#website",
+      "url": "https://www.sistec-am.com/",
+      "name": "Sistec",
+      "description": "",
+      "publisher": {
+       "@id": "https://www.sistec-am.com/#organization"
+      },
+      "potentialAction": [
+       {
+        "@type": "SearchAction",
+        "target": {
+         "@type": "EntryPoint",
+         "urlTemplate": "https://www.sistec-am.com/?s={search_term_string}"
+        },
+        "query-input": {
+         "@type": "PropertyValueSpecification",
+         "valueRequired": true,
+         "valueName": "search_term_string"
+        }
+       }
+      ],
+      "inLanguage": "it-IT"
+     },
+     {
+      "@type": "Organization",
+      "@id": "https://www.sistec-am.com/#organization",
+      "name": "Sistec",
+      "url": "https://www.sistec-am.com/",
+      "logo": {
+       "@type": "ImageObject",
+       "inLanguage": "it-IT",
+       "@id": "https://www.sistec-am.com/#/schema/logo/image/",
+       "url": "https://www.sistec-am.com/wp-content/uploads/2026/04/logo_sistec.png",
+       "contentUrl": "https://www.sistec-am.com/wp-content/uploads/2026/04/logo_sistec.png",
+       "width": 142,
+       "height": 102,
+       "caption": "Sistec"
+      },
+      "image": {
+       "@id": "https://www.sistec-am.com/#/schema/logo/image/"
+      }
+     },
+     {
+      "@type": "Person",
+      "@id": "https://www.sistec-am.com/#/schema/person/1f2a2cdf52dbb1a80eb9732d58a57b90",
+      "name": "viola"
+     }
+    ]
+   }
+  },
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/posts/1645",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/posts"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/types/post"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/users/2"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/comments?post=1645"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 11,
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/posts/1645/revisions"
+    }
+   ],
+   "predecessor-version": [
+    {
+     "id": 2570,
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/posts/1645/revisions/2570"
+    }
+   ],
+   "wp:featuredmedia": [
+    {
+     "embeddable": true,
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/media/1651"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/media?parent=1645"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "category",
+     "embeddable": true,
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/categories?post=1645"
+    },
+    {
+     "taxonomy": "post_tag",
+     "embeddable": true,
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/tags?post=1645"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 1628,
+  "date": "2026-04-29T12:25:38",
+  "date_gmt": "2026-04-29T10:25:38",
+  "guid": {
+   "rendered": "https://www.sistec-am.com/?p=1628"
+  },
+  "modified": "2026-09-22T12:57:54",
+  "modified_gmt": "2026-09-22T10:57:54",
+  "slug": "il-valore-del-tempo-non-presidiato-come-falmec-ha-abilitato-il-turno-notturno-grazie-al-sorting-robotizzato-sistec",
+  "status": "publish",
+  "type": "post",
+  "link": "https://www.sistec-am.com/case-history/il-valore-del-tempo-non-presidiato-come-falmec-ha-abilitato-il-turno-notturno-grazie-al-sorting-robotizzato-sistec/",
+  "title": {
+   "rendered": "Il valore del tempo non presidiato: l&#8217;automazione del sorting come driver di crescita."
+  },
+  "content": {
+   "rendered": "<p class=\"p1\">Un punto di riferimento globale nel mercato delle cappe da cucina di fascia premium ha scelto di rivoluzionare il cuore della propria produzione integrando un sistema di sorting robotizzato direttamente a valle del taglio laser.</p>\n<p>Questa evoluzione tecnologica ha trasformato una fase storicamente critica in un vantaggio competitivo strategico, permettendo di:</p>\n<ul>\n<li class=\"p1\"><strong>Abilitare la produzione h24</strong>: Grazie all&#8217;automazione, l&#8217;azienda ha attivato con successo il turno notturno non presidiato.</li>\n<li class=\"p1\"><strong>Azzerare gli scarti estetici</strong>: La manipolazione robotizzata garantisce l&#8217;integrità dei componenti, fondamentale per prodotti dove il design e la finitura superficiale sono prioritari.</li>\n<li class=\"p1\"><strong>Ottimizzare i flussi</strong>: Il passaggio diretto dal taglio alla separazione dei pezzi ha eliminato i colli di bottiglia, elevando lo standard di efficienza dell&#8217;intero stabilimento.</li>\n</ul>\n<p class=\"p1\">&#8220;L&#8217;integrazione del sorting robotizzato non ha solo velocizzato i processi, ma ha dato nuovo valore al tempo, permettendo alla produzione di proseguire in totale autonomia e con una precisione chirurgica, anche in assenza di operatori.&#8221;</p>\n<p class=\"p1\"><img loading=\"lazy\" decoding=\"async\" class=\"alignnone wp-image-1633\" src=\"https://www.sistec-am.com/wp-content/uploads/2026/04/11-300x200.jpg\" alt=\"\" width=\"674\" height=\"449\" srcset=\"https://www.sistec-am.com/wp-content/uploads/2026/04/11-300x200.jpg 300w, https://www.sistec-am.com/wp-content/uploads/2026/04/11-1024x684.jpg 1024w\" sizes=\"auto, (max-width: 674px) 100vw, 674px\" /></p>\n<p class=\"p1\"><strong>Le sfide del business</strong></p>\n<p class=\"p1\">Per un brand che fa del design e della perfezione superficiale (acciaio inox AISI 304) il proprio marchio di fabbrica, le sfide erano ambiziose:</p>\n<ol class=\"ol1\">\n<li class=\"li1\"><strong>Tutela della qualità estetica</strong>: la manipolazione manuale dei pezzi causava micro-strisciamenti e difetti che portavano a scarti onerosi.</li>\n<li class=\"li1\"><strong>Saturazione degli impianti</strong>: necessità di estendere la capacità produttiva introducendo turni notturni senza aumentare i costi fissi del personale.</li>\n<li class=\"li1\"><strong>Complessità logistica</strong>: gestione di nesting molto variegati (piccoli lotti di prodotti diversi sulla stessa lastra) che rendevano il sorting manuale lento e soggetto a errori.</li>\n</ol>\n<p class=\"p1\"><img loading=\"lazy\" decoding=\"async\" class=\"alignnone wp-image-1634\" style=\"letter-spacing: 0em;\" src=\"https://www.sistec-am.com/wp-content/uploads/2026/04/1-300x200.jpg\" alt=\"\" width=\"557\" height=\"371\" srcset=\"https://www.sistec-am.com/wp-content/uploads/2026/04/1-300x200.jpg 300w, https://www.sistec-am.com/wp-content/uploads/2026/04/1-1024x684.jpg 1024w\" sizes=\"auto, (max-width: 557px) 100vw, 557px\" /></p>\n<p class=\"p1\"><strong>La soluzione strategica </strong></p>\n<p class=\"p1\">È stata progettata una <strong>smart manufacturing cell</strong> che non si limita a tagliare, ma gestisce l&#8217;intero flusso dei semilavorati attraverso l&#8217;automazione avanzata:</p>\n<ul class=\"ul1\">\n<li class=\"li1\"><span class=\"s1\"></span><strong>Sorting robotizzato intelligente</strong>: un robot KUKA KR Quantec preleva singolarmente i pezzi tagliati e li smista con precisione millimetrica su 24 pallet differenti.</li>\n<li class=\"li1\"><strong>Gestione automatica delle prese (gripper)</strong>: il sistema seleziona e configura autonomamente l&#8217;organo di presa più adatto alla geometria del pezzo, lavorando in &#8220;tempo mascherato&#8221;.</li>\n<li class=\"li1\"><strong>Visione artificiale per lo scarto zero</strong>: un sistema di visione integrato monitora la qualità dello sfrido e decide autonomamente come gestire lo scarico per garantire l&#8217;affidabilità totale nel ciclo notturno.</li>\n<li class=\"li1\"><strong>Ribaltatore integrato per il processo downstream</strong>: i pezzi vengono ribaltati e impilati con il verso corretto della bava per ottimizzare la successiva fase di sbavatura, risparmiando tempo prezioso nelle lavorazioni a valle.</li>\n</ul>\n<p class=\"p1\"><strong>Risultati e valore generato</strong></p>\n<p class=\"p1\">L&#8217;approccio ingegneristico ha spostato l&#8217;obiettivo dalla &#8220;velocità pura&#8221; all&#8217;efficienza globale di processo:</p>\n<ul class=\"ul1\">\n<li class=\"li1\"><span class=\"s1\"></span><strong>Produzione non presidiata</strong>: introduzione del turno notturno affidabile, aumentando drasticamente l&#8217;output giornaliero senza supervisione umana.</li>\n<li class=\"li1\"><strong>Eliminazione degli scarti</strong>: grazie al sorting robotizzato, i graffi da strisciamento sono stati azzerati, proteggendo il valore dei materiali pregiati.</li>\n<li class=\"li1\"><strong>Flessibilità totale (just-in-time)</strong>: capacità di gestire lotti piccoli e nesting complessi con la stessa efficienza della grande serie.</li>\n<li class=\"li1\"><strong>Ottimizzazione della manodopera</strong>: il personale è stato liberato da attività alienanti di smistamento e riposizionato su fasi a maggior valore aggiunto</li>\n</ul>\n<p><img loading=\"lazy\" decoding=\"async\" class=\"alignnone wp-image-1635\" src=\"https://www.sistec-am.com/wp-content/uploads/2026/04/10-300x200.jpg\" alt=\"\" width=\"570\" height=\"380\" srcset=\"https://www.sistec-am.com/wp-content/uploads/2026/04/10-300x200.jpg 300w, https://www.sistec-am.com/wp-content/uploads/2026/04/10-1024x684.jpg 1024w\" sizes=\"auto, (max-width: 570px) 100vw, 570px\" /></p>\n<p class=\"p1\"><strong>Architettura tecnica e performance</strong></p>\n<p>L&#8217;ecosistema tecnologico implementato integra le migliori soluzioni di automazione industriale per garantire un ciclo produttivo continuo e privo di errori:</p>\n<ul class=\"ul1\">\n<li class=\"li1\"><span class=\"s1\"></span><strong>Configurazione high-tech</strong>: Integrazione nativa tra sistema di taglio Laser TRUMPF, unità di manipolazione Robot KUKA KR Quantec e Sistema Cartesiano ad alta velocità.</li>\n<li class=\"li1\"><strong>Massima capacità logistica</strong>: Un&#8217;area dedicata con 24 stazioni di palletizzazione automatica, che permette la gestione simultanea di una vasta gamma di codici prodotto e lotti differenziati.</li>\n<li class=\"li1\"><strong>Smart handling &amp; prese</strong>: Presenza di un magazzino gripper automatico che consente al sistema di riconfigurarsi autonomamente in tempo reale, adattandosi a ogni geometria di pezzo senza interventi manuali.</li>\n<li class=\"li1\"><strong>Ottimizzazione processi downstream</strong>: Sistema di ribaltamento pezzi integrato, progettato per orientare correttamente i semilavorati e semplificare drasticamente le successive operazioni di sbavatura e finitura</li>\n</ul>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Un punto di riferimento globale nel mercato delle cappe da cucina di fascia premium ha scelto di rivoluzionare il cuore della propria produzione integrando un sistema di sorting robotizzato direttamente a valle del taglio laser. Questa evoluzione tecnologica ha trasformato una fase storicamente critica in un vantaggio competitivo strategico, permettendo di: Abilitare la produzione h24:&#8230;</p>\n",
+   "protected": false
+  },
+  "author": 2,
+  "featured_media": 1637,
+  "comment_status": "open",
+  "ping_status": "open",
+  "sticky": false,
+  "template": "",
+  "format": "standard",
+  "meta": {
+   "_acf_changed": false,
+   "footnotes": ""
+  },
+  "categories": [
+   1
+  ],
+  "tags": [],
+  "class_list": [
+   "post-1628",
+   "post",
+   "type-post",
+   "status-publish",
+   "format-standard",
+   "has-post-thumbnail",
+   "hentry",
+   "category-case-history"
+  ],
+  "acf": [],
+  "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v28.6 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Il valore del tempo non presidiato: l&#039;automazione del sorting come driver di crescita. | Sistec</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://www.sistec-am.com/case-history/il-valore-del-tempo-non-presidiato-come-falmec-ha-abilitato-il-turno-notturno-grazie-al-sorting-robotizzato-sistec/\" />\n<meta property=\"og:locale\" content=\"it_IT\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Il valore del tempo non presidiato: l&#039;automazione del sorting come driver di crescita. | Sistec\" />\n<meta property=\"og:description\" content=\"Un punto di riferimento globale nel mercato delle cappe da cucina di fascia premium ha scelto di rivoluzionare il cuore della propria produzione integrando un sistema di sorting robotizzato direttamente a valle del taglio laser. Questa evoluzione tecnologica ha trasformato una fase storicamente critica in un vantaggio competitivo strategico, permettendo di: Abilitare la produzione h24:...\" />\n<meta property=\"og:url\" content=\"https://www.sistec-am.com/case-history/il-valore-del-tempo-non-presidiato-come-falmec-ha-abilitato-il-turno-notturno-grazie-al-sorting-robotizzato-sistec/\" />\n<meta property=\"og:site_name\" content=\"Sistec\" />\n<meta property=\"article:published_time\" content=\"2026-04-29T10:25:38+00:00\" />\n<meta property=\"article:modified_time\" content=\"2026-09-22T10:57:54+00:00\" />\n<meta property=\"og:image\" content=\"https://www.sistec-am.com/wp-content/uploads/2026/04/8.jpg\" />\n\t<meta property=\"og:image:width\" content=\"1000\" />\n\t<meta property=\"og:image:height\" content=\"1000\" />\n\t<meta property=\"og:image:type\" content=\"image/jpeg\" />\n<meta name=\"author\" content=\"viola\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<meta name=\"twitter:label1\" content=\"Scritto da\" />\n\t<meta name=\"twitter:data1\" content=\"viola\" />\n\t<meta name=\"twitter:label2\" content=\"Tempo di lettura stimato\" />\n\t<meta name=\"twitter:data2\" content=\"4 minuti\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/il-valore-del-tempo-non-presidiato-come-falmec-ha-abilitato-il-turno-notturno-grazie-al-sorting-robotizzato-sistec\\/#article\",\"isPartOf\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/il-valore-del-tempo-non-presidiato-come-falmec-ha-abilitato-il-turno-notturno-grazie-al-sorting-robotizzato-sistec\\/\"},\"author\":{\"name\":\"viola\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#\\/schema\\/person\\/1f2a2cdf52dbb1a80eb9732d58a57b90\"},\"headline\":\"Il valore del tempo non presidiato: l&#8217;automazione del sorting come driver di crescita.\",\"datePublished\":\"2026-04-29T10:25:38+00:00\",\"dateModified\":\"2026-09-22T10:57:54+00:00\",\"mainEntityOfPage\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/il-valore-del-tempo-non-presidiato-come-falmec-ha-abilitato-il-turno-notturno-grazie-al-sorting-robotizzato-sistec\\/\"},\"wordCount\":614,\"commentCount\":0,\"publisher\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/#organization\"},\"image\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/il-valore-del-tempo-non-presidiato-come-falmec-ha-abilitato-il-turno-notturno-grazie-al-sorting-robotizzato-sistec\\/#primaryimage\"},\"thumbnailUrl\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2026\\/04\\/8.jpg\",\"articleSection\":[\"Case history\"],\"inLanguage\":\"it-IT\",\"potentialAction\":[{\"@type\":\"CommentAction\",\"name\":\"Comment\",\"target\":[\"https:\\/\\/www.sistec-am.com\\/case-history\\/il-valore-del-tempo-non-presidiato-come-falmec-ha-abilitato-il-turno-notturno-grazie-al-sorting-robotizzato-sistec\\/#respond\"]}]},{\"@type\":\"WebPage\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/il-valore-del-tempo-non-presidiato-come-falmec-ha-abilitato-il-turno-notturno-grazie-al-sorting-robotizzato-sistec\\/\",\"url\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/il-valore-del-tempo-non-presidiato-come-falmec-ha-abilitato-il-turno-notturno-grazie-al-sorting-robotizzato-sistec\\/\",\"name\":\"Il valore del tempo non presidiato: l'automazione del sorting come driver di crescita. | Sistec\",\"isPartOf\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/#website\"},\"primaryImageOfPage\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/il-valore-del-tempo-non-presidiato-come-falmec-ha-abilitato-il-turno-notturno-grazie-al-sorting-robotizzato-sistec\\/#primaryimage\"},\"image\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/il-valore-del-tempo-non-presidiato-come-falmec-ha-abilitato-il-turno-notturno-grazie-al-sorting-robotizzato-sistec\\/#primaryimage\"},\"thumbnailUrl\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2026\\/04\\/8.jpg\",\"datePublished\":\"2026-04-29T10:25:38+00:00\",\"dateModified\":\"2026-09-22T10:57:54+00:00\",\"breadcrumb\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/il-valore-del-tempo-non-presidiato-come-falmec-ha-abilitato-il-turno-notturno-grazie-al-sorting-robotizzato-sistec\\/#breadcrumb\"},\"inLanguage\":\"it-IT\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https:\\/\\/www.sistec-am.com\\/case-history\\/il-valore-del-tempo-non-presidiato-come-falmec-ha-abilitato-il-turno-notturno-grazie-al-sorting-robotizzato-sistec\\/\"]}]},{\"@type\":\"ImageObject\",\"inLanguage\":\"it-IT\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/il-valore-del-tempo-non-presidiato-come-falmec-ha-abilitato-il-turno-notturno-grazie-al-sorting-robotizzato-sistec\\/#primaryimage\",\"url\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2026\\/04\\/8.jpg\",\"contentUrl\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2026\\/04\\/8.jpg\",\"width\":1000,\"height\":1000},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/il-valore-del-tempo-non-presidiato-come-falmec-ha-abilitato-il-turno-notturno-grazie-al-sorting-robotizzato-sistec\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/www.sistec-am.com\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Il valore del tempo non presidiato: l&#8217;automazione del sorting come driver di crescita.\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#website\",\"url\":\"https:\\/\\/www.sistec-am.com\\/\",\"name\":\"Sistec\",\"description\":\"\",\"publisher\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/www.sistec-am.com\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"it-IT\"},{\"@type\":\"Organization\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#organization\",\"name\":\"Sistec\",\"url\":\"https:\\/\\/www.sistec-am.com\\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"it-IT\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#\\/schema\\/logo\\/image\\/\",\"url\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2026\\/04\\/logo_sistec.png\",\"contentUrl\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2026\\/04\\/logo_sistec.png\",\"width\":142,\"height\":102,\"caption\":\"Sistec\"},\"image\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/#\\/schema\\/logo\\/image\\/\"}},{\"@type\":\"Person\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#\\/schema\\/person\\/1f2a2cdf52dbb1a80eb9732d58a57b90\",\"name\":\"viola\"}]}</script>\n<!-- / Yoast SEO plugin. -->",
+  "yoast_head_json": {
+   "title": "Il valore del tempo non presidiato: l'automazione del sorting come driver di crescita. | Sistec",
+   "robots": {
+    "index": "index",
+    "follow": "follow",
+    "max-snippet": "max-snippet:-1",
+    "max-image-preview": "max-image-preview:large",
+    "max-video-preview": "max-video-preview:-1"
+   },
+   "canonical": "https://www.sistec-am.com/case-history/il-valore-del-tempo-non-presidiato-come-falmec-ha-abilitato-il-turno-notturno-grazie-al-sorting-robotizzato-sistec/",
+   "og_locale": "it_IT",
+   "og_type": "article",
+   "og_title": "Il valore del tempo non presidiato: l'automazione del sorting come driver di crescita. | Sistec",
+   "og_description": "Un punto di riferimento globale nel mercato delle cappe da cucina di fascia premium ha scelto di rivoluzionare il cuore della propria produzione integrando un sistema di sorting robotizzato direttamente a valle del taglio laser. Questa evoluzione tecnologica ha trasformato una fase storicamente critica in un vantaggio competitivo strategico, permettendo di: Abilitare la produzione h24:...",
+   "og_url": "https://www.sistec-am.com/case-history/il-valore-del-tempo-non-presidiato-come-falmec-ha-abilitato-il-turno-notturno-grazie-al-sorting-robotizzato-sistec/",
+   "og_site_name": "Sistec",
+   "article_published_time": "2026-04-29T10:25:38+00:00",
+   "article_modified_time": "2026-09-22T10:57:54+00:00",
+   "og_image": [
+    {
+     "width": 1000,
+     "height": 1000,
+     "url": "https://www.sistec-am.com/wp-content/uploads/2026/04/8.jpg",
+     "type": "image/jpeg"
+    }
+   ],
+   "author": "viola",
+   "twitter_card": "summary_large_image",
+   "twitter_misc": {
+    "Scritto da": "viola",
+    "Tempo di lettura stimato": "4 minuti"
+   },
+   "schema": {
+    "@context": "https://schema.org",
+    "@graph": [
+     {
+      "@type": "Article",
+      "@id": "https://www.sistec-am.com/case-history/il-valore-del-tempo-non-presidiato-come-falmec-ha-abilitato-il-turno-notturno-grazie-al-sorting-robotizzato-sistec/#article",
+      "isPartOf": {
+       "@id": "https://www.sistec-am.com/case-history/il-valore-del-tempo-non-presidiato-come-falmec-ha-abilitato-il-turno-notturno-grazie-al-sorting-robotizzato-sistec/"
+      },
+      "author": {
+       "name": "viola",
+       "@id": "https://www.sistec-am.com/#/schema/person/1f2a2cdf52dbb1a80eb9732d58a57b90"
+      },
+      "headline": "Il valore del tempo non presidiato: l&#8217;automazione del sorting come driver di crescita.",
+      "datePublished": "2026-04-29T10:25:38+00:00",
+      "dateModified": "2026-09-22T10:57:54+00:00",
+      "mainEntityOfPage": {
+       "@id": "https://www.sistec-am.com/case-history/il-valore-del-tempo-non-presidiato-come-falmec-ha-abilitato-il-turno-notturno-grazie-al-sorting-robotizzato-sistec/"
+      },
+      "wordCount": 614,
+      "commentCount": 0,
+      "publisher": {
+       "@id": "https://www.sistec-am.com/#organization"
+      },
+      "image": {
+       "@id": "https://www.sistec-am.com/case-history/il-valore-del-tempo-non-presidiato-come-falmec-ha-abilitato-il-turno-notturno-grazie-al-sorting-robotizzato-sistec/#primaryimage"
+      },
+      "thumbnailUrl": "https://www.sistec-am.com/wp-content/uploads/2026/04/8.jpg",
+      "articleSection": [
+       "Case history"
+      ],
+      "inLanguage": "it-IT",
+      "potentialAction": [
+       {
+        "@type": "CommentAction",
+        "name": "Comment",
+        "target": [
+         "https://www.sistec-am.com/case-history/il-valore-del-tempo-non-presidiato-come-falmec-ha-abilitato-il-turno-notturno-grazie-al-sorting-robotizzato-sistec/#respond"
+        ]
+       }
+      ]
+     },
+     {
+      "@type": "WebPage",
+      "@id": "https://www.sistec-am.com/case-history/il-valore-del-tempo-non-presidiato-come-falmec-ha-abilitato-il-turno-notturno-grazie-al-sorting-robotizzato-sistec/",
+      "url": "https://www.sistec-am.com/case-history/il-valore-del-tempo-non-presidiato-come-falmec-ha-abilitato-il-turno-notturno-grazie-al-sorting-robotizzato-sistec/",
+      "name": "Il valore del tempo non presidiato: l'automazione del sorting come driver di crescita. | Sistec",
+      "isPartOf": {
+       "@id": "https://www.sistec-am.com/#website"
+      },
+      "primaryImageOfPage": {
+       "@id": "https://www.sistec-am.com/case-history/il-valore-del-tempo-non-presidiato-come-falmec-ha-abilitato-il-turno-notturno-grazie-al-sorting-robotizzato-sistec/#primaryimage"
+      },
+      "image": {
+       "@id": "https://www.sistec-am.com/case-history/il-valore-del-tempo-non-presidiato-come-falmec-ha-abilitato-il-turno-notturno-grazie-al-sorting-robotizzato-sistec/#primaryimage"
+      },
+      "thumbnailUrl": "https://www.sistec-am.com/wp-content/uploads/2026/04/8.jpg",
+      "datePublished": "2026-04-29T10:25:38+00:00",
+      "dateModified": "2026-09-22T10:57:54+00:00",
+      "breadcrumb": {
+       "@id": "https://www.sistec-am.com/case-history/il-valore-del-tempo-non-presidiato-come-falmec-ha-abilitato-il-turno-notturno-grazie-al-sorting-robotizzato-sistec/#breadcrumb"
+      },
+      "inLanguage": "it-IT",
+      "potentialAction": [
+       {
+        "@type": "ReadAction",
+        "target": [
+         "https://www.sistec-am.com/case-history/il-valore-del-tempo-non-presidiato-come-falmec-ha-abilitato-il-turno-notturno-grazie-al-sorting-robotizzato-sistec/"
+        ]
+       }
+      ]
+     },
+     {
+      "@type": "ImageObject",
+      "inLanguage": "it-IT",
+      "@id": "https://www.sistec-am.com/case-history/il-valore-del-tempo-non-presidiato-come-falmec-ha-abilitato-il-turno-notturno-grazie-al-sorting-robotizzato-sistec/#primaryimage",
+      "url": "https://www.sistec-am.com/wp-content/uploads/2026/04/8.jpg",
+      "contentUrl": "https://www.sistec-am.com/wp-content/uploads/2026/04/8.jpg",
+      "width": 1000,
+      "height": 1000
+     },
+     {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.sistec-am.com/case-history/il-valore-del-tempo-non-presidiato-come-falmec-ha-abilitato-il-turno-notturno-grazie-al-sorting-robotizzato-sistec/#breadcrumb",
+      "itemListElement": [
+       {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.sistec-am.com/"
+       },
+       {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Il valore del tempo non presidiato: l&#8217;automazione del sorting come driver di crescita."
+       }
+      ]
+     },
+     {
+      "@type": "WebSite",
+      "@id": "https://www.sistec-am.com/#website",
+      "url": "https://www.sistec-am.com/",
+      "name": "Sistec",
+      "description": "",
+      "publisher": {
+       "@id": "https://www.sistec-am.com/#organization"
+      },
+      "potentialAction": [
+       {
+        "@type": "SearchAction",
+        "target": {
+         "@type": "EntryPoint",
+         "urlTemplate": "https://www.sistec-am.com/?s={search_term_string}"
+        },
+        "query-input": {
+         "@type": "PropertyValueSpecification",
+         "valueRequired": true,
+         "valueName": "search_term_string"
+        }
+       }
+      ],
+      "inLanguage": "it-IT"
+     },
+     {
+      "@type": "Organization",
+      "@id": "https://www.sistec-am.com/#organization",
+      "name": "Sistec",
+      "url": "https://www.sistec-am.com/",
+      "logo": {
+       "@type": "ImageObject",
+       "inLanguage": "it-IT",
+       "@id": "https://www.sistec-am.com/#/schema/logo/image/",
+       "url": "https://www.sistec-am.com/wp-content/uploads/2026/04/logo_sistec.png",
+       "contentUrl": "https://www.sistec-am.com/wp-content/uploads/2026/04/logo_sistec.png",
+       "width": 142,
+       "height": 102,
+       "caption": "Sistec"
+      },
+      "image": {
+       "@id": "https://www.sistec-am.com/#/schema/logo/image/"
+      }
+     },
+     {
+      "@type": "Person",
+      "@id": "https://www.sistec-am.com/#/schema/person/1f2a2cdf52dbb1a80eb9732d58a57b90",
+      "name": "viola"
+     }
+    ]
+   }
+  },
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/posts/1628",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/posts"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/types/post"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/users/2"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/comments?post=1628"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 10,
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/posts/1628/revisions"
+    }
+   ],
+   "predecessor-version": [
+    {
+     "id": 2573,
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/posts/1628/revisions/2573"
+    }
+   ],
+   "wp:featuredmedia": [
+    {
+     "embeddable": true,
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/media/1637"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/media?parent=1628"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "category",
+     "embeddable": true,
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/categories?post=1628"
+    },
+    {
+     "taxonomy": "post_tag",
+     "embeddable": true,
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/tags?post=1628"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ },
+ {
+  "id": 662,
+  "date": "2021-11-16T18:48:58",
+  "date_gmt": "2021-11-16T18:48:58",
+  "guid": {
+   "rendered": "https://impreza26.us-themes.com/?p=662"
+  },
+  "modified": "2026-09-22T12:58:56",
+  "modified_gmt": "2026-09-22T10:58:56",
+  "slug": "automazione-hold-weld",
+  "status": "publish",
+  "type": "post",
+  "link": "https://www.sistec-am.com/case-history/automazione-hold-weld/",
+  "title": {
+   "rendered": "Automazione &#8220;Hold &#038; Weld&#8221;: la rivoluzione nella saldatura di carpenterie pesanti e complesse."
+  },
+  "content": {
+   "rendered": "<p><strong>Le sfide del business</strong></p>\n<p>Il progetto presentava complessità tecniche che impattavano direttamente sulla produttività:</p>\n<ol>\n<li><strong>Variabilità estrema</strong>: l&#8217;impossibilità di creare dime di bloccaggio per i numerosi pezzi piccoli a causa della loro posizione variabile.</li>\n<li><strong>Dimensioni critiche</strong>: gestione di manufatti lunghi fino a 3,5 metri che richiedono ampi raggi d&#8217;azione.</li>\n<li><strong>Tempi morti elevati</strong>: il carico e il bloccaggio di carpenterie pesanti e ingombranti occupavano una frazione eccessiva del tempo ciclo.</li>\n<li><strong>Logistica di carico</strong>: la necessità di utilizzare il carroponte per movimentare i pezzi strutturali all&#8217;interno di un&#8217;area densamente occupata da robot su slitta.</li>\n</ol>\n<p><img loading=\"lazy\" decoding=\"async\" class=\"alignnone wp-image-1557\" src=\"https://www.sistec-am.com/wp-content/uploads/2021/11/Collage-1-300x169.jpg\" alt=\"collage di foto di macchine robotiche\" width=\"520\" height=\"293\" srcset=\"https://www.sistec-am.com/wp-content/uploads/2021/11/Collage-1-300x169.jpg 300w, https://www.sistec-am.com/wp-content/uploads/2021/11/Collage-1.jpg 763w\" sizes=\"auto, (max-width: 520px) 100vw, 520px\" /></p>\n<p><strong>Soluzione strategica</strong></p>\n<p>L&#8217;architettura dell&#8217;impianto è stata progettata per massimizzare il tempo mascherato e la flessibilità operativa:</p>\n<ul>\n<li><strong>Configurazione a tre robot su slitta</strong>: due robot KUKA IONTEC dedicati alla saldatura e un terzo robot KUKA ad alta precisione (HA) per la manipolazione e il posizionamento in tempo reale.</li>\n<li><strong>Tecnologia &#8220;robot-as-jig&#8221;</strong>: il robot di manipolazione posiziona i pezzi piccoli con precisione millimetrica mentre il robot di saldatura esegue la pre-puntatura, eliminando il costo e l&#8217;ingombro di centinaia di dime fisse.</li>\n<li><strong>Doppia stazione a &#8220;tornio&#8221; mobile</strong>: due maschere di saldatura montate su carri slitta separati. Questo sistema permette di portare la zona di carico all&#8217;esterno dell&#8217;ingombro dei robot, consentendo l&#8217;uso agevole del carroponte in totale sicurezza.</li>\n<li><strong>Maschere di saldatura autoadattative</strong>: il robot di manipolazione regola automaticamente la lunghezza della maschera spostando le parti mobili su guide a ricircolo di sfere, adattandosi istantaneamente al modello da saldare.</li>\n<li><strong>Cambio utensili automatico</strong>: gestione di diversi sistemi di presa tramite un magazzino dedicato e cambi automatici elettro-pneumatici sul polso del robot.</li>\n</ul>\n<p><img loading=\"lazy\" decoding=\"async\" class=\"alignnone wp-image-1558\" src=\"https://www.sistec-am.com/wp-content/uploads/2021/11/immagine-2-300x169.jpg\" alt=\"braccio robotico che salda\" width=\"531\" height=\"299\" srcset=\"https://www.sistec-am.com/wp-content/uploads/2021/11/immagine-2-300x169.jpg 300w, https://www.sistec-am.com/wp-content/uploads/2021/11/immagine-2.jpg 765w\" sizes=\"auto, (max-width: 531px) 100vw, 531px\" /></p>\n<p><strong>Risultati e valore generato</strong></p>\n<p>L&#8217;integrazione di queste tecnologie ha permesso di raggiungere obiettivi di business superiori:</p>\n<ul>\n<li><strong>Riduzione del tempo ciclo</strong>: grazie alla saldatura simultanea con due robot sullo stesso pezzo (reso possibile dalla lunghezza del manufatto).</li>\n<li><strong>Efficienza &#8220;tempo mascherato&#8221;</strong>: mentre un lato dell&#8217;impianto salda, l&#8217;operatore carica i pezzi strutturali sul secondo carro esterno, azzerando i fermi macchina.</li>\n<li><strong>Flessibilità totale di modello</strong>: il sistema si riconfigura automaticamente per lunghezze variabili da 2.000 a 3.500 mm senza intervento manuale sulle attrezzature.</li>\n<li><strong>Ottimizzazione degli spazi</strong>: l&#8217;uso di carri slitta per le maschere ha risolto il conflitto tra l&#8217;ingombro dei robot e la necessità di manovra per carichi pesanti.</li>\n</ul>\n<p><strong>Specifiche tecniche e dotazione</strong></p>\n<ul>\n<li><strong>Sistemi di saldatura</strong>: 2x KUKA KR20 R3100 IONTEC installati su slitta traslante per la massima copertura operativa.</li>\n<li><strong>Unità di manipolazione</strong>: 1x KUKA KR120 R3100-2 HA (High Accuracy) su slitta, ottimizzato per il posizionamento millimetrico dei componenti.</li>\n<li><strong>Capacità dimensionale</strong>: gestione di manufatti con sezione fino a 1000&#215;600 mm e lunghezze estese fino a 3500 mm.</li>\n<li><strong>Integrazione di processo</strong>: gruppi di saldatura integrati direttamente a bordo slitta, una scelta progettuale che garantisce la massima libertà di movimento e l’assenza di interferenze durante le lavorazioni più complesse.<img loading=\"lazy\" decoding=\"async\" class=\"alignnone wp-image-1559\" style=\"letter-spacing: 0em;\" src=\"https://www.sistec-am.com/wp-content/uploads/2021/11/immagine-3-300x144.jpg\" alt=\"due braccia robotiche a lavoro\" width=\"554\" height=\"266\" srcset=\"https://www.sistec-am.com/wp-content/uploads/2021/11/immagine-3-300x144.jpg 300w, https://www.sistec-am.com/wp-content/uploads/2021/11/immagine-3.jpg 765w\" sizes=\"auto, (max-width: 554px) 100vw, 554px\" /></li>\n</ul>\n",
+   "protected": false
+  },
+  "excerpt": {
+   "rendered": "<p>Le sfide del business Il progetto presentava complessità tecniche che impattavano direttamente sulla produttività: Variabilità estrema: l&#8217;impossibilità di creare dime di bloccaggio per i numerosi pezzi piccoli a causa della loro posizione variabile. Dimensioni critiche: gestione di manufatti lunghi fino a 3,5 metri che richiedono ampi raggi d&#8217;azione. Tempi morti elevati: il carico e il&#8230;</p>\n",
+   "protected": false
+  },
+  "author": 1,
+  "featured_media": 1536,
+  "comment_status": "open",
+  "ping_status": "open",
+  "sticky": false,
+  "template": "",
+  "format": "standard",
+  "meta": {
+   "_acf_changed": false,
+   "footnotes": ""
+  },
+  "categories": [
+   1
+  ],
+  "tags": [],
+  "class_list": [
+   "post-662",
+   "post",
+   "type-post",
+   "status-publish",
+   "format-standard",
+   "has-post-thumbnail",
+   "hentry",
+   "category-case-history"
+  ],
+  "acf": [],
+  "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v28.6 - https://yoast.com/product/yoast-seo-wordpress/ -->\n<title>Automazione &quot;Hold &amp; Weld&quot;: la rivoluzione nella saldatura di carpenterie pesanti e complesse. | Sistec</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://www.sistec-am.com/case-history/automazione-hold-weld/\" />\n<meta property=\"og:locale\" content=\"it_IT\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Automazione &quot;Hold &amp; Weld&quot;: la rivoluzione nella saldatura di carpenterie pesanti e complesse. | Sistec\" />\n<meta property=\"og:description\" content=\"Le sfide del business Il progetto presentava complessità tecniche che impattavano direttamente sulla produttività: Variabilità estrema: l&#8217;impossibilità di creare dime di bloccaggio per i numerosi pezzi piccoli a causa della loro posizione variabile. Dimensioni critiche: gestione di manufatti lunghi fino a 3,5 metri che richiedono ampi raggi d&#8217;azione. Tempi morti elevati: il carico e il...\" />\n<meta property=\"og:url\" content=\"https://www.sistec-am.com/case-history/automazione-hold-weld/\" />\n<meta property=\"og:site_name\" content=\"Sistec\" />\n<meta property=\"article:published_time\" content=\"2021-11-16T18:48:58+00:00\" />\n<meta property=\"article:modified_time\" content=\"2026-09-22T10:58:56+00:00\" />\n<meta property=\"og:image\" content=\"https://www.sistec-am.com/wp-content/uploads/2021/11/sistec-automazione-hold-e-weld.jpg\" />\n\t<meta property=\"og:image:width\" content=\"503\" />\n\t<meta property=\"og:image:height\" content=\"503\" />\n\t<meta property=\"og:image:type\" content=\"image/jpeg\" />\n<meta name=\"author\" content=\"mael\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<meta name=\"twitter:label1\" content=\"Scritto da\" />\n\t<meta name=\"twitter:data1\" content=\"mael\" />\n\t<meta name=\"twitter:label2\" content=\"Tempo di lettura stimato\" />\n\t<meta name=\"twitter:data2\" content=\"4 minuti\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https:\\/\\/schema.org\",\"@graph\":[{\"@type\":\"Article\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/automazione-hold-weld\\/#article\",\"isPartOf\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/automazione-hold-weld\\/\"},\"author\":{\"name\":\"mael\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#\\/schema\\/person\\/bb5d0e867787844908cc560fa607e6ff\"},\"headline\":\"Automazione &#8220;Hold &#038; Weld&#8221;: la rivoluzione nella saldatura di carpenterie pesanti e complesse.\",\"datePublished\":\"2021-11-16T18:48:58+00:00\",\"dateModified\":\"2026-09-22T10:58:56+00:00\",\"mainEntityOfPage\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/automazione-hold-weld\\/\"},\"wordCount\":472,\"commentCount\":0,\"publisher\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/#organization\"},\"image\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/automazione-hold-weld\\/#primaryimage\"},\"thumbnailUrl\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2021\\/11\\/sistec-automazione-hold-e-weld.jpg\",\"articleSection\":[\"Case history\"],\"inLanguage\":\"it-IT\",\"potentialAction\":[{\"@type\":\"CommentAction\",\"name\":\"Comment\",\"target\":[\"https:\\/\\/www.sistec-am.com\\/case-history\\/automazione-hold-weld\\/#respond\"]}]},{\"@type\":\"WebPage\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/automazione-hold-weld\\/\",\"url\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/automazione-hold-weld\\/\",\"name\":\"Automazione \\\"Hold & Weld\\\": la rivoluzione nella saldatura di carpenterie pesanti e complesse. | Sistec\",\"isPartOf\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/#website\"},\"primaryImageOfPage\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/automazione-hold-weld\\/#primaryimage\"},\"image\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/automazione-hold-weld\\/#primaryimage\"},\"thumbnailUrl\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2021\\/11\\/sistec-automazione-hold-e-weld.jpg\",\"datePublished\":\"2021-11-16T18:48:58+00:00\",\"dateModified\":\"2026-09-22T10:58:56+00:00\",\"breadcrumb\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/automazione-hold-weld\\/#breadcrumb\"},\"inLanguage\":\"it-IT\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https:\\/\\/www.sistec-am.com\\/case-history\\/automazione-hold-weld\\/\"]}]},{\"@type\":\"ImageObject\",\"inLanguage\":\"it-IT\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/automazione-hold-weld\\/#primaryimage\",\"url\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2021\\/11\\/sistec-automazione-hold-e-weld.jpg\",\"contentUrl\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2021\\/11\\/sistec-automazione-hold-e-weld.jpg\",\"width\":503,\"height\":503,\"caption\":\"braccia robotiche saldatrici\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/case-history\\/automazione-hold-weld\\/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https:\\/\\/www.sistec-am.com\\/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Automazione &#8220;Hold &#038; Weld&#8221;: la rivoluzione nella saldatura di carpenterie pesanti e complesse.\"}]},{\"@type\":\"WebSite\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#website\",\"url\":\"https:\\/\\/www.sistec-am.com\\/\",\"name\":\"Sistec\",\"description\":\"\",\"publisher\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https:\\/\\/www.sistec-am.com\\/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"it-IT\"},{\"@type\":\"Organization\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#organization\",\"name\":\"Sistec\",\"url\":\"https:\\/\\/www.sistec-am.com\\/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"it-IT\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#\\/schema\\/logo\\/image\\/\",\"url\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2026\\/04\\/logo_sistec.png\",\"contentUrl\":\"https:\\/\\/www.sistec-am.com\\/wp-content\\/uploads\\/2026\\/04\\/logo_sistec.png\",\"width\":142,\"height\":102,\"caption\":\"Sistec\"},\"image\":{\"@id\":\"https:\\/\\/www.sistec-am.com\\/#\\/schema\\/logo\\/image\\/\"}},{\"@type\":\"Person\",\"@id\":\"https:\\/\\/www.sistec-am.com\\/#\\/schema\\/person\\/bb5d0e867787844908cc560fa607e6ff\",\"name\":\"mael\",\"sameAs\":[\"https:\\/\\/www.sistec-am.com\"]}]}</script>\n<!-- / Yoast SEO plugin. -->",
+  "yoast_head_json": {
+   "title": "Automazione \"Hold & Weld\": la rivoluzione nella saldatura di carpenterie pesanti e complesse. | Sistec",
+   "robots": {
+    "index": "index",
+    "follow": "follow",
+    "max-snippet": "max-snippet:-1",
+    "max-image-preview": "max-image-preview:large",
+    "max-video-preview": "max-video-preview:-1"
+   },
+   "canonical": "https://www.sistec-am.com/case-history/automazione-hold-weld/",
+   "og_locale": "it_IT",
+   "og_type": "article",
+   "og_title": "Automazione \"Hold & Weld\": la rivoluzione nella saldatura di carpenterie pesanti e complesse. | Sistec",
+   "og_description": "Le sfide del business Il progetto presentava complessità tecniche che impattavano direttamente sulla produttività: Variabilità estrema: l&#8217;impossibilità di creare dime di bloccaggio per i numerosi pezzi piccoli a causa della loro posizione variabile. Dimensioni critiche: gestione di manufatti lunghi fino a 3,5 metri che richiedono ampi raggi d&#8217;azione. Tempi morti elevati: il carico e il...",
+   "og_url": "https://www.sistec-am.com/case-history/automazione-hold-weld/",
+   "og_site_name": "Sistec",
+   "article_published_time": "2021-11-16T18:48:58+00:00",
+   "article_modified_time": "2026-09-22T10:58:56+00:00",
+   "og_image": [
+    {
+     "width": 503,
+     "height": 503,
+     "url": "https://www.sistec-am.com/wp-content/uploads/2021/11/sistec-automazione-hold-e-weld.jpg",
+     "type": "image/jpeg"
+    }
+   ],
+   "author": "mael",
+   "twitter_card": "summary_large_image",
+   "twitter_misc": {
+    "Scritto da": "mael",
+    "Tempo di lettura stimato": "4 minuti"
+   },
+   "schema": {
+    "@context": "https://schema.org",
+    "@graph": [
+     {
+      "@type": "Article",
+      "@id": "https://www.sistec-am.com/case-history/automazione-hold-weld/#article",
+      "isPartOf": {
+       "@id": "https://www.sistec-am.com/case-history/automazione-hold-weld/"
+      },
+      "author": {
+       "name": "mael",
+       "@id": "https://www.sistec-am.com/#/schema/person/bb5d0e867787844908cc560fa607e6ff"
+      },
+      "headline": "Automazione &#8220;Hold &#038; Weld&#8221;: la rivoluzione nella saldatura di carpenterie pesanti e complesse.",
+      "datePublished": "2021-11-16T18:48:58+00:00",
+      "dateModified": "2026-09-22T10:58:56+00:00",
+      "mainEntityOfPage": {
+       "@id": "https://www.sistec-am.com/case-history/automazione-hold-weld/"
+      },
+      "wordCount": 472,
+      "commentCount": 0,
+      "publisher": {
+       "@id": "https://www.sistec-am.com/#organization"
+      },
+      "image": {
+       "@id": "https://www.sistec-am.com/case-history/automazione-hold-weld/#primaryimage"
+      },
+      "thumbnailUrl": "https://www.sistec-am.com/wp-content/uploads/2021/11/sistec-automazione-hold-e-weld.jpg",
+      "articleSection": [
+       "Case history"
+      ],
+      "inLanguage": "it-IT",
+      "potentialAction": [
+       {
+        "@type": "CommentAction",
+        "name": "Comment",
+        "target": [
+         "https://www.sistec-am.com/case-history/automazione-hold-weld/#respond"
+        ]
+       }
+      ]
+     },
+     {
+      "@type": "WebPage",
+      "@id": "https://www.sistec-am.com/case-history/automazione-hold-weld/",
+      "url": "https://www.sistec-am.com/case-history/automazione-hold-weld/",
+      "name": "Automazione \"Hold & Weld\": la rivoluzione nella saldatura di carpenterie pesanti e complesse. | Sistec",
+      "isPartOf": {
+       "@id": "https://www.sistec-am.com/#website"
+      },
+      "primaryImageOfPage": {
+       "@id": "https://www.sistec-am.com/case-history/automazione-hold-weld/#primaryimage"
+      },
+      "image": {
+       "@id": "https://www.sistec-am.com/case-history/automazione-hold-weld/#primaryimage"
+      },
+      "thumbnailUrl": "https://www.sistec-am.com/wp-content/uploads/2021/11/sistec-automazione-hold-e-weld.jpg",
+      "datePublished": "2021-11-16T18:48:58+00:00",
+      "dateModified": "2026-09-22T10:58:56+00:00",
+      "breadcrumb": {
+       "@id": "https://www.sistec-am.com/case-history/automazione-hold-weld/#breadcrumb"
+      },
+      "inLanguage": "it-IT",
+      "potentialAction": [
+       {
+        "@type": "ReadAction",
+        "target": [
+         "https://www.sistec-am.com/case-history/automazione-hold-weld/"
+        ]
+       }
+      ]
+     },
+     {
+      "@type": "ImageObject",
+      "inLanguage": "it-IT",
+      "@id": "https://www.sistec-am.com/case-history/automazione-hold-weld/#primaryimage",
+      "url": "https://www.sistec-am.com/wp-content/uploads/2021/11/sistec-automazione-hold-e-weld.jpg",
+      "contentUrl": "https://www.sistec-am.com/wp-content/uploads/2021/11/sistec-automazione-hold-e-weld.jpg",
+      "width": 503,
+      "height": 503,
+      "caption": "braccia robotiche saldatrici"
+     },
+     {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.sistec-am.com/case-history/automazione-hold-weld/#breadcrumb",
+      "itemListElement": [
+       {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.sistec-am.com/"
+       },
+       {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Automazione &#8220;Hold &#038; Weld&#8221;: la rivoluzione nella saldatura di carpenterie pesanti e complesse."
+       }
+      ]
+     },
+     {
+      "@type": "WebSite",
+      "@id": "https://www.sistec-am.com/#website",
+      "url": "https://www.sistec-am.com/",
+      "name": "Sistec",
+      "description": "",
+      "publisher": {
+       "@id": "https://www.sistec-am.com/#organization"
+      },
+      "potentialAction": [
+       {
+        "@type": "SearchAction",
+        "target": {
+         "@type": "EntryPoint",
+         "urlTemplate": "https://www.sistec-am.com/?s={search_term_string}"
+        },
+        "query-input": {
+         "@type": "PropertyValueSpecification",
+         "valueRequired": true,
+         "valueName": "search_term_string"
+        }
+       }
+      ],
+      "inLanguage": "it-IT"
+     },
+     {
+      "@type": "Organization",
+      "@id": "https://www.sistec-am.com/#organization",
+      "name": "Sistec",
+      "url": "https://www.sistec-am.com/",
+      "logo": {
+       "@type": "ImageObject",
+       "inLanguage": "it-IT",
+       "@id": "https://www.sistec-am.com/#/schema/logo/image/",
+       "url": "https://www.sistec-am.com/wp-content/uploads/2026/04/logo_sistec.png",
+       "contentUrl": "https://www.sistec-am.com/wp-content/uploads/2026/04/logo_sistec.png",
+       "width": 142,
+       "height": 102,
+       "caption": "Sistec"
+      },
+      "image": {
+       "@id": "https://www.sistec-am.com/#/schema/logo/image/"
+      }
+     },
+     {
+      "@type": "Person",
+      "@id": "https://www.sistec-am.com/#/schema/person/bb5d0e867787844908cc560fa607e6ff",
+      "name": "mael",
+      "sameAs": [
+       "https://www.sistec-am.com"
+      ]
+     }
+    ]
+   }
+  },
+  "_links": {
+   "self": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/posts/662",
+     "targetHints": {
+      "allow": [
+       "GET"
+      ]
+     }
+    }
+   ],
+   "collection": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/posts"
+    }
+   ],
+   "about": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/types/post"
+    }
+   ],
+   "author": [
+    {
+     "embeddable": true,
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/users/1"
+    }
+   ],
+   "replies": [
+    {
+     "embeddable": true,
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/comments?post=662"
+    }
+   ],
+   "version-history": [
+    {
+     "count": 10,
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/posts/662/revisions"
+    }
+   ],
+   "predecessor-version": [
+    {
+     "id": 2574,
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/posts/662/revisions/2574"
+    }
+   ],
+   "wp:featuredmedia": [
+    {
+     "embeddable": true,
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/media/1536"
+    }
+   ],
+   "wp:attachment": [
+    {
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/media?parent=662"
+    }
+   ],
+   "wp:term": [
+    {
+     "taxonomy": "category",
+     "embeddable": true,
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/categories?post=662"
+    },
+    {
+     "taxonomy": "post_tag",
+     "embeddable": true,
+     "href": "https://www.sistec-am.com/wp-json/wp/v2/tags?post=662"
+    }
+   ],
+   "curies": [
+    {
+     "name": "wp",
+     "href": "https://api.w.org/{rel}",
+     "templated": true
+    }
+   ]
+  }
+ }
+]

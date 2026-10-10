@@ -1,0 +1,39 @@
+---
+import FormShell from './FormShell.astro';
+import Field from './Field.astro';
+import Consent from './Consent.astro';
+import { useDict, routes, type Locale } from '../../i18n';
+import { formEndpoints } from '../../data/site';
+
+interface Props {
+  locale: Locale;
+  labelledby?: string;
+}
+
+const { locale, labelledby } = Astro.props;
+const t = useDict(locale);
+const f = t.forms;
+const [privacyBefore, privacyAfter] = f.privacyConsent.split('{link}');
+---
+
+<FormShell
+  locale={locale}
+  name="newsletter"
+  endpoint={formEndpoints.newsletter}
+  submitLabel={f.subscribe}
+  successMessage={f.successNewsletter}
+  tone="dark"
+  labelledby={labelledby}
+>
+  <div class="grid gap-6 sm:grid-cols-2">
+    <Field name="nl-firstName" label={f.firstName} required autocomplete="given-name" requiredLabel={f.required} tone="dark" />
+    <Field name="nl-lastName" label={f.lastName} required autocomplete="family-name" requiredLabel={f.required} tone="dark" />
+    <Field name="nl-company" label={f.company} required autocomplete="organization" requiredLabel={f.required} tone="dark" />
+    <Field name="nl-country" label={f.country} autocomplete="country-name" requiredLabel={f.required} tone="dark" />
+    <Field name="nl-email" type="email" label={f.email} required autocomplete="email" requiredLabel={f.required} tone="dark" class="sm:col-span-2" />
+  </div>
+  <Consent name="nl-privacy" required requiredLabel={f.required} tone="dark">
+    {privacyBefore}<a href={routes.privacy[locale]} class="font-semibold text-white underline underline-offset-2" target="_blank" rel="noopener">{f.privacyLink}<span class="sr-only"> {t.a11y.opensNewTab}</span></a>{privacyAfter}
+  </Consent>
+  <Consent name="nl-marketing" required requiredLabel={f.required} tone="dark">{f.marketingConsent}</Consent>
+</FormShell>
